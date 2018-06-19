@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://lib/Laser1.gd" type="Script" id=1]
+[ext_resource path="res://lib/Laser1.tres" type="SpriteFrames" id=2]
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="Area2D" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+fire_range = null
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -7.90824, 13.2809, -8.3839, -1.70224, -3.86517, -4.794, -6.00562, -11.4532, 2.08051, -11.691, 3.26965, -5.50749, 6.59924, -1.46442, 6.83707, 15.4213, 2.55617, 18.0374, -4.81648, 18.0374, -8.85955, 16.1348 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+frames = ExtResource( 2 )
+animation = "default"
+playing = true
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="2"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 50 )
+collision_mask = 1
+
+[node name="Fire_Range" type="CollisionShape2D" parent="." index="3"]
+
+position = Vector2( 1.84677, -15.6973 )
+scale = Vector2( 35.9135, 35.9135 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+

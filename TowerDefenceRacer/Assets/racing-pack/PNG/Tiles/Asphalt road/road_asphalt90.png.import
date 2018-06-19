@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/road_asphalt90.png-66f80d55d46ba3451c677efba9c3ba52.stex"
+
+[deps]
+
+source_file="res://Assets/racing-pack/PNG/Tiles/Asphalt road/road_asphalt90.png"
+source_md5="c6322a771efa0446685217fc87e86fe6"
+
+dest_files=[ "res://.import/road_asphalt90.png-66f80d55d46ba3451c677efba9c3ba52.stex" ]
+dest_md5="3eb642ddc504386fbdc81200fb5f21f4"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

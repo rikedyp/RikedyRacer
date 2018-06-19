@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/road_dirt22.png-e4304bcbce7b4eac36084e8f328a6f66.stex"
+
+[deps]
+
+source_file="res://Assets/racing-pack/PNG/Tiles/Dirt road/road_dirt22.png"
+source_md5="48e4d8bbd6942460d4fe324d23ddeb03"
+
+dest_files=[ "res://.import/road_dirt22.png-e4304bcbce7b4eac36084e8f328a6f66.stex" ]
+dest_md5="7b3e08c44e7df92cc69d017ba41f172a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,0 +1,214 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Assets/roadtiles_nova/png/endE.png" type="Texture" id=1]
+[ext_resource path="res://Assets/roadtiles_nova/png/endN.png" type="Texture" id=2]
+[ext_resource path="res://Assets/roadtiles_nova/png/endS.png" type="Texture" id=3]
+[ext_resource path="res://Assets/roadtiles_nova/png/endW.png" type="Texture" id=4]
+[ext_resource path="res://Assets/roadtiles_nova/png/exitE.png" type="Texture" id=5]
+[ext_resource path="res://Assets/roadtiles_nova/png/exitN.png" type="Texture" id=6]
+[ext_resource path="res://Assets/roadtiles_nova/png/exitS.png" type="Texture" id=7]
+[ext_resource path="res://Assets/roadtiles_nova/png/exitW.png" type="Texture" id=8]
+[ext_resource path="res://Assets/roadtiles_nova/png/grass.png" type="Texture" id=9]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotE.png" type="Texture" id=10]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotES.png" type="Texture" id=11]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotN.png" type="Texture" id=12]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotNE.png" type="Texture" id=13]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotNW.png" type="Texture" id=14]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotS.png" type="Texture" id=15]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotSW.png" type="Texture" id=16]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotW.png" type="Texture" id=17]
+[ext_resource path="res://Assets/roadtiles_nova/png/road.png" type="Texture" id=18]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadES.png" type="Texture" id=19]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadEW.png" type="Texture" id=20]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadNE.png" type="Texture" id=21]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadNS.png" type="Texture" id=22]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadNW.png" type="Texture" id=23]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadSW.png" type="Texture" id=24]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeAltShort.png" type="Texture" id=25]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeAltTall.png" type="Texture" id=26]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeShort.png" type="Texture" id=27]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeTall.png" type="Texture" id=28]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferAltShort.png" type="Texture" id=29]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferAltTall.png" type="Texture" id=30]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferTall.png" type="Texture" id=31]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferShort.png" type="Texture" id=32]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="endE" type="Sprite" parent="." index="0"]
+
+position = Vector2( 78.1461, 82.3942 )
+texture = ExtResource( 1 )
+
+[node name="endN" type="Sprite" parent="." index="1"]
+
+position = Vector2( 279.549, 77.3591 )
+texture = ExtResource( 2 )
+
+[node name="endS" type="Sprite" parent="." index="2"]
+
+position = Vector2( 491.021, 79.8766 )
+texture = ExtResource( 3 )
+
+[node name="endW" type="Sprite" parent="." index="3"]
+
+position = Vector2( 672.284, 84.9117 )
+texture = ExtResource( 4 )
+
+[node name="exitE" type="Sprite" parent="." index="4"]
+
+position = Vector2( 88.2162, 195.683 )
+texture = ExtResource( 5 )
+
+[node name="exitN" type="Sprite" parent="." index="5"]
+
+position = Vector2( 282.066, 193.166 )
+texture = ExtResource( 6 )
+
+[node name="exitS" type="Sprite" parent="." index="6"]
+
+position = Vector2( 485.986, 203.236 )
+texture = ExtResource( 7 )
+
+[node name="exitW" type="Sprite" parent="." index="7"]
+
+position = Vector2( 689.906, 193.166 )
+texture = ExtResource( 8 )
+
+[node name="grass" type="Sprite" parent="." index="8"]
+
+position = Vector2( 80.6636, 314.007 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="grass" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grass/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -49.9952, -6.40149, 0.798645, -32.3387, 49.9714, -7.48218, 1.339, 17.9147 )
+
+[node name="lotE" type="Sprite" parent="." index="9"]
+
+position = Vector2( 294.654, 324.077 )
+texture = ExtResource( 10 )
+
+[node name="lotES" type="Sprite" parent="." index="10"]
+
+position = Vector2( 506.127, 321.56 )
+texture = ExtResource( 11 )
+
+[node name="lotN" type="Sprite" parent="." index="11"]
+
+position = Vector2( 707.529, 329.112 )
+texture = ExtResource( 12 )
+
+[node name="lotNE" type="Sprite" parent="." index="12"]
+
+position = Vector2( 888.792, 319.042 )
+texture = ExtResource( 13 )
+
+[node name="lotNW" type="Sprite" parent="." index="13"]
+
+position = Vector2( 1085.16, 319.042 )
+texture = ExtResource( 14 )
+
+[node name="lotS" type="Sprite" parent="." index="14"]
+
+position = Vector2( 1211.04, 321.56 )
+texture = ExtResource( 15 )
+
+[node name="lotSW" type="Sprite" parent="." index="15"]
+
+position = Vector2( 1384.75, 329.112 )
+texture = ExtResource( 16 )
+
+[node name="lotW" type="Sprite" parent="." index="16"]
+
+position = Vector2( 103.321, 427.296 )
+texture = ExtResource( 17 )
+
+[node name="road" type="Sprite" parent="." index="17"]
+
+position = Vector2( 876.204, 200.718 )
+texture = ExtResource( 18 )
+
+[node name="roadES" type="Sprite" parent="." index="18"]
+
+position = Vector2( 873.686, 79.8766 )
+texture = ExtResource( 19 )
+
+[node name="roadEW" type="Sprite" parent="." index="19"]
+
+position = Vector2( 1044.88, 79.8766 )
+texture = ExtResource( 20 )
+
+[node name="roadNE" type="Sprite" parent="." index="20"]
+
+position = Vector2( 1226.14, 89.9468 )
+texture = ExtResource( 21 )
+
+[node name="roadNS" type="Sprite" parent="." index="21"]
+
+position = Vector2( 1389.78, 89.9468 )
+texture = ExtResource( 22 )
+
+[node name="roadNW" type="Sprite" parent="." index="22"]
+
+position = Vector2( 1065.02, 185.613 )
+texture = ExtResource( 23 )
+
+[node name="roadSW" type="Sprite" parent="." index="23"]
+
+position = Vector2( 1243.76, 195.683 )
+texture = ExtResource( 24 )
+
+[node name="treeAltShort" type="Sprite" parent="." index="24"]
+
+position = Vector2( 297.171, 427.296 )
+texture = ExtResource( 25 )
+
+[node name="treeAltTall" type="Sprite" parent="." index="25"]
+
+position = Vector2( 428.083, 442.401 )
+texture = ExtResource( 26 )
+
+[node name="treeShort" type="Sprite" parent="." index="26"]
+
+position = Vector2( 531.302, 427.296 )
+texture = ExtResource( 27 )
+
+[node name="treeTall" type="Sprite" parent="." index="27"]
+
+position = Vector2( 634.521, 432.331 )
+texture = ExtResource( 28 )
+
+[node name="coniferAltShort" type="Sprite" parent="." index="28"]
+
+position = Vector2( 712.564, 434.849 )
+texture = ExtResource( 29 )
+
+[node name="coniferAltTall" type="Sprite" parent="." index="29"]
+
+position = Vector2( 284.584, 525.48 )
+texture = ExtResource( 30 )
+
+[node name="coniferTall" type="Sprite" parent="." index="30"]
+
+position = Vector2( 377.732, 515.41 )
+texture = ExtResource( 31 )
+
+[node name="coniferShort" type="Sprite" parent="." index="31"]
+
+position = Vector2( 473.399, 502.822 )
+texture = ExtResource( 32 )
+
+

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/road_sand79.png-63ef8246a84d9b75c81fe1a165dd5186.stex"
+
+[deps]
+
+source_file="res://Assets/racing-pack/PNG/Tiles/Sand road/road_sand79.png"
+source_md5="d69c4c47355cba9eb3bbdf2402c61fc6"
+
+dest_files=[ "res://.import/road_sand79.png-63ef8246a84d9b75c81fe1a165dd5186.stex" ]
+dest_md5="8bfe2b8c985c0cf81fe3a773230600f5"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
