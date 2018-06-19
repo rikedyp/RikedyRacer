@@ -1,0 +1,316 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 166,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        0.699999988079071,
+        1.0
+      ],
+      "min": [
+        -1.0499999523162842,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 166,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 166,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 166,
+      "type": "VEC2",
+      "max": [
+        41.338581085205078,
+        1.0
+      ],
+      "min": [
+        -41.338581085205078,
+        -31.060581207275391
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 129,
+      "type": "SCALAR",
+      "max": [
+        66.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5121,
+      "count": 18,
+      "type": "SCALAR",
+      "max": [
+        84.0
+      ],
+      "min": [
+        67.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5121,
+      "count": 24,
+      "type": "SCALAR",
+      "max": [
+        92.0
+      ],
+      "min": [
+        23.0
+      ]
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5121,
+      "count": 138,
+      "type": "SCALAR",
+      "max": [
+        153.0
+      ],
+      "min": [
+        14.0
+      ]
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5121,
+      "count": 18,
+      "type": "SCALAR",
+      "max": [
+        165.0
+      ],
+      "min": [
+        154.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "pitsGarageCorner.bin",
+      "byteLength": 8295
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1992
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1992,
+      "byteLength": 1992
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3984,
+      "byteLength": 2656
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6640,
+      "byteLength": 1328
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7968,
+      "byteLength": 129
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8097,
+      "byteLength": 18
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8115,
+      "byteLength": 24
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8139,
+      "byteLength": 138
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8277,
+      "byteLength": 18
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.945098042,
+          0.9490196,
+          0.9647059,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grey"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0
+      },
+      "name": "_defaultMat"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.9098039,
+          0.333333343,
+          0.3254902,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "red"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.266666681,
+          0.266666681,
+          0.266666681,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "road"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.298039228,
+          0.3764706,
+          0.466666669,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "glass"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 6,
+          "material": 2
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 7,
+          "material": 3
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 8,
+          "material": 4
+        }
+      ],
+      "name": "pitsGarageCorner"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        7.89348,
+        0.0,
+        3.138676
+      ],
+      "name": "pitsGarageCorner"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "pitsGarageCorner"
+    }
+  ]
+}

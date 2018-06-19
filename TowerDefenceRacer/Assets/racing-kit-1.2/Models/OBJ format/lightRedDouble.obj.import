@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/lightRedDouble.obj-2ba24a7e11aa3e1d32ee594b5c2a9655.mesh"
+
+[deps]
+
+files=[ "res://.import/lightRedDouble.obj-2ba24a7e11aa3e1d32ee594b5c2a9655.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/lightRedDouble.obj"
+source_md5="bfee983262db39cdc60356f8b433e85b"
+
+dest_files=[ "res://.import/lightRedDouble.obj-2ba24a7e11aa3e1d32ee594b5c2a9655.mesh", "res://.import/lightRedDouble.obj-2ba24a7e11aa3e1d32ee594b5c2a9655.mesh" ]
+dest_md5="9540fd1cdd4edef5dfa51d16de81ee91"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

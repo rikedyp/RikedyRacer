@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadHalfCircle.obj-25d7c26da29fc75353582aabc25293c0.mesh"
+
+[deps]
+
+files=[ "res://.import/roadHalfCircle.obj-25d7c26da29fc75353582aabc25293c0.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/roadHalfCircle.obj"
+source_md5="ba5a9913d473a657679e8a1bf864113b"
+
+dest_files=[ "res://.import/roadHalfCircle.obj-25d7c26da29fc75353582aabc25293c0.mesh", "res://.import/roadHalfCircle.obj-25d7c26da29fc75353582aabc25293c0.mesh" ]
+dest_md5="e0bc71b710099649410a2b61ebbe2637"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

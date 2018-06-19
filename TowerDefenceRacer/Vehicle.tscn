@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="AnimatedSprite" type="AnimatedSprite" index="0"]
+
+animation = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+

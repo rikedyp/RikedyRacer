@@ -1,0 +1,238 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 438,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        0.019999999552965164,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 438,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 438,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 438,
+      "type": "VEC2",
+      "max": [
+        39.370079040527344,
+        1.0
+      ],
+      "min": [
+        0.0,
+        -38.370079040527344
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 120,
+      "type": "SCALAR",
+      "max": [
+        43.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5123,
+      "count": 378,
+      "type": "SCALAR",
+      "max": [
+        419.0
+      ],
+      "min": [
+        44.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5123,
+      "count": 48,
+      "type": "SCALAR",
+      "max": [
+        437.0
+      ],
+      "min": [
+        420.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "roadCornerSmallSquare.bin",
+      "byteLength": 21996
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 5256
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5256,
+      "byteLength": 5256
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 10512,
+      "byteLength": 7008
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 17520,
+      "byteLength": 3504
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 21024,
+      "byteLength": 120
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 21144,
+      "byteLength": 756
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 21900,
+      "byteLength": 96
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.3019608,
+          0.56078434,
+          0.431372553,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grass"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0
+      },
+      "name": "_defaultMat"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.266666681,
+          0.266666681,
+          0.266666681,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "road"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 6,
+          "material": 2
+        }
+      ],
+      "name": "roadCornerSmallSquare"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        -1.98359036,
+        0.0,
+        -3.522422
+      ],
+      "name": "roadCornerSmallSquare"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "roadCornerSmallSquare"
+    }
+  ]
+}

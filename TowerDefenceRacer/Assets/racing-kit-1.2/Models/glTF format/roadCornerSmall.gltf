@@ -1,0 +1,244 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 310,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        0.019999999552965164,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 310,
+      "type": "VEC3",
+      "max": [
+        0.99785894155502319,
+        1.0,
+        0.99785894155502319
+      ],
+      "min": [
+        -0.99785894155502319,
+        0.0,
+        -0.99785894155502319
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 310,
+      "type": "VEC4",
+      "max": [
+        0.99785894155502319,
+        0.0,
+        0.99785894155502319,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -0.99785894155502319,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 310,
+      "type": "VEC2",
+      "max": [
+        41.461944580078125,
+        1.0
+      ],
+      "min": [
+        -41.650463104248047,
+        -38.370079040527344
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 432,
+      "type": "SCALAR",
+      "max": [
+        243.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5123,
+      "count": 108,
+      "type": "SCALAR",
+      "max": [
+        283.0
+      ],
+      "min": [
+        244.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5123,
+      "count": 72,
+      "type": "SCALAR",
+      "max": [
+        309.0
+      ],
+      "min": [
+        284.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "roadCornerSmall.bin",
+      "byteLength": 15672
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 3720
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3720,
+      "byteLength": 3720
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7440,
+      "byteLength": 4960
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 12400,
+      "byteLength": 2480
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 14880,
+      "byteLength": 432
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 15312,
+      "byteLength": 216
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 15528,
+      "byteLength": 144
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.945098042,
+          0.9490196,
+          0.9647059,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grey"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.3019608,
+          0.56078434,
+          0.431372553,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grass"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.266666681,
+          0.266666681,
+          0.266666681,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "road"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 6,
+          "material": 2
+        }
+      ],
+      "name": "roadCornerSmall"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        9.413104,
+        0.0,
+        -0.622422159
+      ],
+      "name": "roadCornerSmall"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "roadCornerSmall"
+    }
+  ]
+}

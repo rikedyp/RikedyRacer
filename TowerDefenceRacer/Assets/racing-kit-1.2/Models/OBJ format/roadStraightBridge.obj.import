@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadStraightBridge.obj-97411eb2f7d43f032b599c37cc27a5e8.mesh"
+
+[deps]
+
+files=[ "res://.import/roadStraightBridge.obj-97411eb2f7d43f032b599c37cc27a5e8.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/roadStraightBridge.obj"
+source_md5="c7d41fe134674cc11ebe16df3513d884"
+
+dest_files=[ "res://.import/roadStraightBridge.obj-97411eb2f7d43f032b599c37cc27a5e8.mesh", "res://.import/roadStraightBridge.obj-97411eb2f7d43f032b599c37cc27a5e8.mesh" ]
+dest_md5="94dd39057f7a179defbff0e16acfaad7"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/grandStandCovered.obj-e6f963f123691ef0c57751424cadf9d0.mesh"
+
+[deps]
+
+files=[ "res://.import/grandStandCovered.obj-e6f963f123691ef0c57751424cadf9d0.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/grandStandCovered.obj"
+source_md5="8ec3ff6fd414b7985131bf8ec6fa4230"
+
+dest_files=[ "res://.import/grandStandCovered.obj-e6f963f123691ef0c57751424cadf9d0.mesh", "res://.import/grandStandCovered.obj-e6f963f123691ef0c57751424cadf9d0.mesh" ]
+dest_md5="bbf69850fd474d724ce3e52b33f58916"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

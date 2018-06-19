@@ -1,0 +1,124 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Ninja.gd" type="Script" id=1]
+[ext_resource path="res://bg/Ninja.tres" type="SpriteFrames" id=2]
+
+[sub_resource type="InputEventKey" id=1]
+
+device = 0
+alt = false
+shift = false
+control = false
+meta = false
+command = false
+pressed = false
+scancode = 0
+unicode = 0
+echo = false
+
+[sub_resource type="ShortCut" id=2]
+
+shortcut = SubResource( 1 )
+
+[sub_resource type="GDScript" id=3]
+
+script/source = "extends Button
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
+	pass
+
+#func _process(delta):
+
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+#	pass
+
+
+func _on_Button_button_up():
+	get_tree().change_scene(\"res://bg/Tester.tscn\")
+	#pass # replace with function body
+"
+
+[node name="Player" type="Area2D"]
+
+position = Vector2( 460.463, 173.761 )
+scale = Vector2( 1.47372, 1.47372 )
+input_pickable = true
+gravity_point = true
+gravity_distance_scale = 0.01
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+SPEED = 400
+active = true
+
+[node name="Node2D" type="Node2D" parent="." index="0"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+frames = ExtResource( 2 )
+animation = "idle"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
+
+build_mode = 0
+polygon = PoolVector2Array( -14.3245, -15.3603, -28.9197, -6.73588, -38.871, 5.86911, -29.5832, 25.1083, -17.6416, 39.7035, 2.26102, 28.4254, 1.5976, 6.53252, -0.39267, -13.3701 )
+
+[node name="Panel" type="Panel" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 254.0
+margin_top = -17.0
+margin_right = 294.0
+margin_bottom = 23.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Theme", "custom_styles" ]
+
+[node name="Button" type="Button" parent="Panel" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 15.0
+margin_top = 10.0
+margin_right = 27.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = SubResource( 2 )
+group = null
+flat = false
+align = 1
+script = SubResource( 3 )
+
+[connection signal="button_up" from="Panel/Button" to="Panel/Button" method="_on_Button_button_up"]
+
+

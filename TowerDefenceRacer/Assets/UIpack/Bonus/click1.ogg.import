@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/click1.ogg-21c03de23d77582ca1fe67e383f8b5dc.oggstr"
+
+[deps]
+
+source_file="res://Assets/UIpack/Bonus/click1.ogg"
+source_md5="56fdc5328bbe4d1d03b30d493f75b798"
+
+dest_files=[ "res://.import/click1.ogg-21c03de23d77582ca1fe67e383f8b5dc.oggstr" ]
+dest_md5="1f732dbaff4c61162170d7ac23e00ae9"
+
+[params]
+
+loop=true
+loop_offset=0

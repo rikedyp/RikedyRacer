@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadCornerLargerBorderInner.obj-bf003a2f8196ec43d85dd6b34f144f60.mesh"
+
+[deps]
+
+files=[ "res://.import/roadCornerLargerBorderInner.obj-bf003a2f8196ec43d85dd6b34f144f60.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/roadCornerLargerBorderInner.obj"
+source_md5="e58e7305680e58aae8a134d2e5fd0b5c"
+
+dest_files=[ "res://.import/roadCornerLargerBorderInner.obj-bf003a2f8196ec43d85dd6b34f144f60.mesh", "res://.import/roadCornerLargerBorderInner.obj-bf003a2f8196ec43d85dd6b34f144f60.mesh" ]
+dest_md5="803e3c0842401554a900ab38ebc56b19"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

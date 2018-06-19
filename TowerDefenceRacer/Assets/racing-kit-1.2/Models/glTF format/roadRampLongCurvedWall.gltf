@@ -1,0 +1,244 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 718,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        0.51999998092651367,
+        2.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 718,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        0.99979168176651,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -0.452478289604187
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 718,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 718,
+      "type": "VEC2",
+      "max": [
+        78.740158081054688,
+        1.0
+      ],
+      "min": [
+        -78.740158081054688,
+        -78.14166259765625
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 453,
+      "type": "SCALAR",
+      "max": [
+        248.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5123,
+      "count": 831,
+      "type": "SCALAR",
+      "max": [
+        625.0
+      ],
+      "min": [
+        249.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5123,
+      "count": 138,
+      "type": "SCALAR",
+      "max": [
+        717.0
+      ],
+      "min": [
+        626.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "roadRampLongCurvedWall.bin",
+      "byteLength": 36855
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 8616
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8616,
+      "byteLength": 8616
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 17232,
+      "byteLength": 11488
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 28720,
+      "byteLength": 5744
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 34464,
+      "byteLength": 453
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 34917,
+      "byteLength": 1662
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 36579,
+      "byteLength": 276
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          0.9490196,
+          0.870588243,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "wall"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.945098042,
+          0.9490196,
+          0.9647059,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grey"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.266666681,
+          0.266666681,
+          0.266666681,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "road"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 6,
+          "material": 2
+        }
+      ],
+      "name": "roadRampLongCurvedWall"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        -1.98359036,
+        0.0,
+        -0.9624222
+      ],
+      "name": "roadRampLongCurvedWall"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "roadRampLongCurvedWall"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadStartPositions.obj-7b76b5026d2cf6beba486d1a0c430dd2.mesh"
+
+[deps]
+
+files=[ "res://.import/roadStartPositions.obj-7b76b5026d2cf6beba486d1a0c430dd2.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/roadStartPositions.obj"
+source_md5="429a44dc6e4c680f21d6251e85131f62"
+
+dest_files=[ "res://.import/roadStartPositions.obj-7b76b5026d2cf6beba486d1a0c430dd2.mesh", "res://.import/roadStartPositions.obj-7b76b5026d2cf6beba486d1a0c430dd2.mesh" ]
+dest_md5="0d38fca49ed44152a26045a61b5dc533"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

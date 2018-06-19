@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/flagRed.obj-3973aa303254391d152ff08a10348fe4.mesh"
+
+[deps]
+
+files=[ "res://.import/flagRed.obj-3973aa303254391d152ff08a10348fe4.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/flagRed.obj"
+source_md5="b47cf1887901700d3199a2f4d3ca1d5a"
+
+dest_files=[ "res://.import/flagRed.obj-3973aa303254391d152ff08a10348fe4.mesh", "res://.import/flagRed.obj-3973aa303254391d152ff08a10348fe4.mesh" ]
+dest_md5="372c453e29bc150d239ac97099b6c9ff"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

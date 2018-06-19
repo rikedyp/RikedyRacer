@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/treeSmall.obj-b4abf3a04be9cfb2dafd3a23b35daa65.mesh"
+
+[deps]
+
+files=[ "res://.import/treeSmall.obj-b4abf3a04be9cfb2dafd3a23b35daa65.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/treeSmall.obj"
+source_md5="9789849720b690cf72b6d68d07e7e8fd"
+
+dest_files=[ "res://.import/treeSmall.obj-b4abf3a04be9cfb2dafd3a23b35daa65.mesh", "res://.import/treeSmall.obj-b4abf3a04be9cfb2dafd3a23b35daa65.mesh" ]
+dest_md5="bb746fb0bf90a977c3fd485f4e1b06bc"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

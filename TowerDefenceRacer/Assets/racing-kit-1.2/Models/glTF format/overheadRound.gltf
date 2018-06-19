@@ -1,0 +1,205 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 177,
+      "type": "VEC3",
+      "max": [
+        0.43344756960868835,
+        0.933447539806366,
+        0.32999998331069946
+      ],
+      "min": [
+        -1.4334475994110107,
+        -2.4761062684178746E-16,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 177,
+      "type": "VEC3",
+      "max": [
+        0.99144488573074341,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.99144488573074341,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 177,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 177,
+      "type": "VEC2",
+      "max": [
+        56.434944152832031,
+        25.313455581665039
+      ],
+      "min": [
+        -56.434944152832031,
+        -35.749904632568359
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 360,
+      "type": "SCALAR",
+      "max": [
+        176.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5121,
+      "count": 36,
+      "type": "SCALAR",
+      "max": [
+        107.0
+      ],
+      "min": [
+        75.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "overheadRound.bin",
+      "byteLength": 8892
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 2124
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2124,
+      "byteLength": 2124
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4248,
+      "byteLength": 2832
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7080,
+      "byteLength": 1416
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8496,
+      "byteLength": 360
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8856,
+      "byteLength": 36
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.266666681,
+          0.266666681,
+          0.266666681,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "road"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.945098042,
+          0.9490196,
+          0.9647059,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grey"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        }
+      ],
+      "name": "overheadRound"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        1.55137825,
+        2.47610627E-16,
+        1.27338111
+      ],
+      "name": "overheadRound"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "overheadRound"
+    }
+  ]
+}

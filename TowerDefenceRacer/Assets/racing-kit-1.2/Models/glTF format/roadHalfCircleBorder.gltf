@@ -1,0 +1,199 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 130,
+      "type": "VEC3",
+      "max": [
+        0.20999999344348907,
+        0.019999999552965164,
+        1.7100000381469727
+      ],
+      "min": [
+        -3.2100000381469727,
+        0.0,
+        -3.60955721285779E-15
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 130,
+      "type": "VEC3",
+      "max": [
+        0.99144488573074341,
+        1.0,
+        0.99144488573074341
+      ],
+      "min": [
+        -0.99144488573074341,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 130,
+      "type": "VEC4",
+      "max": [
+        0.99144488573074341,
+        0.0,
+        0.99144488573074341,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -0.99144488573074341,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 130,
+      "type": "VEC2",
+      "max": [
+        126.37795257568359,
+        1.0
+      ],
+      "min": [
+        -67.337287902832031,
+        -66.322837829589844
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 114,
+      "type": "SCALAR",
+      "max": [
+        75.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5121,
+      "count": 114,
+      "type": "SCALAR",
+      "max": [
+        129.0
+      ],
+      "min": [
+        12.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "roadHalfCircleBorder.bin",
+      "byteLength": 6468
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1560
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1560,
+      "byteLength": 1560
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3120,
+      "byteLength": 2080
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5200,
+      "byteLength": 1040
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6240,
+      "byteLength": 114
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6354,
+      "byteLength": 114
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.9098039,
+          0.333333343,
+          0.3254902,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "red"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0
+      },
+      "name": "white"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        }
+      ],
+      "name": "roadHalfCircleBorder"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        3.83640981,
+        2.38584472E-35,
+        -0.9624222
+      ],
+      "name": "roadHalfCircleBorder"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "roadHalfCircleBorder"
+    }
+  ]
+}

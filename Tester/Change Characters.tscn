@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Change Characters.gd" type="Script" id=1]
+[ext_resource path="res://hud/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Pirate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Ranger.tscn" type="PackedScene" id=5]
+[ext_resource path="res://lib/Ranger.gd" type="Script" id=6]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+position = Vector2( 41.7545, -54.6634 )
+scale = Vector2( 1, 1.03805 )
+script = ExtResource( 1 )
+
+[node name="GUIlayer" type="CanvasLayer" parent="." index="0"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="GUI" parent="GUIlayer" index="0" instance=ExtResource( 2 )]
+
+[node name="Pirate" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 334.493, 151.676 )
+scale = Vector2( 1, 0.963345 )
+z_index = 2
+_sections_unfolded = [ "Collision", "Pickable", "Z Index" ]
+SPEED = 400
+active = false
+
+[node name="Player" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 664.31, 326.522 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "Z Index" ]
+SPEED = 400
+
+[node name="Ranger" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 146.563, 244.684 )
+scale = Vector2( 1, 0.963345 )
+z_index = 2
+script = ExtResource( 6 )
+_sections_unfolded = [ "Z Index" ]
+SPEED = 400
+
+[connection signal="area_shape_entered" from="Pirate" to="." method="_on_Pirate_area_shape_entered"]
+
+[connection signal="area_shape_exited" from="Pirate" to="." method="_on_Pirate_area_shape_exited"]
+
+[connection signal="area_shape_entered" from="Ranger" to="." method="_on_Ranger_area_shape_entered"]
+
+

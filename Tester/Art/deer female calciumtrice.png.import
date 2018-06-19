@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/deer female calciumtrice.png-5753e9403011e83dfb38413cb3bc7892.stex"
+
+[deps]
+
+source_file="res://Art/deer female calciumtrice.png"
+source_md5="85d53e66a13d3007a4a0c6c2e71843a9"
+
+dest_files=[ "res://.import/deer female calciumtrice.png-5753e9403011e83dfb38413cb3bc7892.stex" ]
+dest_md5="3b97398f3fb0c54d932ab96afb7d7d38"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

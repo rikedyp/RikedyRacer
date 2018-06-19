@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/flagCheckers.obj-427aa3900308e920d939ed2c932b7c71.mesh"
+
+[deps]
+
+files=[ "res://.import/flagCheckers.obj-427aa3900308e920d939ed2c932b7c71.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/flagCheckers.obj"
+source_md5="3c73bcad78a030c0d074871356b29096"
+
+dest_files=[ "res://.import/flagCheckers.obj-427aa3900308e920d939ed2c932b7c71.mesh", "res://.import/flagCheckers.obj-427aa3900308e920d939ed2c932b7c71.mesh" ]
+dest_md5="f5ea23b371c94bbf7818f77c9cda36df"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

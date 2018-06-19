@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/rogue spritesheet calciumtrice.png-e71840450535a8114fd36c77a26b7e90.stex"
+
+[deps]
+
+source_file="res://Art/rogue spritesheet calciumtrice.png"
+source_md5="dc92b4ec8e49b8eb25151eb6ed6b97ce"
+
+dest_files=[ "res://.import/rogue spritesheet calciumtrice.png-e71840450535a8114fd36c77a26b7e90.stex" ]
+dest_md5="0ea434d9a33f1760bc7afda8d8b90be3"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

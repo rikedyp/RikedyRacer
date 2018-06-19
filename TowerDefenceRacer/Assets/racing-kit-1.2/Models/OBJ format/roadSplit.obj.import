@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadSplit.obj-d3ec67d50babdce27d19d1cb014a32db.mesh"
+
+[deps]
+
+files=[ "res://.import/roadSplit.obj-d3ec67d50babdce27d19d1cb014a32db.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/roadSplit.obj"
+source_md5="51c44319869df14e0451b78c534259c9"
+
+dest_files=[ "res://.import/roadSplit.obj-d3ec67d50babdce27d19d1cb014a32db.mesh", "res://.import/roadSplit.obj-d3ec67d50babdce27d19d1cb014a32db.mesh" ]
+dest_md5="813dda3ba3f01b23473ab3171be4bdb9"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

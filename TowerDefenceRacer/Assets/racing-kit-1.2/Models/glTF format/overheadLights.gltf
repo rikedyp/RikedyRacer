@@ -1,0 +1,244 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 738,
+      "type": "VEC3",
+      "max": [
+        0.12999999523162842,
+        0.69386398792266846,
+        8.662937141452106E-15
+      ],
+      "min": [
+        -1.1299999952316284,
+        0.0,
+        -0.18999999761581421
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 738,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 738,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 738,
+      "type": "VEC2",
+      "max": [
+        44.488189697265625,
+        39.234699249267578
+      ],
+      "min": [
+        -44.488189697265625,
+        -33.899391174316406
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 456,
+      "type": "SCALAR",
+      "max": [
+        229.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5123,
+      "count": 1224,
+      "type": "SCALAR",
+      "max": [
+        737.0
+      ],
+      "min": [
+        230.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5123,
+      "count": 144,
+      "type": "SCALAR",
+      "max": [
+        491.0
+      ],
+      "min": [
+        248.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "overheadLights.bin",
+      "byteLength": 38616
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 8856
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8856,
+      "byteLength": 8856
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 17712,
+      "byteLength": 11808
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 29520,
+      "byteLength": 5904
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 35424,
+      "byteLength": 456
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 35880,
+      "byteLength": 2448
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 38328,
+      "byteLength": 288
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.945098042,
+          0.9490196,
+          0.9647059,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grey"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.266666681,
+          0.266666681,
+          0.266666681,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "road"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.9098039,
+          0.333333343,
+          0.3254902,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "red"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 6,
+          "material": 2
+        }
+      ],
+      "name": "overheadLights"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        -7.08359,
+        4.51194665E-17,
+        0.04757787
+      ],
+      "name": "overheadLights"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "overheadLights"
+    }
+  ]
+}

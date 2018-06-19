@@ -1,0 +1,356 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 368,
+      "type": "VEC3",
+      "max": [
+        0.035399999469518661,
+        0.64565521478652954,
+        0.017599999904632568
+      ],
+      "min": [
+        -0.035399999469518661,
+        0.0,
+        -0.0910666212439537
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 368,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 368,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 368,
+      "type": "VEC2",
+      "max": [
+        3.5853002071380615,
+        3.8285207748413086
+      ],
+      "min": [
+        -3.5853002071380615,
+        -24.419496536254883
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 102,
+      "type": "SCALAR",
+      "max": [
+        59.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5121,
+      "count": 102,
+      "type": "SCALAR",
+      "max": [
+        119.0
+      ],
+      "min": [
+        60.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5123,
+      "count": 546,
+      "type": "SCALAR",
+      "max": [
+        367.0
+      ],
+      "min": [
+        120.0
+      ]
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5121,
+      "count": 18,
+      "type": "SCALAR",
+      "max": [
+        244.0
+      ],
+      "min": [
+        227.0
+      ]
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5121,
+      "count": 18,
+      "type": "SCALAR",
+      "max": [
+        247.0
+      ],
+      "min": [
+        232.0
+      ]
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5121,
+      "count": 18,
+      "type": "SCALAR",
+      "max": [
+        242.0
+      ],
+      "min": [
+        221.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "lightColored.bin",
+      "byteLength": 19014
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 4416
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4416,
+      "byteLength": 4416
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8832,
+      "byteLength": 5888
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 14720,
+      "byteLength": 2944
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 17664,
+      "byteLength": 102
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 17766,
+      "byteLength": 102
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 17868,
+      "byteLength": 1092
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 18960,
+      "byteLength": 18
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 18978,
+      "byteLength": 18
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 18996,
+      "byteLength": 18
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0
+      },
+      "name": "_defaultMat"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.945098042,
+          0.9490196,
+          0.9647059,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grey"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.266666681,
+          0.266666681,
+          0.266666681,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "road"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.9607843,
+          0.7254902,
+          0.258823544,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.5
+      },
+      "name": "pylon"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.9098039,
+          0.333333343,
+          0.3254902,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "red"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.3019608,
+          0.56078434,
+          0.431372553,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grass"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 6,
+          "material": 2
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 7,
+          "material": 3
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 8,
+          "material": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 9,
+          "material": 5
+        }
+      ],
+      "name": "lightColored"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        3.54644585,
+        0.0,
+        -1.45161951
+      ],
+      "name": "lightColored"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "lightColored"
+    }
+  ]
+}

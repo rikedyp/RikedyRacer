@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadRampLongCurved.obj-d4bd50c6101a139c1711e0394eb258db.mesh"
+
+[deps]
+
+files=[ "res://.import/roadRampLongCurved.obj-d4bd50c6101a139c1711e0394eb258db.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/roadRampLongCurved.obj"
+source_md5="772809a01ff6235a058ee39328da232f"
+
+dest_files=[ "res://.import/roadRampLongCurved.obj-d4bd50c6101a139c1711e0394eb258db.mesh", "res://.import/roadRampLongCurved.obj-d4bd50c6101a139c1711e0394eb258db.mesh" ]
+dest_md5="e77559f6ad707872748adc70deec721f"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

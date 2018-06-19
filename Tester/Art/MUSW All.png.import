@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/MUSW All.png-d25e0f2e0eed5980894b7923b5b2eef1.stex"
+
+[deps]
+
+source_file="res://Art/MUSW All.png"
+source_md5="c8dda34a90069ceeb1c2a0cde1a4a627"
+
+dest_files=[ "res://.import/MUSW All.png-d25e0f2e0eed5980894b7923b5b2eef1.stex" ]
+dest_md5="d4c1d94b880486e7a0921fd88b7f86cb"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

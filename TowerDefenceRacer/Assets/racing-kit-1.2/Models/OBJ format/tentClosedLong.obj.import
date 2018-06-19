@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/tentClosedLong.obj-3794640254c7daf6501c22db7a842b18.mesh"
+
+[deps]
+
+files=[ "res://.import/tentClosedLong.obj-3794640254c7daf6501c22db7a842b18.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/tentClosedLong.obj"
+source_md5="a0f3361f991e419594b50d762698c022"
+
+dest_files=[ "res://.import/tentClosedLong.obj-3794640254c7daf6501c22db7a842b18.mesh", "res://.import/tentClosedLong.obj-3794640254c7daf6501c22db7a842b18.mesh" ]
+dest_md5="bbb864eed0f3a572b26aa35326c912fa"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

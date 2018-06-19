@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ramp.obj-9c2614b0ca30d95dff6dc094e7396815.mesh"
+
+[deps]
+
+files=[ "res://.import/ramp.obj-9c2614b0ca30d95dff6dc094e7396815.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/ramp.obj"
+source_md5="a40c071da6a13f64af81d58623b0bc5f"
+
+dest_files=[ "res://.import/ramp.obj-9c2614b0ca30d95dff6dc094e7396815.mesh", "res://.import/ramp.obj-9c2614b0ca30d95dff6dc094e7396815.mesh" ]
+dest_md5="c7de8b79b3266a56e1f1aeb0da9a3dcf"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

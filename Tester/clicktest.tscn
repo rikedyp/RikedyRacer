@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Area2D
+
+func _ready():
+    pass
+
+func _input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		if (event.is_pressed() and event.button_index == BUTTON_LEFT):
+			print('left click')"
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Area2D" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 188.624, 87.5429 )
+scale = Vector2( 3.50588, 2.81164 )
+shape = SubResource( 2 )
+
+

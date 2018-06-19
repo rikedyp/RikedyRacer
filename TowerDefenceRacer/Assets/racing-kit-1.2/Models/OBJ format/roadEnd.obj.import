@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadEnd.obj-6a8780f3974cbf91d3cb307c7a97642e.mesh"
+
+[deps]
+
+files=[ "res://.import/roadEnd.obj-6a8780f3974cbf91d3cb307c7a97642e.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/roadEnd.obj"
+source_md5="772bc8cbb9cf4c0956120499a683f7ad"
+
+dest_files=[ "res://.import/roadEnd.obj-6a8780f3974cbf91d3cb307c7a97642e.mesh", "res://.import/roadEnd.obj-6a8780f3974cbf91d3cb307c7a97642e.mesh" ]
+dest_md5="4b0671e74cc3d4a87a4b3504650b4da2"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

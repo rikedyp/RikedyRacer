@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Ninja.gd" type="Script" id=1]
+[ext_resource path="res://bg/Ninja.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://interrogation-point.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[node name="Player" type="Area2D"]
+
+position = Vector2( 221.409, 173.457 )
+scale = Vector2( 1, 1.05066 )
+z_index = 1
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "Z Index" ]
+SPEED = null
+active = null
+nearby = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( -133.454, -60.8687 )
+scale = Vector2( 2.49923, 1.30396 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( -113.81, -71.5442 )
+z_index = 1
+frames = ExtResource( 2 )
+animation = "idle"
+playing = true
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="Camera" type="Camera2D" parent="." index="2"]
+
+position = Vector2( -129.058, -56.6931 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Smoothing" ]
+
+[node name="interrogation-point" type="Sprite" parent="." index="3"]
+
+visible = false
+position = Vector2( -126.801, -115.318 )
+texture = ExtResource( 3 )
+
+

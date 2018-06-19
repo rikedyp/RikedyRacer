@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pylon.obj-14a4ce8b987888d79db532c79d65f8e1.mesh"
+
+[deps]
+
+files=[ "res://.import/pylon.obj-14a4ce8b987888d79db532c79d65f8e1.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/pylon.obj"
+source_md5="4898f1b0a8d3da155a7eedd87cdb5887"
+
+dest_files=[ "res://.import/pylon.obj-14a4ce8b987888d79db532c79d65f8e1.mesh", "res://.import/pylon.obj-14a4ce8b987888d79db532c79d65f8e1.mesh" ]
+dest_md5="8db31d044873c5a36ca510a00e9108b7"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

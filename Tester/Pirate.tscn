@@ -1,0 +1,132 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://lib/Pirate.gd" type="Script" id=1]
+[ext_resource path="res://Art/Pirate/5x/idle_0.png" type="Texture" id=2]
+[ext_resource path="res://Art/Pirate/5x/idle_1.png" type="Texture" id=3]
+[ext_resource path="res://Art/Pirate/5x/idle_2.png" type="Texture" id=4]
+[ext_resource path="res://Art/Pirate/5x/idle_3.png" type="Texture" id=5]
+[ext_resource path="res://Art/Pirate/5x/attack_0.png" type="Texture" id=6]
+[ext_resource path="res://Art/Pirate/5x/attack_1.png" type="Texture" id=7]
+[ext_resource path="res://Art/Pirate/5x/attack_2.png" type="Texture" id=8]
+[ext_resource path="res://Art/Pirate/5x/attack_3.png" type="Texture" id=9]
+[ext_resource path="res://Art/Pirate/5x/attack_4.png" type="Texture" id=10]
+[ext_resource path="res://Art/Pirate/5x/run_0.png" type="Texture" id=11]
+[ext_resource path="res://Art/Pirate/5x/run_1.png" type="Texture" id=12]
+[ext_resource path="res://Art/Pirate/5x/run_2.png" type="Texture" id=13]
+[ext_resource path="res://Art/Pirate/5x/run_3.png" type="Texture" id=14]
+[ext_resource path="res://Art/Pirate/5x/run_4.png" type="Texture" id=15]
+[ext_resource path="res://Art/Pirate/5x/run_5.png" type="Texture" id=16]
+[ext_resource path="res://Art/Pirate/5x/jump_0.png" type="Texture" id=17]
+[ext_resource path="res://Art/Pirate/5x/jump_1.png" type="Texture" id=18]
+[ext_resource path="res://Art/Pirate/5x/jump_2.png" type="Texture" id=19]
+[ext_resource path="res://Art/Pirate/5x/jump_3.png" type="Texture" id=20]
+[ext_resource path="res://Art/Pirate/5x/jump_4.png" type="Texture" id=21]
+[ext_resource path="res://Art/Pirate/5x/jump_5.png" type="Texture" id=22]
+[ext_resource path="res://arrow.png" type="Texture" id=23]
+[ext_resource path="res://interrogation-point.png" type="Texture" id=24]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 17.1756
+height = 1.37236
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "attack1",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "attack2",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "run",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "jump",
+"speed": 6.0
+} ]
+
+[node name="Pirate" type="Area2D"]
+
+position = Vector2( -16.245, 0.902504 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Z Index" ]
+SPEED = null
+active = null
+nearby = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( -22.4591, 8.79887 )
+scale = Vector2( 3.01539, 3.3157 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( -11.7325, 3.61002 )
+frames = SubResource( 3 )
+animation = "run"
+playing = true
+
+[node name="Camera" type="Camera2D" parent="." index="2"]
+
+position = Vector2( -16.2451, -9.92752 )
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Offset", "Smoothing" ]
+
+[node name="arrow" type="Sprite" parent="." index="3"]
+
+visible = false
+position = Vector2( -20.3054, -73.5538 )
+texture = ExtResource( 23 )
+
+[node name="interrogation-point" type="Sprite" parent="." index="4"]
+
+visible = false
+position = Vector2( -21.2079, -70.8463 )
+texture = ExtResource( 24 )
+
+

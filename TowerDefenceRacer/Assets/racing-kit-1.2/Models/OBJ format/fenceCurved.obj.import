@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/fenceCurved.obj-b483a3763f7cb410450e8862906bf85d.mesh"
+
+[deps]
+
+files=[ "res://.import/fenceCurved.obj-b483a3763f7cb410450e8862906bf85d.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/fenceCurved.obj"
+source_md5="93bb992050764001175272f2e6f10029"
+
+dest_files=[ "res://.import/fenceCurved.obj-b483a3763f7cb410450e8862906bf85d.mesh", "res://.import/fenceCurved.obj-b483a3763f7cb410450e8862906bf85d.mesh" ]
+dest_md5="240d26cb0e478549637277db51718ddc"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

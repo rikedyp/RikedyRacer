@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadStraightSkew.obj-9116a8f16ca097b462779753ec988f04.mesh"
+
+[deps]
+
+files=[ "res://.import/roadStraightSkew.obj-9116a8f16ca097b462779753ec988f04.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/roadStraightSkew.obj"
+source_md5="d73523295598700762eb455787377c63"
+
+dest_files=[ "res://.import/roadStraightSkew.obj-9116a8f16ca097b462779753ec988f04.mesh", "res://.import/roadStraightSkew.obj-9116a8f16ca097b462779753ec988f04.mesh" ]
+dest_md5="6cb8906ec81044a9ebbfb9c181c21970"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

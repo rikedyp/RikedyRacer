@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pitsOffice.obj-97bd2377d17df4894f412649b3c526ee.mesh"
+
+[deps]
+
+files=[ "res://.import/pitsOffice.obj-97bd2377d17df4894f412649b3c526ee.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/pitsOffice.obj"
+source_md5="bcfee39256965f213c1ada7447349946"
+
+dest_files=[ "res://.import/pitsOffice.obj-97bd2377d17df4894f412649b3c526ee.mesh", "res://.import/pitsOffice.obj-97bd2377d17df4894f412649b3c526ee.mesh" ]
+dest_md5="4b4281afb318f3dc5e943177f04404f9"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

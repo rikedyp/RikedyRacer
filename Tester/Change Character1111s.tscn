@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Pirate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ranger.tscn" type="PackedScene" id=3]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Node2D
+
+# class member variables go here, for example:
+# var a = 2
+# var b = \"textvar\"
+var toggle = 0
+var charcounter = 1
+var textcounter = 0
+#onready var tie = get_node(\"GUIlayer/GUI/dialogue-bubble/TextInterfaceEngine\")
+onready var char_list = [get_node(\"Charlayer/Ranger\"),get_node(\"Charlayer/Player\"),get_node(\"Charlayer/Pirate\")]
+onready var cam_list = [get_node(\"Charlayer/Ranger/Camera\"),get_node(\"Charlayer/Player/Camera\"),get_node(\"Charlayer/Pirate/Camera\")]
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
+	#tie.set_color(Color(0,0,0))
+	pass
+
+func _unhandled_input(event):
+	if Input.is_action_just_pressed(\"ui_click\"):
+		print('click')			
+		
+	# Input for GUI (maybe nonplayer objects too)
+	# if input isn't consumed here it passes to _unhandled_input
+	if Input.is_action_just_pressed(\"ui_page_down\"):
+		var charprev = charcounter - 1
+		if charprev < 0:
+			charprev = len(char_list) - 1
+		var charnext = charcounter + 1
+		if charnext > len(char_list) - 1:
+			charnext = 0
+		print(char_list[charcounter].name + \" active\")
+		print(char_list[charnext].name + \" inactive\")
+		print(char_list[charprev].name + \" inactive\")
+		char_list[charprev].active = false
+		char_list[charnext].active = false
+		char_list[charcounter].active = true
+		#cam_list[charcounter].make_current()
+		#char_list[charcounter].camera.make_current()
+		charcounter += 1
+		if charcounter > len(char_list)-1:
+			charcounter = 0
+#	if Input.is_action_just_pressed(\"ui_accept\"):
+#		if textcounter == 0:
+#			tie.buff_clear()
+#			tie.buff_text(\"I can't feel my legs...\", 0.05)
+#			textcounter += 1
+#		elif textcounter == 1:
+#			tie.buff_text(\"... well i'm certainly not in control of them...\", 0.05)
+#			textcounter = 0
+#		tie.set_state(tie.STATE_OUTPUT)
+		# escape key to quit:
+	if Input.is_action_just_pressed(\"ui_pause\"):
+		get_tree().quit()
+
+func _process(delta):
+	pass
+
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+#	pass
+
+
+
+"
+
+[node name="Node2D" type="Node2D"]
+
+script = SubResource( 1 )
+
+[node name="Pirate" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 345.915, -204.163 )
+
+[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 739.765, -135.667 )
+
+[node name="Ranger" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 524.004, 52.6965 )
+
+

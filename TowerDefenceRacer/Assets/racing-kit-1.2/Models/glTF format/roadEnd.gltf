@@ -1,0 +1,244 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 187,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        0.019999999552965164,
+        1.5
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 187,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 187,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 187,
+      "type": "VEC2",
+      "max": [
+        45.679939270019531,
+        1.0
+      ],
+      "min": [
+        -46.0561637878418,
+        -58.055118560791016
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 252,
+      "type": "SCALAR",
+      "max": [
+        141.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5121,
+      "count": 84,
+      "type": "SCALAR",
+      "max": [
+        171.0
+      ],
+      "min": [
+        142.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5121,
+      "count": 39,
+      "type": "SCALAR",
+      "max": [
+        186.0
+      ],
+      "min": [
+        172.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "roadEnd.bin",
+      "byteLength": 9351
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 2244
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2244,
+      "byteLength": 2244
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4488,
+      "byteLength": 2992
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7480,
+      "byteLength": 1496
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8976,
+      "byteLength": 252
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 9228,
+      "byteLength": 84
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 9312,
+      "byteLength": 39
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.945098042,
+          0.9490196,
+          0.9647059,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grey"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.3019608,
+          0.56078434,
+          0.431372553,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grass"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.266666681,
+          0.266666681,
+          0.266666681,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "road"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 6,
+          "material": 2
+        }
+      ],
+      "name": "roadEnd"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        0.0864096656,
+        -3.205931E-31,
+        -4.09701538
+      ],
+      "name": "roadEnd"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "roadEnd"
+    }
+  ]
+}

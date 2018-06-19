@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/net.png-588878c0847584462293ab8126ba1d0d.stex"
+
+[deps]
+
+source_file="res://Assets/racing-kit-1.2/Models/FBX format/Textures/net.png"
+source_md5="ead10ee362032d8dd312dea86b6fc5b4"
+
+dest_files=[ "res://.import/net.png-588878c0847584462293ab8126ba1d0d.stex" ]
+dest_md5="6ab25e0b57ccfa8ffb301155c9995c6b"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

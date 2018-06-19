@@ -1,0 +1,290 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 154,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        0.699999988079071,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -0.089999988675117493
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 154,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 154,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.54180163145065308,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.54180163145065308,
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 154,
+      "type": "VEC2",
+      "max": [
+        39.370079040527344,
+        4.543306827545166
+      ],
+      "min": [
+        -39.370079040527344,
+        -38.370079040527344
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 228,
+      "type": "SCALAR",
+      "max": [
+        113.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5121,
+      "count": 30,
+      "type": "SCALAR",
+      "max": [
+        143.0
+      ],
+      "min": [
+        114.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5121,
+      "count": 6,
+      "type": "SCALAR",
+      "max": [
+        147.0
+      ],
+      "min": [
+        144.0
+      ]
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5121,
+      "count": 24,
+      "type": "SCALAR",
+      "max": [
+        153.0
+      ],
+      "min": [
+        32.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "pitsGarage.bin",
+      "byteLength": 7680
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1848
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1848,
+      "byteLength": 1848
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3696,
+      "byteLength": 2464
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6160,
+      "byteLength": 1232
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7392,
+      "byteLength": 228
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7620,
+      "byteLength": 30
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7650,
+      "byteLength": 6
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7656,
+      "byteLength": 24
+    }
+  ],
+  "images": [
+    {
+      "uri": "tankcoBanner.png",
+      "name": "tankcoBanner"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.945098042,
+          0.9490196,
+          0.9647059,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grey"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0
+      },
+      "name": "_defaultMat"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0
+      },
+      "name": "tankco"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.9098039,
+          0.333333343,
+          0.3254902,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "red"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 6,
+          "material": 2
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 7,
+          "material": 3
+        }
+      ],
+      "name": "pitsGarage"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        9.63348,
+        0.0,
+        3.138676
+      ],
+      "name": "pitsGarage"
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "pitsGarage"
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "tankcoBanner"
+    }
+  ]
+}

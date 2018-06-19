@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/overheadLights.obj-a41801bff72c2709eeeec84a297b1e0a.mesh"
+
+[deps]
+
+files=[ "res://.import/overheadLights.obj-a41801bff72c2709eeeec84a297b1e0a.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/overheadLights.obj"
+source_md5="9db3751cd9fea77c86a8149293db2831"
+
+dest_files=[ "res://.import/overheadLights.obj-a41801bff72c2709eeeec84a297b1e0a.mesh", "res://.import/overheadLights.obj-a41801bff72c2709eeeec84a297b1e0a.mesh" ]
+dest_md5="dbd591ed173cb34ca591e57e413cc540"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

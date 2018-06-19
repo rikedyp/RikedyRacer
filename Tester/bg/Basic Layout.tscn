@@ -1,0 +1,111 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://bg/tileset.png" type="Texture" id=1]
+
+[node name="Basic Layout" type="Node2D"]
+
+[node name="house1" type="Sprite" parent="." index="0"]
+
+position = Vector2( 227.849, 298.566 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="house2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 250, 300 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="house3" type="Sprite" parent="." index="2"]
+
+position = Vector2( 273.018, 301.434 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="house4" type="Sprite" parent="." index="3"]
+
+position = Vector2( 296.678, 303.585 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="house5" type="Sprite" parent="." index="4"]
+
+position = Vector2( 227.849, 317.207 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="house6" type="Sprite" parent="." index="5"]
+
+position = Vector2( 250.075, 317.924 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 16, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="house7" type="Sprite" parent="." index="6"]
+
+position = Vector2( 272.301, 319.358 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 16, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="house8" type="Sprite" parent="." index="7"]
+
+position = Vector2( 295.961, 322.943 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 16, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="house9" type="Sprite" parent="." index="8"]
+
+position = Vector2( 227.132, 335.849 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="house10" type="Sprite" parent="." index="9"]
+
+position = Vector2( 248.641, 337.282 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 32, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="house11" type="Sprite" parent="." index="10"]
+
+position = Vector2( 273.018, 335.132 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="house12" type="Sprite" parent="." index="11"]
+
+position = Vector2( 299.546, 340.867 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 32, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="n" type="Sprite" parent="." index="12"]
+
+position = Vector2( 335.395, 302.868 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+

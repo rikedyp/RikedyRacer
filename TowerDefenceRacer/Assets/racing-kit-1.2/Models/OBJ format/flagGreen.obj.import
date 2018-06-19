@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/flagGreen.obj-cf0f6bcd3f1ba052459adcd53cf632a3.mesh"
+
+[deps]
+
+files=[ "res://.import/flagGreen.obj-cf0f6bcd3f1ba052459adcd53cf632a3.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/flagGreen.obj"
+source_md5="54f01140d37402197c9eb6ccc3a5ea72"
+
+dest_files=[ "res://.import/flagGreen.obj-cf0f6bcd3f1ba052459adcd53cf632a3.mesh", "res://.import/flagGreen.obj-cf0f6bcd3f1ba052459adcd53cf632a3.mesh" ]
+dest_md5="3b20f689805dcfd44d79ba32d3a2af22"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

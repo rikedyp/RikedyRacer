@@ -1,0 +1,167 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 168,
+      "type": "VEC3",
+      "max": [
+        0.060000002384185791,
+        0.13199999928474426,
+        0.060000002384185791
+      ],
+      "min": [
+        -0.060000002384185791,
+        0.0,
+        -0.060000002384185791
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 168,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 168,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.032044701278209686,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.032044705003499985,
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 168,
+      "type": "VEC2",
+      "max": [
+        2.3622047901153564,
+        3.3622047901153564
+      ],
+      "min": [
+        -2.3622047901153564,
+        -3.8686561584472656
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 324,
+      "type": "SCALAR",
+      "max": [
+        167.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "pylon.bin",
+      "byteLength": 8388
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 2016
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2016,
+      "byteLength": 2016
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4032,
+      "byteLength": 2688
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6720,
+      "byteLength": 1344
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 8064,
+      "byteLength": 324
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.9607843,
+          0.7254902,
+          0.258823544,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.5
+      },
+      "name": "pylon"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        }
+      ],
+      "name": "pylon"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        2.707348,
+        1.60296546E-31,
+        -1.86576807
+      ],
+      "name": "pylon"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "pylon"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/barrierWhite.obj-031eac5703a29dbbdaed2a773aa65b98.mesh"
+
+[deps]
+
+files=[ "res://.import/barrierWhite.obj-031eac5703a29dbbdaed2a773aa65b98.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/barrierWhite.obj"
+source_md5="f02a12d628831e40db8fcd2030c4ef2e"
+
+dest_files=[ "res://.import/barrierWhite.obj-031eac5703a29dbbdaed2a773aa65b98.mesh", "res://.import/barrierWhite.obj-031eac5703a29dbbdaed2a773aa65b98.mesh" ]
+dest_md5="0a2934f838f61767aad4ee02fbd48ff0"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

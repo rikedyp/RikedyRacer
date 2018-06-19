@@ -1,0 +1,205 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 126,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        0.32999998331069946,
+        0.73000001907348633
+      ],
+      "min": [
+        -0.550000011920929,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 126,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 126,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 126,
+      "type": "VEC2",
+      "max": [
+        28.740158081054688,
+        1.0
+      ],
+      "min": [
+        -28.740158081054688,
+        -28.960117340087891
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 114,
+      "type": "SCALAR",
+      "max": [
+        45.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5121,
+      "count": 168,
+      "type": "SCALAR",
+      "max": [
+        125.0
+      ],
+      "min": [
+        10.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "ramp.bin",
+      "byteLength": 6330
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1512
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1512,
+      "byteLength": 1512
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3024,
+      "byteLength": 2016
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5040,
+      "byteLength": 1008
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6048,
+      "byteLength": 114
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6162,
+      "byteLength": 168
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.831372559,
+          0.654902,
+          0.423529416,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "bark"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.945098042,
+          0.9490196,
+          0.9647059,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grey"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        }
+      ],
+      "name": "ramp"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        8.516868,
+        0.0,
+        1.47217548
+      ],
+      "name": "ramp"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "ramp"
+    }
+  ]
+}

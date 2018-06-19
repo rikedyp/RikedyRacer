@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/overheadRound.obj-f97d0ee91f4d9829195423b5d6795c0d.mesh"
+
+[deps]
+
+files=[ "res://.import/overheadRound.obj-f97d0ee91f4d9829195423b5d6795c0d.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/overheadRound.obj"
+source_md5="6928ea7424990dc7de9aa13bcae162c9"
+
+dest_files=[ "res://.import/overheadRound.obj-f97d0ee91f4d9829195423b5d6795c0d.mesh", "res://.import/overheadRound.obj-f97d0ee91f4d9829195423b5d6795c0d.mesh" ]
+dest_md5="ab867be751c16f8eac5d433e30169aae"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

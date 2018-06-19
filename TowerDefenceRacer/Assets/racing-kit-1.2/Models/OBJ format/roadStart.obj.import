@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/roadStart.obj-7d9dad1538a98c98dd038ad8f6d5589a.mesh"
+
+[deps]
+
+files=[ "res://.import/roadStart.obj-7d9dad1538a98c98dd038ad8f6d5589a.mesh" ]
+
+source_file="res://Assets/racing-kit-1.2/Models/OBJ format/roadStart.obj"
+source_md5="7700821e50dbe1ac20af82a698ded408"
+
+dest_files=[ "res://.import/roadStart.obj-7d9dad1538a98c98dd038ad8f6d5589a.mesh", "res://.import/roadStart.obj-7d9dad1538a98c98dd038ad8f6d5589a.mesh" ]
+dest_md5="ed1acdc28bf5a4f7cda85b2edf25ce01"
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

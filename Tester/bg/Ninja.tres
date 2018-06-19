@@ -1,0 +1,68 @@
+[gd_resource type="SpriteFrames" load_steps=27 format=2]
+
+[ext_resource path="res://Art/Ninja/5x/idle_0.png" type="Texture" id=1]
+[ext_resource path="res://Art/Ninja/5x/idle_1.png" type="Texture" id=2]
+[ext_resource path="res://Art/Ninja/5x/idle_2.png" type="Texture" id=3]
+[ext_resource path="res://Art/Ninja/5x/idle_3.png" type="Texture" id=4]
+[ext_resource path="res://Art/Ninja/5x/attack_0.png" type="Texture" id=5]
+[ext_resource path="res://Art/Ninja/5x/attack_1.png" type="Texture" id=6]
+[ext_resource path="res://Art/Ninja/5x/attack_2.png" type="Texture" id=7]
+[ext_resource path="res://Art/bat/bat0.png" type="Texture" id=8]
+[ext_resource path="res://Art/bat/bat1.png" type="Texture" id=9]
+[ext_resource path="res://Art/bat/bat2.png" type="Texture" id=10]
+[ext_resource path="res://Art/Ninja/5x/run_0.png" type="Texture" id=11]
+[ext_resource path="res://Art/Ninja/5x/run_1.png" type="Texture" id=12]
+[ext_resource path="res://Art/Ninja/5x/run_2.png" type="Texture" id=13]
+[ext_resource path="res://Art/Ninja/5x/run_3.png" type="Texture" id=14]
+[ext_resource path="res://Art/Ninja/5x/run_4.png" type="Texture" id=15]
+[ext_resource path="res://Art/Ninja/5x/run_5.png" type="Texture" id=16]
+[ext_resource path="res://Art/Ninja/5x/jump_0.png" type="Texture" id=17]
+[ext_resource path="res://Art/Ninja/5x/jump_1.png" type="Texture" id=18]
+[ext_resource path="res://Art/Ninja/5x/jump_2.png" type="Texture" id=19]
+[ext_resource path="res://Art/Ninja/5x/jump_3.png" type="Texture" id=20]
+[ext_resource path="res://Art/Ninja/5x/swim_0.png" type="Texture" id=21]
+[ext_resource path="res://Art/Ninja/5x/swim_1.png" type="Texture" id=22]
+[ext_resource path="res://Art/Ninja/5x/swim_2.png" type="Texture" id=23]
+[ext_resource path="res://Art/Ninja/5x/swim_3.png" type="Texture" id=24]
+[ext_resource path="res://Art/Ninja/5x/swim_4.png" type="Texture" id=25]
+[ext_resource path="res://Art/Ninja/5x/swim_5.png" type="Texture" id=26]
+
+[resource]
+
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "attack1",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "attack2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "bat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "run",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "swim",
+"speed": 5.0
+} ]
+

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Mage spell casting sheet copy.png-6e5aea64f2988f400d5c5d1e605cd30c.stex"
+
+[deps]
+
+source_file="res://Art/Mage spell casting sheet copy.png"
+source_md5="8334581ac5b95b196da70af4bf8d0b84"
+
+dest_files=[ "res://.import/Mage spell casting sheet copy.png-6e5aea64f2988f400d5c5d1e605cd30c.stex" ]
+dest_md5="ae9b712feacc6e9e78eb22b83e99abfb"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

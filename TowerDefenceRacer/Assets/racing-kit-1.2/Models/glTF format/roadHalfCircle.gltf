@@ -1,0 +1,244 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 322,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        0.019999999552965164,
+        1.5
+      ],
+      "min": [
+        -3.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 322,
+      "type": "VEC3",
+      "max": [
+        0.99144488573074341,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.99144488573074341,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 322,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        0.99144488573074341,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -0.99144488573074341,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 322,
+      "type": "VEC2",
+      "max": [
+        118.11023712158203,
+        1.0
+      ],
+      "min": [
+        -65.838531494140625,
+        -58.055118560791016
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5121,
+      "count": 144,
+      "type": "SCALAR",
+      "max": [
+        51.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5123,
+      "count": 432,
+      "type": "SCALAR",
+      "max": [
+        295.0
+      ],
+      "min": [
+        52.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5123,
+      "count": 72,
+      "type": "SCALAR",
+      "max": [
+        321.0
+      ],
+      "min": [
+        296.0
+      ]
+    }
+  ],
+  "asset": {
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "roadHalfCircle.bin",
+      "byteLength": 16608
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 3864
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3864,
+      "byteLength": 3864
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 7728,
+      "byteLength": 5152
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 12880,
+      "byteLength": 2576
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 15456,
+      "byteLength": 144
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 15600,
+      "byteLength": 864
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 16464,
+      "byteLength": 144
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.3019608,
+          0.56078434,
+          0.431372553,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grass"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.945098042,
+          0.9490196,
+          0.9647059,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "grey"
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.266666681,
+          0.266666681,
+          0.266666681,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      },
+      "name": "road"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 5,
+          "material": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 6,
+          "material": 2
+        }
+      ],
+      "name": "roadHalfCircle"
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        3.83640981,
+        0.0,
+        -0.9624222
+      ],
+      "name": "roadHalfCircle"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "roadHalfCircle"
+    }
+  ]
+}
