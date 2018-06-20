@@ -14,11 +14,8 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-
 func _on_Button_button_down():
 	get_tree().change_scene("res://Scenes/lobby.tscn")
 
-
-
 func _on_Button2_button_down():
-	get_tree().change_scene("res://Scenes/.tscn")
+	get_tree().change_scene("res://Scenes/Main.tscn")

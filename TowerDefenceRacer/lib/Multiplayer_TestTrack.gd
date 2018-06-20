@@ -20,3 +20,6 @@ func _ready():
 		camera._set_current(true)
 
 	print("unique id: ",get_tree().get_network_unique_id())
+
+func _on_Button2_button_down():
+	get_tree().change_scene("res://Scenes/Main.tscn")
