@@ -21,7 +21,7 @@ __meta__ = {
 "_edit_group_": true
 }
 MASS = null
-ACCELERATION = 100
+ACCELERATION = 1000
 BRAKING = 1.05
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]

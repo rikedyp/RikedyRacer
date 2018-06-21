@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
+[node name="KinematicBody2D" type="KinematicBody2D"]
 
 position = Vector2( 31.9582, 82.7034 )
 scale = Vector2( 0.962397, 0.962397 )
@@ -20,7 +20,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-MASS = null
+TOPSPEED = null
 ACCELERATION = null
 BRAKING = null
 

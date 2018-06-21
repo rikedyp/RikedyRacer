@@ -3,6 +3,9 @@ extends Area2D
 var speed = 1000
 var velocity = Vector2()
 
+func _ready():
+	pass
+
 func start(pos, dir):
 	position = pos
 	rotation = dir
@@ -12,4 +15,6 @@ func _physics_process(delta):
 	position += velocity * delta
 
 func _on_Bullet_body_entered(body):
-	queue_free()
+	if body.get_class() != "TileMap":
+		print(body)
+		queue_free()

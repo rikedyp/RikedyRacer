@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/Turret.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Multiplayer_Car.tscn" type="PackedScene" id=4]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 script = ExtResource( 1 )
 __meta__ = {
@@ -40,19 +40,7 @@ position = Vector2( 817.808, 513.405 )
 collision_mask = 2
 _sections_unfolded = [ "Collision", "Transform", "collision" ]
 
-[node name="Turret2" parent="." index="2" instance=ExtResource( 3 )]
-
-position = Vector2( -658.055, 883.422 )
-collision_mask = 2
-_sections_unfolded = [ "Collision", "Transform", "collision" ]
-
-[node name="Turret3" parent="." index="3" instance=ExtResource( 3 )]
-
-position = Vector2( -1175.24, 475.562 )
-collision_mask = 2
-_sections_unfolded = [ "Collision", "Transform", "collision" ]
-
-[node name="Button2" type="Button" parent="." index="4"]
+[node name="Button2" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -77,7 +65,7 @@ text = "Bonus"
 flat = false
 align = 1
 
-[node name="player1" parent="." index="5" instance=ExtResource( 4 )]
+[node name="player1" parent="." index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 356, 310 )
 
@@ -106,9 +94,9 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 
-[node name="player2" parent="." index="6" instance=ExtResource( 4 )]
+[node name="player2" parent="." index="4" instance=ExtResource( 4 )]
 
-position = Vector2( 524, 310 )
+position = Vector2( 356, 310 )
 
 [node name="camera2" type="Camera2D" parent="player2" index="2"]
 

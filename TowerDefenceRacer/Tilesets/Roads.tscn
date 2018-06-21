@@ -33,7 +33,7 @@
 [ext_resource path="res://Assets/roadtiles_nova/png/coniferTall.png" type="Texture" id=31]
 [ext_resource path="res://Assets/roadtiles_nova/png/coniferShort.png" type="Texture" id=32]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="endE" type="Sprite" parent="." index="0"]
 

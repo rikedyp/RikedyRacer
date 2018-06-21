@@ -9,8 +9,11 @@ func _ready():
 	# Initialization here
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
+func _process(delta):
+	#print($Player.position)
+	#print($Player.velocity)
+	draw_line(Vector2(), Vector2(300,300), Color(1,1,0))#	
+# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
 

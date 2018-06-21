@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/eye monster single frame.png-7f94cb1efdf6066b769b8925a197798f.stex"
+
+[deps]
+
+source_file="res://Assets/eye monster single frame.png"
+source_md5="d25f45c7c9a0fc4ceec8f7947cdd4c0a"
+
+dest_files=[ "res://.import/eye monster single frame.png-7f94cb1efdf6066b769b8925a197798f.stex" ]
+dest_md5="b0eaa1d3bb6b8fd82c29c8ab9e19cbb4"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
