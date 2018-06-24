@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://lib/playerscript.gd" type="Script" id=1]
-[ext_resource path="res://lib/PurpleCar1.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://lib/Player.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/PurpleCar1.tres" type="SpriteFrames" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D"]
 
 position = Vector2( 31.9582, 82.7034 )
 scale = Vector2( 0.962397, 0.962397 )
@@ -20,16 +20,17 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-TOPSPEED = null
-ACCELERATION = null
-BRAKING = null
+TOPSPEED = 300
+GRASSSPEED = 50
+ACCELERATION = 6000
+BRAKING = 1.1
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 scale = Vector2( 0.5, 0.5 )
 frames = ExtResource( 2 )
 animation = "Around"
-frame = 15
+frame = 2
 _sections_unfolded = [ "Transform" ]
 
 [node name="Camera" type="Camera2D" parent="." index="1"]

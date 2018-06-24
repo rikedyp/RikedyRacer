@@ -1,0 +1,356 @@
+[gd_resource type="TileSet" load_steps=36 format=2]
+
+[ext_resource path="res://Assets/roadtiles_nova/png/endE.png" type="Texture" id=1]
+[ext_resource path="res://Assets/roadtiles_nova/png/endN.png" type="Texture" id=2]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotE.png" type="Texture" id=3]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotES.png" type="Texture" id=4]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotN.png" type="Texture" id=5]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotNE.png" type="Texture" id=6]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotNW.png" type="Texture" id=7]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotS.png" type="Texture" id=8]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotSW.png" type="Texture" id=9]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotW.png" type="Texture" id=10]
+[ext_resource path="res://Assets/roadtiles_nova/png/road.png" type="Texture" id=11]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadES.png" type="Texture" id=12]
+[ext_resource path="res://Assets/roadtiles_nova/png/endS.png" type="Texture" id=13]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadEW.png" type="Texture" id=14]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadNE.png" type="Texture" id=15]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadNS.png" type="Texture" id=16]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadNW.png" type="Texture" id=17]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadSW.png" type="Texture" id=18]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeAltShort.png" type="Texture" id=19]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeAltTall.png" type="Texture" id=20]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeShort.png" type="Texture" id=21]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeTall.png" type="Texture" id=22]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferAltShort.png" type="Texture" id=23]
+[ext_resource path="res://Assets/roadtiles_nova/png/endW.png" type="Texture" id=24]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferAltTall.png" type="Texture" id=25]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferTall.png" type="Texture" id=26]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferShort.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Isometric Buildings/PNG/buildingTiles_120.png" type="Texture" id=28]
+[ext_resource path="res://Assets/roadtiles_nova/png/exitE.png" type="Texture" id=29]
+[ext_resource path="res://Assets/roadtiles_nova/png/exitN.png" type="Texture" id=30]
+[ext_resource path="res://Assets/roadtiles_nova/png/exitS.png" type="Texture" id=31]
+[ext_resource path="res://Assets/roadtiles_nova/png/exitW.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Isometric Buildings/PNG/buildingTiles_015.png" type="Texture" id=33]
+[ext_resource path="res://Assets/roadtiles_nova/png/grass.png" type="Texture" id=34]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -48.1827, -16.2532, -0.649109, -40.9003, 48.2048, -17.1335, 47.7647, 11.9148, 0.23114, 34.8014, -47.7426, 11.4747 )
+
+[resource]
+
+0/name = "endE"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 65 )
+0/is_autotile = false
+0/occluder_offset = Vector2( 50, 32.5 )
+0/navigation_offset = Vector2( 50, 32.5 )
+0/shapes = [  ]
+1/name = "endN"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 100, 65 )
+1/is_autotile = false
+1/occluder_offset = Vector2( 50, 32.5 )
+1/navigation_offset = Vector2( 50, 32.5 )
+1/shapes = [  ]
+2/name = "endS"
+2/texture = ExtResource( 13 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 100, 65 )
+2/is_autotile = false
+2/occluder_offset = Vector2( 50, 32.5 )
+2/navigation_offset = Vector2( 50, 32.5 )
+2/shapes = [  ]
+3/name = "endW"
+3/texture = ExtResource( 24 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 100, 65 )
+3/is_autotile = false
+3/occluder_offset = Vector2( 50, 32.5 )
+3/navigation_offset = Vector2( 50, 32.5 )
+3/shapes = [  ]
+4/name = "exitE"
+4/texture = ExtResource( 29 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 100, 65 )
+4/is_autotile = false
+4/occluder_offset = Vector2( 50, 32.5 )
+4/navigation_offset = Vector2( 50, 32.5 )
+4/shapes = [  ]
+5/name = "exitN"
+5/texture = ExtResource( 30 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 100, 65 )
+5/is_autotile = false
+5/occluder_offset = Vector2( 50, 32.5 )
+5/navigation_offset = Vector2( 50, 32.5 )
+5/shapes = [  ]
+6/name = "exitS"
+6/texture = ExtResource( 31 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 100, 65 )
+6/is_autotile = false
+6/occluder_offset = Vector2( 50, 32.5 )
+6/navigation_offset = Vector2( 50, 32.5 )
+6/shapes = [  ]
+7/name = "exitW"
+7/texture = ExtResource( 32 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 100, 65 )
+7/is_autotile = false
+7/occluder_offset = Vector2( 50, 32.5 )
+7/navigation_offset = Vector2( 50, 32.5 )
+7/shapes = [  ]
+8/name = "buildingTiles_015"
+8/texture = ExtResource( 33 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 99, 85 )
+8/is_autotile = false
+8/occluder_offset = Vector2( 49.5, 42.5 )
+8/navigation_offset = Vector2( 49.5, 42.5 )
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 49.5, 42.5 )
+} ]
+9/name = "grass"
+9/texture = ExtResource( 34 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 100, 65 )
+9/is_autotile = false
+9/occluder_offset = Vector2( 50, 32.5 )
+9/navigation_offset = Vector2( 50, 32.5 )
+9/shapes = [  ]
+10/name = "lotE"
+10/texture = ExtResource( 3 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 100, 65 )
+10/is_autotile = false
+10/occluder_offset = Vector2( 50, 32.5 )
+10/navigation_offset = Vector2( 50, 32.5 )
+10/shapes = [  ]
+11/name = "lotES"
+11/texture = ExtResource( 4 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 100, 65 )
+11/is_autotile = false
+11/occluder_offset = Vector2( 50, 32.5 )
+11/navigation_offset = Vector2( 50, 32.5 )
+11/shapes = [  ]
+12/name = "lotN"
+12/texture = ExtResource( 5 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 0, 100, 65 )
+12/is_autotile = false
+12/occluder_offset = Vector2( 50, 32.5 )
+12/navigation_offset = Vector2( 50, 32.5 )
+12/shapes = [  ]
+13/name = "lotNE"
+13/texture = ExtResource( 6 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 100, 65 )
+13/is_autotile = false
+13/occluder_offset = Vector2( 50, 32.5 )
+13/navigation_offset = Vector2( 50, 32.5 )
+13/shapes = [  ]
+14/name = "lotNW"
+14/texture = ExtResource( 7 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 0, 100, 65 )
+14/is_autotile = false
+14/occluder_offset = Vector2( 50, 32.5 )
+14/navigation_offset = Vector2( 50, 32.5 )
+14/shapes = [  ]
+15/name = "lotS"
+15/texture = ExtResource( 8 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 0, 100, 65 )
+15/is_autotile = false
+15/occluder_offset = Vector2( 50, 32.5 )
+15/navigation_offset = Vector2( 50, 32.5 )
+15/shapes = [  ]
+16/name = "lotSW"
+16/texture = ExtResource( 9 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 0, 0, 100, 65 )
+16/is_autotile = false
+16/occluder_offset = Vector2( 50, 32.5 )
+16/navigation_offset = Vector2( 50, 32.5 )
+16/shapes = [  ]
+17/name = "lotW"
+17/texture = ExtResource( 10 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 0, 100, 65 )
+17/is_autotile = false
+17/occluder_offset = Vector2( 50, 32.5 )
+17/navigation_offset = Vector2( 50, 32.5 )
+17/shapes = [  ]
+18/name = "road"
+18/texture = ExtResource( 11 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 100, 65 )
+18/is_autotile = false
+18/occluder_offset = Vector2( 50, 32.5 )
+18/navigation_offset = Vector2( 50, 32.5 )
+18/shapes = [  ]
+19/name = "roadES"
+19/texture = ExtResource( 12 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 100, 65 )
+19/is_autotile = false
+19/occluder_offset = Vector2( 50, 32.5 )
+19/navigation_offset = Vector2( 50, 32.5 )
+19/shapes = [  ]
+20/name = "roadEW"
+20/texture = ExtResource( 14 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 0, 0, 100, 65 )
+20/is_autotile = false
+20/occluder_offset = Vector2( 50, 32.5 )
+20/navigation_offset = Vector2( 50, 32.5 )
+20/shapes = [  ]
+21/name = "roadNE"
+21/texture = ExtResource( 15 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 0, 0, 100, 65 )
+21/is_autotile = false
+21/occluder_offset = Vector2( 50, 32.5 )
+21/navigation_offset = Vector2( 50, 32.5 )
+21/shapes = [  ]
+22/name = "roadNS"
+22/texture = ExtResource( 16 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 0, 0, 100, 65 )
+22/is_autotile = false
+22/occluder_offset = Vector2( 50, 32.5 )
+22/navigation_offset = Vector2( 50, 32.5 )
+22/shapes = [  ]
+23/name = "roadNW"
+23/texture = ExtResource( 17 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 0, 0, 100, 65 )
+23/is_autotile = false
+23/occluder_offset = Vector2( 50, 32.5 )
+23/navigation_offset = Vector2( 50, 32.5 )
+23/shapes = [  ]
+24/name = "roadSW"
+24/texture = ExtResource( 18 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 0, 100, 65 )
+24/is_autotile = false
+24/occluder_offset = Vector2( 50, 32.5 )
+24/navigation_offset = Vector2( 50, 32.5 )
+24/shapes = [  ]
+25/name = "treeAltShort"
+25/texture = ExtResource( 19 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 0, 0, 11, 32 )
+25/is_autotile = false
+25/occluder_offset = Vector2( 5.5, 16 )
+25/navigation_offset = Vector2( 5.5, 16 )
+25/shapes = [  ]
+26/name = "treeAltTall"
+26/texture = ExtResource( 20 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 0, 0, 11, 41 )
+26/is_autotile = false
+26/occluder_offset = Vector2( 5.5, 20.5 )
+26/navigation_offset = Vector2( 5.5, 20.5 )
+26/shapes = [  ]
+27/name = "treeShort"
+27/texture = ExtResource( 21 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 0, 0, 11, 32 )
+27/is_autotile = false
+27/occluder_offset = Vector2( 5.5, 16 )
+27/navigation_offset = Vector2( 5.5, 16 )
+27/shapes = [  ]
+28/name = "treeTall"
+28/texture = ExtResource( 22 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 0, 0, 12, 41 )
+28/is_autotile = false
+28/occluder_offset = Vector2( 6, 20.5 )
+28/navigation_offset = Vector2( 6, 20.5 )
+28/shapes = [  ]
+29/name = "coniferAltShort"
+29/texture = ExtResource( 23 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 0, 0, 14, 36 )
+29/is_autotile = false
+29/occluder_offset = Vector2( 7, 18 )
+29/navigation_offset = Vector2( 7, 18 )
+29/shapes = [  ]
+30/name = "coniferAltTall"
+30/texture = ExtResource( 25 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 0, 0, 19, 48 )
+30/is_autotile = false
+30/occluder_offset = Vector2( 9.5, 24 )
+30/navigation_offset = Vector2( 9.5, 24 )
+30/shapes = [  ]
+31/name = "coniferTall"
+31/texture = ExtResource( 26 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 0, 0, 19, 48 )
+31/is_autotile = false
+31/occluder_offset = Vector2( 9.5, 24 )
+31/navigation_offset = Vector2( 9.5, 24 )
+31/shapes = [  ]
+32/name = "coniferShort"
+32/texture = ExtResource( 27 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 0, 0, 14, 36 )
+32/is_autotile = false
+32/occluder_offset = Vector2( 7, 18 )
+32/navigation_offset = Vector2( 7, 18 )
+32/shapes = [  ]
+33/name = "buildingTiles_120"
+33/texture = ExtResource( 28 )
+33/tex_offset = Vector2( 0, 0 )
+33/modulate = Color( 1, 1, 1, 1 )
+33/region = Rect2( 0, 0, 99, 56 )
+33/is_autotile = false
+33/occluder_offset = Vector2( 49.5, 28 )
+33/navigation_offset = Vector2( 49.5, 28 )
+33/shapes = [  ]
+

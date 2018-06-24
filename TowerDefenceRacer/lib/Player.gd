@@ -1,20 +1,156 @@
 extends KinematicBody2D
-
-export (int) var speed
+export (int) var TOPSPEED  # how fast the player will move (pixels/sec)
+export (int) var GRASSSPEED
+export (int) var ACCELERATION
+export (float) var BRAKING
+var NOWSPEED
 var velocity = Vector2()
+var screensize  # size of the game window
 
-func get_input():
-	velocity = Vector2()
-	if Input.is_action_pressed('right'):
-		velocity.x += 1
-	if Input.is_action_pressed('left'):
-		velocity.x -= 1
-	if Input.is_action_pressed('up'):
-		velocity.y -= 1
-	if Input.is_action_pressed('down'):
-		velocity.y += 1
-	velocity = velocity.normalized() * speed
+func _ready():
+	screensize = get_viewport_rect().size
+	$AnimatedSprite.set_frame(2)
+	$Camera.make_current()
+	# Called every time the node is added to the scene.
+	# Initialization here
+	NOWSPEED = TOPSPEED
+	pass
 
-func _physics_process(delta):
-	get_input()
-	velocity = move_and_slide(velocity)
+func _handleinput(delta):
+	var force = Vector2() # the player's force vector
+	var acceleration = Vector2()
+	if Input.is_action_pressed("ui_right"):
+		force.x += 1
+	if Input.is_action_pressed("ui_left"):
+		force.x -= 1
+	if Input.is_action_pressed("ui_down"):
+		# Backwards
+		force.y += 1
+	if Input.is_action_pressed("ui_up"):
+		# Forwards
+		force.y -= 1
+	if force.length() > 0:
+		acceleration = force.normalized() * ACCELERATION
+	else:
+		if velocity.length() > 0:
+			velocity = velocity / BRAKING
+	# Accelerate
+	velocity = velocity + acceleration * delta
+	# Limit speed
+	# TODO
+	# 	Friction / grass slow etc.
+	if velocity.length() > NOWSPEED:
+		velocity = NOWSPEED*velocity.normalized()
+	var x = velocity.x
+	var y = velocity.y
+	# Isometrize motion
+	var vel_iso = Vector2()
+	vel_iso.x = x - y
+	vel_iso.y = (x + y) / 2
+	# Move car
+	#position += vel_iso * delta
+	var collision = move_and_collide(vel_iso*delta)
+	if collision:
+		print("Collision")
+		print(collision)
+    # Clamp inside screen
+	#position.x = clamp(position.x, 0, screensize.x)
+	#position.y = clamp(position.y, 0, screensize.y)
+	# Change animated sprite frame depending on velocity
+	var v = velocity.normalized()
+	# To help quantize velocity to one of 8 directions
+	x = round((v.x*4))/4
+	y = round((v.y*4))/4
+	#var printstring = str(x)+', '+str(y)
+	#print(printstring)
+	var dir = [x,y]
+	#print(dir)	
+	# Determine direction x -> y
+	if x == -1:
+		if y < 0:
+			# NWW
+			$AnimatedSprite.set_frame(15)
+		elif y > 0:
+			# SWW
+			$AnimatedSprite.set_frame(13)
+		else:
+			$AnimatedSprite.set_frame(14)
+			# West
+	elif x == -0.75:
+		if y < 0:
+			# NW
+			$AnimatedSprite.set_frame(0)
+		else:
+			# SW
+			$AnimatedSprite.set_frame(12)
+	elif x < 0:
+		if y < 0:
+			# NNW
+			$AnimatedSprite.set_frame(1)
+		else:
+			# SSW
+			$AnimatedSprite.set_frame(11)
+	elif x == 0.75:
+		if y < 0:
+			# NE
+			$AnimatedSprite.set_frame(4)
+		else:
+			# SE
+			$AnimatedSprite.set_frame(8)
+	elif x == 1:
+		if y < 0:
+			# NEE
+			$AnimatedSprite.set_frame(5)
+		elif y > 0:
+			# SEE
+			$AnimatedSprite.set_frame(7)
+		else:
+			# East
+			$AnimatedSprite.set_frame(6)
+	elif x > 0:
+		if y < 0:
+			# NNE
+			$AnimatedSprite.set_frame(3)
+		else:
+			# SSE
+			$AnimatedSprite.set_frame(9)
+	else:
+		if y < 0:
+			# North
+			$AnimatedSprite.set_frame(2)
+		else:
+			# South
+			$AnimatedSprite.set_frame(10)
+		
+	
+
+		
+	
+	
+func _process(delta):
+	_handleinput(delta)
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+
+
+func _on_Area2D_body_entered(body):
+	print(body)
+	pass # replace with function body
+
+
+func _on_Area2D_body_exited(body):
+	pass # replace with function body
+
+func _on_Grass_body_entered(body):
+	print(body.get_name())
+	if body.get_name() == "Player":
+		NOWSPEED = GRASSSPEED
+
+
+func _on_Grass_body_exited(body):
+	if body.get_name() == "Player":
+		NOWSPEED = TOPSPEED
+
+
+func _on_PitStop_body_exited(body):
+	pass # replace with function body

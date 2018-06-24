@@ -22,3 +22,8 @@ func _on_Button_button_down():
 
 func _on_Button2_button_down():
 	get_tree().change_scene("res://Scenes/Main.tscn")
+
+
+func _on_Player_input_event(viewport, event, shape_idx):
+	print("Player input event")
+	pass # replace with function body

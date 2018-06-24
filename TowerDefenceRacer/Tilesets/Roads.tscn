@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Assets/roadtiles_nova/png/endE.png" type="Texture" id=1]
 [ext_resource path="res://Assets/roadtiles_nova/png/endN.png" type="Texture" id=2]
@@ -8,32 +8,34 @@
 [ext_resource path="res://Assets/roadtiles_nova/png/exitN.png" type="Texture" id=6]
 [ext_resource path="res://Assets/roadtiles_nova/png/exitS.png" type="Texture" id=7]
 [ext_resource path="res://Assets/roadtiles_nova/png/exitW.png" type="Texture" id=8]
-[ext_resource path="res://Assets/roadtiles_nova/png/grass.png" type="Texture" id=9]
-[ext_resource path="res://Assets/roadtiles_nova/png/lotE.png" type="Texture" id=10]
-[ext_resource path="res://Assets/roadtiles_nova/png/lotES.png" type="Texture" id=11]
-[ext_resource path="res://Assets/roadtiles_nova/png/lotN.png" type="Texture" id=12]
-[ext_resource path="res://Assets/roadtiles_nova/png/lotNE.png" type="Texture" id=13]
-[ext_resource path="res://Assets/roadtiles_nova/png/lotNW.png" type="Texture" id=14]
-[ext_resource path="res://Assets/roadtiles_nova/png/lotS.png" type="Texture" id=15]
-[ext_resource path="res://Assets/roadtiles_nova/png/lotSW.png" type="Texture" id=16]
-[ext_resource path="res://Assets/roadtiles_nova/png/lotW.png" type="Texture" id=17]
-[ext_resource path="res://Assets/roadtiles_nova/png/road.png" type="Texture" id=18]
-[ext_resource path="res://Assets/roadtiles_nova/png/roadES.png" type="Texture" id=19]
-[ext_resource path="res://Assets/roadtiles_nova/png/roadEW.png" type="Texture" id=20]
-[ext_resource path="res://Assets/roadtiles_nova/png/roadNE.png" type="Texture" id=21]
-[ext_resource path="res://Assets/roadtiles_nova/png/roadNS.png" type="Texture" id=22]
-[ext_resource path="res://Assets/roadtiles_nova/png/roadNW.png" type="Texture" id=23]
-[ext_resource path="res://Assets/roadtiles_nova/png/roadSW.png" type="Texture" id=24]
-[ext_resource path="res://Assets/roadtiles_nova/png/treeAltShort.png" type="Texture" id=25]
-[ext_resource path="res://Assets/roadtiles_nova/png/treeAltTall.png" type="Texture" id=26]
-[ext_resource path="res://Assets/roadtiles_nova/png/treeShort.png" type="Texture" id=27]
-[ext_resource path="res://Assets/roadtiles_nova/png/treeTall.png" type="Texture" id=28]
-[ext_resource path="res://Assets/roadtiles_nova/png/coniferAltShort.png" type="Texture" id=29]
-[ext_resource path="res://Assets/roadtiles_nova/png/coniferAltTall.png" type="Texture" id=30]
-[ext_resource path="res://Assets/roadtiles_nova/png/coniferTall.png" type="Texture" id=31]
-[ext_resource path="res://Assets/roadtiles_nova/png/coniferShort.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Isometric Buildings/PNG/buildingTiles_015.png" type="Texture" id=9]
+[ext_resource path="res://Assets/roadtiles_nova/png/grass.png" type="Texture" id=10]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotE.png" type="Texture" id=11]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotES.png" type="Texture" id=12]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotN.png" type="Texture" id=13]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotNE.png" type="Texture" id=14]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotNW.png" type="Texture" id=15]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotS.png" type="Texture" id=16]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotSW.png" type="Texture" id=17]
+[ext_resource path="res://Assets/roadtiles_nova/png/lotW.png" type="Texture" id=18]
+[ext_resource path="res://Assets/roadtiles_nova/png/road.png" type="Texture" id=19]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadES.png" type="Texture" id=20]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadEW.png" type="Texture" id=21]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadNE.png" type="Texture" id=22]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadNS.png" type="Texture" id=23]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadNW.png" type="Texture" id=24]
+[ext_resource path="res://Assets/roadtiles_nova/png/roadSW.png" type="Texture" id=25]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeAltShort.png" type="Texture" id=26]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeAltTall.png" type="Texture" id=27]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeShort.png" type="Texture" id=28]
+[ext_resource path="res://Assets/roadtiles_nova/png/treeTall.png" type="Texture" id=29]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferAltShort.png" type="Texture" id=30]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferAltTall.png" type="Texture" id=31]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferTall.png" type="Texture" id=32]
+[ext_resource path="res://Assets/roadtiles_nova/png/coniferShort.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Isometric Buildings/PNG/buildingTiles_120.png" type="Texture" id=34]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="endE" type="Sprite" parent="." index="0"]
 
@@ -75,140 +77,164 @@ texture = ExtResource( 7 )
 position = Vector2( 689.906, 193.166 )
 texture = ExtResource( 8 )
 
-[node name="grass" type="Sprite" parent="." index="8"]
+[node name="buildingTiles_015" type="Sprite" parent="." index="8"]
 
-position = Vector2( 80.6636, 314.007 )
+position = Vector2( 890.622, 469.611 )
 texture = ExtResource( 9 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="grass" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="buildingTiles_015" index="0"]
 
 input_pickable = false
-collision_layer = 2
+collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-_sections_unfolded = [ "Collision" ]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grass/StaticBody2D" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="buildingTiles_015/StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -49.9952, -6.40149, 0.798645, -32.3387, 49.9714, -7.48218, 1.339, 17.9147 )
+polygon = PoolVector2Array( -48.1827, -16.2532, -0.649109, -40.9003, 48.2048, -17.1335, 47.7647, 11.9148, 0.23114, 34.8014, -47.7426, 11.4747 )
 
-[node name="lotE" type="Sprite" parent="." index="9"]
+[node name="grass" type="Sprite" parent="." index="9"]
 
-position = Vector2( 294.654, 324.077 )
+position = Vector2( 80.6636, 314.007 )
 texture = ExtResource( 10 )
 
-[node name="lotES" type="Sprite" parent="." index="10"]
+[node name="Area2D" type="Area2D" parent="grass" index="0"]
 
-position = Vector2( 506.127, 321.56 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="grass/Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -49.8387, -7.28409, -0.0426254, -32.6114, 49.9681, -7.71335, 0.815926, 17.614 )
+
+[node name="lotE" type="Sprite" parent="." index="10"]
+
+position = Vector2( 294.654, 324.077 )
 texture = ExtResource( 11 )
 
-[node name="lotN" type="Sprite" parent="." index="11"]
+[node name="lotES" type="Sprite" parent="." index="11"]
 
-position = Vector2( 707.529, 329.112 )
+position = Vector2( 506.127, 321.56 )
 texture = ExtResource( 12 )
 
-[node name="lotNE" type="Sprite" parent="." index="12"]
+[node name="lotN" type="Sprite" parent="." index="12"]
 
-position = Vector2( 888.792, 319.042 )
+position = Vector2( 707.529, 329.112 )
 texture = ExtResource( 13 )
 
-[node name="lotNW" type="Sprite" parent="." index="13"]
+[node name="lotNE" type="Sprite" parent="." index="13"]
 
-position = Vector2( 1085.16, 319.042 )
+position = Vector2( 888.792, 319.042 )
 texture = ExtResource( 14 )
 
-[node name="lotS" type="Sprite" parent="." index="14"]
+[node name="lotNW" type="Sprite" parent="." index="14"]
 
-position = Vector2( 1211.04, 321.56 )
+position = Vector2( 1085.16, 319.042 )
 texture = ExtResource( 15 )
 
-[node name="lotSW" type="Sprite" parent="." index="15"]
+[node name="lotS" type="Sprite" parent="." index="15"]
 
-position = Vector2( 1384.75, 329.112 )
+position = Vector2( 1211.04, 321.56 )
 texture = ExtResource( 16 )
 
-[node name="lotW" type="Sprite" parent="." index="16"]
+[node name="lotSW" type="Sprite" parent="." index="16"]
 
-position = Vector2( 103.321, 427.296 )
+position = Vector2( 1384.75, 329.112 )
 texture = ExtResource( 17 )
 
-[node name="road" type="Sprite" parent="." index="17"]
+[node name="lotW" type="Sprite" parent="." index="17"]
 
-position = Vector2( 876.204, 200.718 )
+position = Vector2( 103.321, 427.296 )
 texture = ExtResource( 18 )
 
-[node name="roadES" type="Sprite" parent="." index="18"]
+[node name="road" type="Sprite" parent="." index="18"]
 
-position = Vector2( 873.686, 79.8766 )
+position = Vector2( 876.204, 200.718 )
 texture = ExtResource( 19 )
 
-[node name="roadEW" type="Sprite" parent="." index="19"]
+[node name="roadES" type="Sprite" parent="." index="19"]
 
-position = Vector2( 1044.88, 79.8766 )
+position = Vector2( 873.686, 79.8766 )
 texture = ExtResource( 20 )
 
-[node name="roadNE" type="Sprite" parent="." index="20"]
+[node name="roadEW" type="Sprite" parent="." index="20"]
 
-position = Vector2( 1226.14, 89.9468 )
+position = Vector2( 1044.88, 79.8766 )
 texture = ExtResource( 21 )
 
-[node name="roadNS" type="Sprite" parent="." index="21"]
+[node name="roadNE" type="Sprite" parent="." index="21"]
 
-position = Vector2( 1389.78, 89.9468 )
+position = Vector2( 1226.14, 89.9468 )
 texture = ExtResource( 22 )
 
-[node name="roadNW" type="Sprite" parent="." index="22"]
+[node name="roadNS" type="Sprite" parent="." index="22"]
 
-position = Vector2( 1065.02, 185.613 )
+position = Vector2( 1389.78, 89.9468 )
 texture = ExtResource( 23 )
 
-[node name="roadSW" type="Sprite" parent="." index="23"]
+[node name="roadNW" type="Sprite" parent="." index="23"]
 
-position = Vector2( 1243.76, 195.683 )
+position = Vector2( 1065.02, 185.613 )
 texture = ExtResource( 24 )
 
-[node name="treeAltShort" type="Sprite" parent="." index="24"]
+[node name="roadSW" type="Sprite" parent="." index="24"]
 
-position = Vector2( 297.171, 427.296 )
+position = Vector2( 1243.76, 195.683 )
 texture = ExtResource( 25 )
 
-[node name="treeAltTall" type="Sprite" parent="." index="25"]
+[node name="treeAltShort" type="Sprite" parent="." index="25"]
 
-position = Vector2( 428.083, 442.401 )
+position = Vector2( 297.171, 427.296 )
 texture = ExtResource( 26 )
 
-[node name="treeShort" type="Sprite" parent="." index="26"]
+[node name="treeAltTall" type="Sprite" parent="." index="26"]
 
-position = Vector2( 531.302, 427.296 )
+position = Vector2( 428.083, 442.401 )
 texture = ExtResource( 27 )
 
-[node name="treeTall" type="Sprite" parent="." index="27"]
+[node name="treeShort" type="Sprite" parent="." index="27"]
 
-position = Vector2( 634.521, 432.331 )
+position = Vector2( 531.302, 427.296 )
 texture = ExtResource( 28 )
 
-[node name="coniferAltShort" type="Sprite" parent="." index="28"]
+[node name="treeTall" type="Sprite" parent="." index="28"]
 
-position = Vector2( 712.564, 434.849 )
+position = Vector2( 634.521, 432.331 )
 texture = ExtResource( 29 )
 
-[node name="coniferAltTall" type="Sprite" parent="." index="29"]
+[node name="coniferAltShort" type="Sprite" parent="." index="29"]
 
-position = Vector2( 284.584, 525.48 )
+position = Vector2( 712.564, 434.849 )
 texture = ExtResource( 30 )
 
-[node name="coniferTall" type="Sprite" parent="." index="30"]
+[node name="coniferAltTall" type="Sprite" parent="." index="30"]
 
-position = Vector2( 377.732, 515.41 )
+position = Vector2( 284.584, 525.48 )
 texture = ExtResource( 31 )
 
-[node name="coniferShort" type="Sprite" parent="." index="31"]
+[node name="coniferTall" type="Sprite" parent="." index="31"]
+
+position = Vector2( 377.732, 515.41 )
+texture = ExtResource( 32 )
+
+[node name="coniferShort" type="Sprite" parent="." index="32"]
 
 position = Vector2( 473.399, 502.822 )
-texture = ExtResource( 32 )
+texture = ExtResource( 33 )
+
+[node name="buildingTiles_120" type="Sprite" parent="." index="33"]
+
+position = Vector2( 1121.26, 474.492 )
+texture = ExtResource( 34 )
 
 

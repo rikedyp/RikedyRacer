@@ -58,6 +58,8 @@ func _draw():
 			draw_line(Vector2(), (hit - position).rotated(-rotation), laser_color)
 
 func _on_Visibility_body_entered(body):
+	print("Body entered")
+	print(body)
 	if target:
 		return
 	target = body
