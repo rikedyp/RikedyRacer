@@ -16,5 +16,9 @@ func _physics_process(delta):
 
 func _on_Bullet_body_entered(body):
 	if body.get_class() != "TileMap":
-		print(body)
+		#print(body.get_name())
+		# TODO: if body.get_name() == Other_Player shoot
+		# else: don't shoot
+		if body.NOWSPEED > 50:
+			body.NOWSPEED -= 30
 		queue_free()

@@ -3,8 +3,11 @@ export (int) var TOPSPEED  # how fast the player will move (pixels/sec)
 export (int) var GRASSSPEED
 export (int) var ACCELERATION
 export (float) var BRAKING
+export (bool) var ACTIVE 
 var NOWSPEED
 var velocity = Vector2()
+var lap = 0
+var time = 0.0
 var screensize  # size of the game window
 
 #This updates the position on the other end
@@ -22,12 +25,19 @@ func _ready():
 	screensize = get_viewport_rect().size
 	$AnimatedSprite.set_frame(2)
 	NOWSPEED = TOPSPEED
+	lap = 0
+	print(lap)
+	#if is_network_master():
+#	if is_network_master():
+#		ACTIVE = true
+#	else:
+#		ACTIVE = false
 	#$Camera.make_current()
 	# Called every time the node is added to the scene.
 	# Initialization here
 	pass
 
-func _handleinput(delta):
+func handle_input(delta):
 	var force = Vector2() # the player's force vector
 	var acceleration = Vector2()
 	if Input.is_action_pressed("ui_right"):
@@ -137,8 +147,9 @@ func set_animation(x,y):
 			$AnimatedSprite.set_frame(10)
 
 func _process(delta):
-	if is_network_master():
-		_handleinput(delta)
+	if ACTIVE:
+		handle_input(delta)
+		time += delta
 	rpc("set_pos_and_motion",position,velocity)
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
@@ -154,8 +165,11 @@ func _on_Area2D_body_exited(body):
 
 
 func _on_Grass_body_entered(body):
+	print(body)
+	NOWSPEED = GRASSSPEED
 	pass # replace with function body
 
 
 func _on_Grass_body_exited(body):
+	NOWSPEED = TOPSPEED
 	pass # replace with function body

@@ -24,6 +24,7 @@ TOPSPEED = 500
 GRASSSPEED = 100
 ACCELERATION = 3000
 BRAKING = 1.05
+ACTIVE = null
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 

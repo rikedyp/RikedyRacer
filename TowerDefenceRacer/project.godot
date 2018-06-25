@@ -11,8 +11,12 @@ config_version=3
 [application]
 
 config/name="Tower Defense Racer"
-run/main_scene="res://Maps/RaceTrack1.tscn"
+run/main_scene="res://Scenes/Lobby.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://lib/Global.gd"
 
 [input]
 
@@ -35,7 +39,7 @@ left_click=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resou
 
 [layer_names]
 
-2d_physics/layer_1="environment"
+2d_physics/layer_1="pitstop"
 2d_physics/layer_2="player"
 2d_physics/layer_3="turrets"
 2d_physics/layer_4="turret_visibility"
@@ -45,6 +49,7 @@ left_click=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resou
 
 [rendering]
 
+environment/default_clear_color=Color( 0.729412, 0.54902, 0.364706, 1 )
 environment/default_environment="res://default_env.tres"
 
 [tiled_importer]

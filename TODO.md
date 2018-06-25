@@ -20,6 +20,8 @@ There may be TODOs in any gdscript files
 - Mulitplayer as priority
 - 0.5 Basic Game:  
 	2 Player online 
+	- Lap times + total time
+	- Laps reset on new game
 	- Give player 2 different colour
 	- Home screen with lobby
 	3 Lap race (Timed)

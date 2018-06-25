@@ -35,7 +35,7 @@ func aim():
 				pos, [self], collision_mask)
 		if result:
 			hit_pos.append(result.position)
-			if result.collider.name == "Player":
+			if result.collider.name == "Player1" or result.collider.name == "Player2":
 				$Sprite.self_modulate.r = 1.0
 				rotation = (target.position - position).angle()
 				if can_shoot:
