@@ -390,7 +390,7 @@ audio_bus_name = "Master"
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TheLine" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -1689.95, 456.08, -1060.03, 771.87, -1014.6, 747.493, -1641.75, 431.704 )
+polygon = PoolVector2Array( -2911.36, -152.263, -639.389, 984.299, -601.442, 953.941, -2888, -178.401 )
 
 [connection signal="body_entered" from="Grass" to="Player1" method="_on_Grass_body_entered"]
 

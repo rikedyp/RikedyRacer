@@ -9,16 +9,12 @@ var ActivePlayer
 signal Ready
 
 func _ready():
-	print("NEW GAME START")
-	print(MAXLAPS)
 	connect("Ready", self, "new_game")
 	$HUD/Lap.text = "Lap: " + "1/" + str(MAXLAPS)
 	if not is_network_master():
 		for player in get_tree().get_nodes_in_group("players"):
 			print(player.get_name() + " Ready.")
 			player.ACTIVE = false
-			print(player.lap)
-			#player.lap = 0
 
 	# By default, all nodes in server inherit from master,
 	# while all nodes in clients inherit from slave.
@@ -41,9 +37,7 @@ func _ready():
 
 
 	print("unique id: ",get_tree().get_network_unique_id())
-	var printstring = "Host player: " + ActivePlayer.get_name()
 	# might need to alter ActivePlayer method or delete
-	print(printstring)
 	# Get both players to confirm ready here
 	$HUD/CDBG.show()
 	$HUD/Countdown.show()
@@ -94,7 +88,6 @@ func _on_TheLine_body_entered(body):
 
 func _on_TheLine_body_exited(body):
 	var lapstring
-	print("THE LINE")
 	# TODO: Figure out methods for any number (flexible number) of players
 	if dir == 1 and body.velocity.y < 0:
 		# This player going correct direction
@@ -102,8 +95,6 @@ func _on_TheLine_body_exited(body):
 	elif dir == -1 and body.velocity.y > 0:
 		# This player going wrong direction
 		body.lap -= 1
-	print(body.lap)
-	print(MAXLAPS)
 	if body.lap > MAXLAPS:
 		body.ACTIVE = false
 		var printstring = body.get_name() + " Finished."
