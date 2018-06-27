@@ -1,40 +1,12 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://lib/Multiplayer_TestTrack.gd" type="Script" id=1]
 [ext_resource path="res://Tilesets/Roads2.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/Turret.tscn" type="PackedScene" id=3]
 [ext_resource path="res://lib/TowerCam.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Multiplayer_Car.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/UIpack/PNG/yellow_button07.png" type="Texture" id=6]
-[ext_resource path="res://Assets/raleway/Raleway-SemiBold.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://Assets/raleway/Raleway-Bold.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://Assets/UIpack/PNG/green_button08.png" type="Texture" id=9]
-[ext_resource path="res://Assets/raleway/Raleway-Black.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://Scenes/Lobby.tscn" type="PackedScene" id=11]
-
-[sub_resource type="DynamicFont" id=1]
-
-size = 15
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 7 )
-_sections_unfolded = [ "Font", "Resource", "Settings" ]
-
-[sub_resource type="DynamicFont" id=2]
-
-size = 15
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 8 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="DynamicFont" id=3]
-
-size = 80
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 10 )
-_sections_unfolded = [ "Font", "Settings" ]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Shotgun.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -132,7 +104,6 @@ polygon = PoolVector2Array( -3445.9, 838.572, -47.1791, 269.548, 2212.96, -91.97
 [node name="Turret" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( -1024.36, 807.429 )
-collision_mask = 2
 
 [node name="TowerCam1" type="Node2D" parent="." index="3"]
 
@@ -227,8 +198,7 @@ collision_layer = 2
 collision_mask = 5
 _sections_unfolded = [ "Collision", "collision" ]
 TOPSPEED = 700
-GRASSSPEED = 80
-ACCELERATION = 1500
+ACCELERATION = 8000
 ACTIVE = false
 
 [node name="Player2" parent="." index="7" groups=[
@@ -240,142 +210,10 @@ collision_layer = 2
 collision_mask = 5
 _sections_unfolded = [ "Collision" ]
 TOPSPEED = 700
-GRASSSPEED = 80
-ACCELERATION = 10000
+ACCELERATION = 8000
 ACTIVE = true
 
-[node name="HUD" type="CanvasLayer" parent="." index="8"]
-
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-
-[node name="Lap_Clock_BG" type="Sprite" parent="HUD" index="0"]
-
-position = Vector2( 101.211, 41.5757 )
-scale = Vector2( 3.52826, 1.45056 )
-texture = ExtResource( 6 )
-
-[node name="Lap" type="Label" parent="HUD" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 31.0
-margin_top = 16.0
-margin_right = 130.0
-margin_bottom = 75.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Lap:"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
-
-[node name="Clock" type="Label" parent="HUD" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 45.0
-margin_right = 72.0
-margin_bottom = 59.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Time:"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
-
-[node name="Timer" type="Timer" parent="HUD" index="3"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
-
-[node name="CDBG" type="Sprite" parent="HUD" index="4"]
-
-position = Vector2( 523.753, 114.441 )
-scale = Vector2( 1.9036, 2.23663 )
-texture = ExtResource( 9 )
-
-[node name="Countdown" type="Label" parent="HUD" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 500.0
-margin_top = 55.0
-margin_right = 546.0
-margin_bottom = 150.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
-text = "3"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Grow Direction", "Rect", "Theme", "custom_constants", "custom_fonts" ]
-
-[node name="AgainButton" type="Button" parent="HUD" index="6"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 312.0
-margin_top = 235.0
-margin_right = 393.0
-margin_bottom = 255.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Play again?"
-flat = false
-align = 1
-_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
-
-[node name="Lobby" parent="HUD" index="7" instance=ExtResource( 11 )]
-
-visible = false
-margin_left = 209.0
-margin_top = 173.0
-margin_right = 249.0
-margin_bottom = 213.0
+[node name="HUD" parent="." index="8" instance=ExtResource( 6 )]
 
 [node name="TheLine" type="Area2D" parent="." index="9"]
 
@@ -392,6 +230,10 @@ audio_bus_name = "Master"
 build_mode = 0
 polygon = PoolVector2Array( -2911.36, -152.263, -639.389, 984.299, -601.442, 953.941, -2888, -178.401 )
 
+[node name="Shotgun" parent="." index="10" instance=ExtResource( 7 )]
+
+position = Vector2( -769.277, 74.2162 )
+
 [connection signal="body_entered" from="Grass" to="Player1" method="_on_Grass_body_entered"]
 
 [connection signal="body_entered" from="Grass" to="Player2" method="_on_Grass_body_entered"]
@@ -404,9 +246,7 @@ polygon = PoolVector2Array( -2911.36, -152.263, -639.389, 984.299, -601.442, 953
 
 [connection signal="body_exited" from="PitStop" to="." method="_on_PitStop_body_exited"]
 
-[connection signal="timeout" from="HUD/Timer" to="." method="_on_Timer_timeout"]
-
-[connection signal="pressed" from="HUD/AgainButton" to="." method="_on_AgainButton_pressed"]
+[connection signal="countdown_timeout" from="HUD" to="." method="_on_HUD_countdown_timeout"]
 
 [connection signal="body_entered" from="TheLine" to="." method="_on_TheLine_body_entered"]
 

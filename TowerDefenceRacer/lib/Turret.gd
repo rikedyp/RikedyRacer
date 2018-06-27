@@ -58,17 +58,16 @@ func _draw():
 			draw_line(Vector2(), (hit - position).rotated(-rotation), laser_color)
 
 func _on_Visibility_body_entered(body):
-	print("Body entered")
-	print(body)
+	#print("Body entered")
+	#print(body)
 	if target:
 		return
 	target = body
 
-
 func _on_Visibility_body_exited(body):
 	if body == target:
 		target = null
-		$Sprite.self_modulate.r = 0.2
+		#$Sprite.self_modulate.r = 0.2
 
 func _on_ShootTimer_timeout():
 	can_shoot = true

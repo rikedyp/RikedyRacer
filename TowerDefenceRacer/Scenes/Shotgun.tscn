@@ -1,0 +1,105 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://lib/Shotgun.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/3_rightup.png" type="Texture" id=3]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/3_right.png" type="Texture" id=4]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/3_rightdown.png" type="Texture" id=5]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/3_down.png" type="Texture" id=6]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/3_leftdown.png" type="Texture" id=7]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/3_left.png" type="Texture" id=8]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/3_leftup.png" type="Texture" id=9]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/3_up.png" type="Texture" id=10]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/2_rightup.png" type="Texture" id=11]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/2_right.png" type="Texture" id=12]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/2_rightdown.png" type="Texture" id=13]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/2_down.png" type="Texture" id=14]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/2_leftdown.png" type="Texture" id=15]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/2_left.png" type="Texture" id=16]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/2_leftup.png" type="Texture" id=17]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/2_up.png" type="Texture" id=18]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/1_rightup.png" type="Texture" id=19]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/1_right.png" type="Texture" id=20]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/1_rightdown.png" type="Texture" id=21]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/1_down.png" type="Texture" id=22]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/1_leftdown.png" type="Texture" id=23]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/1_left.png" type="Texture" id=24]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/1_leftup.png" type="Texture" id=25]
+[ext_resource path="res://Assets/topdown_shooter/towers/shotgun/1_up.png" type="Texture" id=26]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "level3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "level2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "level1",
+"speed": 5.0
+} ]
+
+[node name="Shotgun" type="StaticBody2D"]
+
+input_pickable = false
+collision_layer = 4
+collision_mask = 2
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+detect_radius = 420
+fire_rate = 0.5
+Bullet = ExtResource( 2 )
+
+[node name="Visibility" type="Area2D" parent="." index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+collision_mask = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visibility" index="0"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( -0.466205, -1.91944 )
+scale = Vector2( 1.22775, 1.22669 )
+frames = SubResource( 1 )
+animation = "level1"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2"]
+
+position = Vector2( -8.9407e-08, -1.19209e-06 )
+build_mode = 0
+polygon = PoolVector2Array( -7.63799, 16.274, -7.63799, -2.3996, -5.27696, -4.54599, 5.66963, -4.76063, 7.60138, -2.18496, 7.38675, 16.7033 )
+
+[node name="ShootTimer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="body_entered" from="Visibility" to="." method="_on_Visibility_body_entered"]
+
+[connection signal="body_exited" from="Visibility" to="." method="_on_Visibility_body_exited"]
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
+
+

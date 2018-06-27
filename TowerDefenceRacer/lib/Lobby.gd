@@ -10,7 +10,6 @@ func _player_connected(id):
 	#This starts the game upon connection.
 	var stage = load("res://Scenes/Multiplayer_TestTrack.tscn").instance()
 	stage.connect("game_finished",self,"_end_game",[],CONNECT_DEFERRED) # connect deferred so we can safely erase it from the callback
-
 	get_tree().get_root().add_child(stage)
 	hide()
 
@@ -105,3 +104,5 @@ func _ready():
 	get_tree().connect("connection_failed",self,"_connected_fail")
 	get_tree().connect("server_disconnected",self,"_server_disconnected")
 
+func _on_SingleButton_pressed():
+	get_tree().change_scene("res://Scenes/Multiplayer_TestTrack.tscn")

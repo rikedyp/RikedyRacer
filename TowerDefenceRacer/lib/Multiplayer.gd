@@ -10,6 +10,10 @@ var lap = 0
 var time = 0.0
 var screensize  # size of the game window
 
+#slave var slave_pos = Vector2()
+#slave var slave_vel = Vector2()
+slave var slave_frame = "" # Will this need massive change for > 2 player?
+
 #This updates the position on the other end
 slave func set_pos_and_motion(p_pos,p_motion):
 	position=p_pos
@@ -21,12 +25,14 @@ slave func set_pos_and_motion(p_pos,p_motion):
 	var y = round((v.y*4))/4
 	set_animation(x,y)
 
+# master func set_my_motion(p_pos,p_motion):
+	# pass
+
 func _ready():
 	screensize = get_viewport_rect().size
 	$AnimatedSprite.set_frame(2)
 	NOWSPEED = TOPSPEED
 	lap = 0
-	print(lap)
 	#if is_network_master():
 #	if is_network_master():
 #		ACTIVE = true
@@ -35,7 +41,6 @@ func _ready():
 	#$Camera.make_current()
 	# Called every time the node is added to the scene.
 	# Initialization here
-	pass
 
 func handle_input(delta):
 	var force = Vector2() # the player's force vector
@@ -82,10 +87,7 @@ func handle_input(delta):
 	# To help quantize velocity to one of 8 directions
 	x = round((v.x*4))/4
 	y = round((v.y*4))/4
-	#var printstring = str(x)+', '+str(y)
-	#print(printstring)
 	var dir = [x,y]
-	#print(dir)	
 	# Determine direction x -> y
 	set_animation(x,y)
 	
@@ -147,22 +149,13 @@ func set_animation(x,y):
 			$AnimatedSprite.set_frame(10)
 
 func _process(delta):
-	if ACTIVE:
+	if ACTIVE and is_network_master():
 		handle_input(delta)
 		time += delta
 	rpc("set_pos_and_motion",position,velocity)
+	
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
-
-
-func _on_Area2D_body_entered(body):
-	print(body)
-	pass # replace with function body
-
-
-func _on_Area2D_body_exited(body):
-	pass # replace with function body
-
 
 func _on_Grass_body_entered(body):
 	print(body)

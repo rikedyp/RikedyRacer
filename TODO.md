@@ -18,26 +18,35 @@ There may be TODOs in any gdscript files
 
 ### Game modes
 - Mulitplayer as priority
+- Tower Mode zoom in/out
+- 1.0 Boot Splash / Logo
+- 1.0 Make sure signals are attached at _ready() function 
 - 0.5 Basic Game:  
 	2 Player online 
-	- Lap times + total time
-	- Laps reset on new game
+	- Lap times + total time + shows both player's times at the end
 	- Give player 2 different colour
-	- Home screen with lobby
-	3 Lap race (Timed)
-	Pit stops available when car is in the pit area
-	1 Tower which slows the car temporarily
+	- 1 Tower which slows the car temporarily (attach timer)
 	- Track boundaries
-		- Barrier
+		- Barriers
 	- Warns against going backwards
-	- Tower build / upgrade pit stops
-	- Turrets target opponent only
 	- Times laps
 	- Press 'a' to ready + Countdown to start
 	- MK-style buttons? A, B + Directions
 - 0.9 Single player mode
-	- Maybe 1 AI that follows simple track 
+- 1.0 Flesh out tower mode
+	- Spawn towers (tower tokens / limited available)
+	- Tower upgrades
+	- Tower types
+		- Slow enemy
+- 1.0 Tower aim areas are circles on the ground (so oval really)
+- Make tower aim angles more faithful to the isometric world
+- Maybe towers can only aim in 8 directions?
+- 1.0 Decide and get consistent with variable / function naming conventions (check python)
+- 1.0 Test cross compatibility of different versions executables to determine version
+- 1.0 Single player time trial / sandbox / tutorial level minimum
+- Maybe 1 AI that follows simple track 
 - 1.0 Restructure folders 
+	- Assets (used images only, with full collections in TDRacer-dev and sources in the docs)
 	- Vehicles
 	- Towers
 	- Levels
@@ -61,13 +70,13 @@ There may be TODOs in any gdscript files
 - 1.0 Main menu + splash screen
 - Use Tiled Tilemap editor with tiled map importer  
 	https://godotengine.org/asset-library/asset/158
-- Other obstacles
+- Other obstacles / items / weapons / things
 - In-built level editor
 
 ### Vehicles
 Do not make these with haste, many game balancing variants can be added in as the game develops  
 Check out those loop maths dice games on YouTube
-- Colour Cars come in  
+- Colour Cars come in (probably nice to choose colour then car)
 Blue | Green | Grey | Orange | Pink | Purple | Red | White | Yellow   
 	- Basic sedan car 			BG1G2OP1RWY
 	- Sport coupe 				BG1G2OP1P2RWY
