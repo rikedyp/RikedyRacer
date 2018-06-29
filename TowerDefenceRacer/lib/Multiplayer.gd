@@ -7,12 +7,9 @@ export (bool) var ACTIVE
 var NOWSPEED
 var velocity = Vector2()
 var lap = 0
+var lap_times = []
 var time = 0.0
 var screensize  # size of the game window
-
-#slave var slave_pos = Vector2()
-#slave var slave_vel = Vector2()
-slave var slave_frame = "" # Will this need massive change for > 2 player?
 
 #This updates the position on the other end
 slave func set_pos_and_motion(p_pos,p_motion):
@@ -24,9 +21,9 @@ slave func set_pos_and_motion(p_pos,p_motion):
 	var x = round((v.x*4))/4
 	var y = round((v.y*4))/4
 	set_animation(x,y)
-
-# master func set_my_motion(p_pos,p_motion):
-	# pass
+	
+slave func set_time(t):
+	time = t
 
 func _ready():
 	screensize = get_viewport_rect().size
@@ -150,18 +147,18 @@ func set_animation(x,y):
 
 func _process(delta):
 	if ACTIVE and is_network_master():
+		# Handle input for this player
 		handle_input(delta)
 		time += delta
+	# Send this player's motion to other player
 	rpc("set_pos_and_motion",position,velocity)
-	
+	rpc("set_time", time)
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 
 func _on_Grass_body_entered(body):
-	print(body)
+	#print(body)
 	NOWSPEED = GRASSSPEED
-	pass # replace with function body
-
 
 func _on_Grass_body_exited(body):
 	NOWSPEED = TOPSPEED

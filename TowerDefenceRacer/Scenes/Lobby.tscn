@@ -106,7 +106,55 @@ caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
 
-[node name="host" type="Button" parent="panel" index="2"]
+[node name="lap_label" type="Label" parent="panel" index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 11.0
+margin_top = 88.0
+margin_right = 63.0
+margin_bottom = 102.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "Laps:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="laps" type="LineEdit" parent="panel" index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 69.0
+margin_top = 83.0
+margin_right = 147.0
+margin_bottom = 107.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "1"
+focus_mode = 2
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
+
+[node name="host" type="Button" parent="panel" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -131,7 +179,7 @@ text = "Host"
 flat = false
 align = 1
 
-[node name="join" type="Button" parent="panel" index="3"]
+[node name="join" type="Button" parent="panel" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -156,7 +204,7 @@ text = "Join"
 flat = false
 align = 1
 
-[node name="status_ok" type="Label" parent="panel" index="4"]
+[node name="status_ok" type="Label" parent="panel" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -178,7 +226,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="status_fail" type="Label" parent="panel" index="5"]
+[node name="status_fail" type="Label" parent="panel" index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -224,6 +272,8 @@ group = null
 text = "Single Player"
 flat = false
 align = 1
+
+[connection signal="text_changed" from="panel/laps" to="." method="_on_laps_text_changed"]
 
 [connection signal="pressed" from="panel/host" to="." method="_on_host_pressed"]
 

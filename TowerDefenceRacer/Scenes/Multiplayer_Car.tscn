@@ -30,8 +30,7 @@ ACTIVE = null
 
 scale = Vector2( 0.5, 0.5 )
 frames = ExtResource( 2 )
-animation = "Around"
-frame = 2
+animation = "Purple"
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]

@@ -32,7 +32,7 @@ use_filter = false
 font_data = ExtResource( 6 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="HUD" type="CanvasLayer" index="0"]
+[node name="HUD" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -77,10 +77,33 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 32.0
-margin_top = 45.0
-margin_right = 72.0
-margin_bottom = 59.0
+margin_left = 82.0
+margin_top = 41.0
+margin_right = 122.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0.00"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Label" type="Label" parent="Clock" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -51.0
+margin_right = -11.0
+margin_bottom = 19.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -133,34 +156,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Grow Direction", "Rect", "Theme", "custom_constants", "custom_fonts" ]
 
-[node name="AgainButton" type="Button" parent="." index="6"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 312.0
-margin_top = 235.0
-margin_right = 393.0
-margin_bottom = 255.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Back to lobby?"
-flat = false
-align = 1
-_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
-
-[node name="Lobby" parent="." index="7" instance=ExtResource( 7 )]
+[node name="Lobby" parent="." index="6" instance=ExtResource( 7 )]
 
 visible = false
 margin_left = 209.0
@@ -168,7 +164,7 @@ margin_top = 173.0
 margin_right = 249.0
 margin_bottom = 213.0
 
-[node name="TowerMenu" type="Control" parent="." index="8"]
+[node name="TowerMenu" type="Control" parent="." index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -183,7 +179,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="Scoreboard" type="Panel" parent="." index="9"]
+[node name="Scoreboard" type="Panel" parent="." index="8"]
 
 visible = false
 anchor_left = 0.0
@@ -243,7 +239,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Score" type="Label" parent="Scoreboard/Player1" index="0"]
+[node name="Lap" type="Label" parent="Scoreboard/Player1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -251,24 +247,44 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = -20.0
 margin_top = 22.0
-margin_right = 78.0
-margin_bottom = 107.0
+margin_right = 22.0
+margin_bottom = 189.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Lap 1:     0.000
-Lap 2:     0.000
-Lap 3:     0.000
+text = "Lap 1:
+Lap 2:
+Lap 3:
 .
 .
 .
-Lap N:     0.000
+Lap N:
 
-Total:     0.000
+Total:
 "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Score" type="Label" parent="Scoreboard/Player1" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 26.0
+margin_top = 22.0
+margin_right = 149.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -279,10 +295,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 453.0
-margin_top = 68.0
-margin_right = 493.0
-margin_bottom = 82.0
+margin_left = 449.0
+margin_top = 66.0
+margin_right = 500.0
+margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -294,36 +310,85 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Score" type="Label" parent="Scoreboard/Player2" index="0"]
+[node name="Lap" type="Label" parent="Scoreboard/Player2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -349.0
-margin_top = 21.0
-margin_right = -251.0
-margin_bottom = 188.0
+margin_left = -20.0
+margin_top = 22.0
+margin_right = 22.0
+margin_bottom = 189.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Lap 1:     0.000
-Lap 2:     0.000
-Lap 3:     0.000
+text = "Lap 1:
+Lap 2:
+Lap 3:
 .
 .
 .
-Lap N:     0.000
+Lap N:
 
-Total:     0.000
+Total:
 "
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="Score" type="Label" parent="Scoreboard/Player2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 26.0
+margin_top = 22.0
+margin_right = 149.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AgainButton" type="Button" parent="." index="9"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 462.0
+margin_top = 522.0
+margin_right = 566.0
+margin_bottom = 542.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Back to lobby?"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[connection signal="pressed" from="AgainButton" to="." method="_on_AgainButton_pressed"]
 
 

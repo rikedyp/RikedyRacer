@@ -8,10 +8,10 @@
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Shotgun.tscn" type="PackedScene" id=7]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="MP_Stage" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
-MAXLAPS = 3
+max_laps = 1
 
 [node name="Environment" type="TileMap" parent="." index="0"]
 
@@ -197,21 +197,20 @@ position = Vector2( -1428.71, 644.163 )
 collision_layer = 2
 collision_mask = 5
 _sections_unfolded = [ "Collision", "collision" ]
-TOPSPEED = 700
-ACCELERATION = 8000
+TOPSPEED = 2000
+GRASSSPEED = 800
+ACCELERATION = 15000
 ACTIVE = false
 
 [node name="Player2" parent="." index="7" groups=[
 "players",
 ] instance=ExtResource( 5 )]
 
-position = Vector2( -1384.48, 669.667 )
-collision_layer = 2
-collision_mask = 5
-_sections_unfolded = [ "Collision" ]
-TOPSPEED = 700
-ACCELERATION = 8000
-ACTIVE = true
+position = Vector2( -1351.65, 696.24 )
+scale = Vector2( 0.926208, 0.926208 )
+TOPSPEED = 1200
+GRASSSPEED = 500
+ACCELERATION = 10000
 
 [node name="HUD" parent="." index="8" instance=ExtResource( 6 )]
 
@@ -236,15 +235,13 @@ position = Vector2( -769.277, 74.2162 )
 
 [connection signal="body_entered" from="Grass" to="Player1" method="_on_Grass_body_entered"]
 
-[connection signal="body_entered" from="Grass" to="Player2" method="_on_Grass_body_entered"]
-
 [connection signal="body_exited" from="Grass" to="Player1" method="_on_Grass_body_exited"]
-
-[connection signal="body_exited" from="Grass" to="Player2" method="_on_Grass_body_exited"]
 
 [connection signal="body_entered" from="PitStop" to="." method="_on_PitStop_body_entered"]
 
 [connection signal="body_exited" from="PitStop" to="." method="_on_PitStop_body_exited"]
+
+[connection signal="back_to_lobby" from="HUD" to="." method="_on_HUD_back_to_lobby"]
 
 [connection signal="countdown_timeout" from="HUD" to="." method="_on_HUD_countdown_timeout"]
 

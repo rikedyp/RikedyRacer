@@ -21,18 +21,28 @@ There may be TODOs in any gdscript files
 - Tower Mode zoom in/out
 - 1.0 Boot Splash / Logo
 - 1.0 Make sure signals are attached at _ready() function 
+- 1.0 Car colour assigned in the lobby
+- 1.0 Add barries which cars cannot go past
+- Warn cars which go in wrong direction after a little while
+- 1.0 Multiplayer all from lobby [hide() show() methods] OR change_scene?
+- More types of terrain
+	- Hills?
+	- Boost pads
+- Tower colours match car colours for each player
+- 1.0 Set # laps in the lobby
 - 0.5 Basic Game:  
 	2 Player online 
-	- Lap times + total time + shows both player's times at the end
-	- Give player 2 different colour
-	- 1 Tower which slows the car temporarily (attach timer)
-	- Track boundaries
-		- Barriers
-	- Warns against going backwards
-	- Times laps
-	- Press 'a' to ready + Countdown to start
-	- MK-style buttons? A, B + Directions
-- 0.9 Single player mode
+	- Clean up comments & prints
+	- Export executable for mac, win, lin
+
+- 1.0 New game without closing / reopening program
+	- Laps reset on back to lobby / new game
+	- Game resets correctly on back to lobby / new game
+	- Other players return to lobby on network disconnect
+
+
+
+- MK-style buttons? A, B + Directions (forward / reverse?)
 - 1.0 Flesh out tower mode
 	- Spawn towers (tower tokens / limited available)
 	- Tower upgrades
@@ -53,6 +63,7 @@ There may be TODOs in any gdscript files
 	- gd (replace lib)
 	- Clean up OLD (Move to dev folder)
 - 1.0 Towers
+	- Tower which slows the car temporarily (attach timer)
 	- Pistol
 	- MG (Rapid fire)
 	- Shotgun (Spray)
@@ -66,6 +77,7 @@ There may be TODOs in any gdscript files
 		- Armour
 	- NPC / AI opponent (at least 1) that builds towers as well (random strategy)
 - > 2P Multiplayer
+	- Players join the lobby, then game starts
 	- PvP and Team modes
 - 1.0 Main menu + splash screen
 - Use Tiled Tilemap editor with tiled map importer  

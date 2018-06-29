@@ -5,13 +5,10 @@ extends Node
 # var b = "textvar"
 var ip
 var current_scene
-var master_ready = false
-var slave_ready = false
+var max_laps = 54321
 
 func _ready():
-	var root = get_tree().get_root()
-	current_scene = root.get_child( root.get_child_count() -1 )
-# Called every time the node is added to the scene.
+	# Called every time the node is added to the scene.
 	# Initialization here
 	pass
 

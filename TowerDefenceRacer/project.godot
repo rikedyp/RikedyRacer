@@ -14,10 +14,6 @@ config/name="Tower Defense Racer"
 run/main_scene="res://Scenes/Lobby.tscn"
 config/icon="res://icon.png"
 
-[autoload]
-
-Global="*res://lib/Global.gd"
-
 [input]
 
 right=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
@@ -49,7 +45,7 @@ left_click=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resou
 
 [rendering]
 
-environment/default_clear_color=Color( 0.729412, 0.54902, 0.364706, 1 )
+environment/default_clear_color=Color( 0.511719, 0.492933, 0.47374, 1 )
 environment/default_environment="res://default_env.tres"
 
 [tiled_importer]
