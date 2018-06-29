@@ -197,8 +197,8 @@ position = Vector2( -1428.71, 644.163 )
 collision_layer = 2
 collision_mask = 5
 _sections_unfolded = [ "Collision", "collision" ]
-TOPSPEED = 2000
-GRASSSPEED = 800
+TOPSPEED = 1000
+GRASSSPEED = 300
 ACCELERATION = 15000
 ACTIVE = false
 
@@ -208,9 +208,12 @@ ACTIVE = false
 
 position = Vector2( -1351.65, 696.24 )
 scale = Vector2( 0.926208, 0.926208 )
-TOPSPEED = 1200
-GRASSSPEED = 500
-ACCELERATION = 10000
+collision_layer = 2
+collision_mask = 37
+_sections_unfolded = [ "Collision", "collision" ]
+TOPSPEED = 1000
+GRASSSPEED = 300
+ACCELERATION = 15000
 
 [node name="HUD" parent="." index="8" instance=ExtResource( 6 )]
 
@@ -235,7 +238,11 @@ position = Vector2( -769.277, 74.2162 )
 
 [connection signal="body_entered" from="Grass" to="Player1" method="_on_Grass_body_entered"]
 
+[connection signal="body_entered" from="Grass" to="Player2" method="_on_Grass_body_entered"]
+
 [connection signal="body_exited" from="Grass" to="Player1" method="_on_Grass_body_exited"]
+
+[connection signal="body_exited" from="Grass" to="Player2" method="_on_Grass_body_exited"]
 
 [connection signal="body_entered" from="PitStop" to="." method="_on_PitStop_body_entered"]
 

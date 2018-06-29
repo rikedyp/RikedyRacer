@@ -168,3 +168,6 @@ func _on_HUD_back_to_lobby():
 	$Player1.queue_free()
 	queue_free()
 	#get_tree().change_scene("res://Scenes/Lobby.tscn")
+
+func _on_Grass_body_entered(body):
+	pass # replace with function body
