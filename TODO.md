@@ -16,13 +16,13 @@ There may be TODOs in any gdscript files
 	- iOS
 	- Android
 
-### Game modes
+### Game modes [change title]
 - Mulitplayer as priority
 - Tower Mode zoom in/out
 - 1.0 Boot Splash / Logo
 - 1.0 Make sure signals are attached at _ready() function 
 - 1.0 Car colour assigned in the lobby
-- 1.0 Add barries which cars cannot go past
+- 1.0 Add barriers which cars cannot go past
 - Warn cars which go in wrong direction after a little while
 - 1.0 Multiplayer all from lobby [hide() show() methods] OR change_scene?
 - More types of terrain
@@ -55,6 +55,8 @@ There may be TODOs in any gdscript files
 - 1.0 Test cross compatibility of different versions executables to determine version
 - 1.0 Single player time trial / sandbox / tutorial level minimum
 - Maybe 1 AI that follows simple track 
+- Does all the network connecty stuff for you
+	- Use ip4.me ./+ ip6.me
 - 1.0 Restructure folders 
 	- Assets (used images only, with full collections in TDRacer-dev and sources in the docs)
 	- Vehicles

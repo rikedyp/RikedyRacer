@@ -43,6 +43,10 @@ left_click=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resou
 2d_physics/layer_6="grass"
 2d_physics/layer_7="wall"
 
+[network]
+
+ssl/certificates="res://SSL/apache-selfsigned.crt"
+
 [rendering]
 
 environment/default_clear_color=Color( 0.511719, 0.492933, 0.47374, 1 )

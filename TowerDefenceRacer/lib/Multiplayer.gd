@@ -25,6 +25,9 @@ slave func set_pos_and_motion(p_pos,p_motion):
 slave func set_time(t):
 	time = t
 
+func set_frame(frame):
+	$AnimatedSprite.set_frame(frame)
+
 func _ready():
 	screensize = get_viewport_rect().size
 	$AnimatedSprite.set_frame(2)

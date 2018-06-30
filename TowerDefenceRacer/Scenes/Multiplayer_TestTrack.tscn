@@ -236,13 +236,13 @@ polygon = PoolVector2Array( -2911.36, -152.263, -639.389, 984.299, -601.442, 953
 
 position = Vector2( -769.277, 74.2162 )
 
-[connection signal="body_entered" from="Grass" to="Player1" method="_on_Grass_body_entered"]
-
 [connection signal="body_entered" from="Grass" to="Player2" method="_on_Grass_body_entered"]
 
-[connection signal="body_exited" from="Grass" to="Player1" method="_on_Grass_body_exited"]
+[connection signal="body_entered" from="Grass" to="Player1" method="_on_Grass_body_entered"]
 
 [connection signal="body_exited" from="Grass" to="Player2" method="_on_Grass_body_exited"]
+
+[connection signal="body_exited" from="Grass" to="Player1" method="_on_Grass_body_exited"]
 
 [connection signal="body_entered" from="PitStop" to="." method="_on_PitStop_body_entered"]
 

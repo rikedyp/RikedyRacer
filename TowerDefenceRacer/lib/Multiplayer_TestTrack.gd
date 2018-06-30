@@ -15,6 +15,7 @@ func _ready():
 		# Disable players during countdown
 		for player in get_tree().get_nodes_in_group("players"):
 			print(player.get_name() + " Ready.")
+			player.set_frame(2)
 			player.ACTIVE = false
 			#player.AnimatedSprite.set_frame(2)
 	# By default, all nodes in server inherit from master,
