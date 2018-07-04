@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="isometric" renderorder="right-down" width="100" height="100" tilewidth="100" tileheight="50" infinite="0" nextobjectid="1">
- <tileset firstgid="1" source="../Tilesets/TrackSet.tsx"/>
- <layer name="Tile Layer 1" width="100" height="100">
-  <data encoding="base64" compression="zlib">
-   eJzt0UEKwCAQBMFZ///oXAyIkKtroAr6BZ0AAAAAAAAAAAAAAAAAAAAAAAAAAHDaWKLfiCc32X/UjB5+3KWW3h+JJ53qIwAAAAAAAAAAAAAAAAAAAAD+7QGERwAw
-  </data>
- </layer>
-</map>

@@ -1,12 +1,14 @@
-# TDRacer
+# RikedyRacer
+RikedyRacer copyright 2018 Rich Park
+
 Multiplayer Tower Defence Racing Game Mashup
   made with Godot 3
 
 ### Quickstart
 
-project.godot in TowerDefenseRacer
+project.godot in dev
 
-There are executables in the bin folder
+There are executables in the release folder
 
 ### Multiplayer
 up, down left, right

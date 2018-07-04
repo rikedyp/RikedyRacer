@@ -1,6 +1,17 @@
-# Tower Defense Racer Defence
+# Tower Defense Racer 
 Isometric top-down 2D racing game tower defense fusion  
 Made with Godot 3  
+
+Design notes and future ideas
+
+### Godot project structure
+- project.godot
+	Godot project file
+- Assets
+	Images and Godot .tscn files for all game elements
+	- Vehicles
+	- Towers
+	
 
 ### WIP
 Different cars have features / abilities, resistance / weaknesses
@@ -18,7 +29,7 @@ Different cars have features / abilities, resistance / weaknesses
 
 ### Targets
 - Balancing mechanics a la mario kart
-- Skilled players can evade hindrance
+- Skilled players can evade hindrance but novice players can still enjoy a game
 
 ### Towers
 - Crossbow / pistol short spurts low damage
@@ -30,4 +41,4 @@ Different cars have features / abilities, resistance / weaknesses
 
 ### Maybe
 - Top down + 3rd person
-- 3D engine next version
+- 3D engine for version 2

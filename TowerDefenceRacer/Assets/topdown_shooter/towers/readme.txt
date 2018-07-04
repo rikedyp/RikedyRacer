@@ -1,1 +1,0 @@
-Each tower has three levels: each level has a frame of animation for facing in all 8 directions.

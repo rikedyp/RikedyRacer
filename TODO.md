@@ -6,9 +6,15 @@ There may be TODOs in any gdscript files
 - [General](#general)
 - [Vehicles](#vehicles)
 - [Towers](#towers)
+- [Items](#items)
+- [Terrain](#terrain)
 
 ### General
-- 1.0 Name
+- 1.0 Update this todo to fit new structure
+- 1.0 Logo
+- 1.0 Boot splash
+- 1.0 Plan with mobile in mind 
+	- Or consider mobile version
 - 1.0 Executables
 	- Win
 	- Mac
@@ -18,8 +24,11 @@ There may be TODOs in any gdscript files
 
 ### Game modes [change title]
 - Mulitplayer as priority
+- 1.0 Steal multiplayer bomber code
 - Tower Mode zoom in/out
+- The view follows the car
 - 1.0 Boot Splash / Logo
+- 1.0 Re design lobby
 - 1.0 Make sure signals are attached at _ready() function 
 - 1.0 Car colour assigned in the lobby
 - 1.0 Add barriers which cars cannot go past
