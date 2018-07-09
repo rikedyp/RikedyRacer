@@ -16,8 +16,10 @@ CONTENTS
 [Stages](#stages)
 
 ### Overview
-- Mulitplayer as priority
-- Mobile app compatability (consider touch screen)
+- RikedyRacer is a 2D racing game / tower defense mashup.
+- Made with Godot 3 
+- Multiplayer focus
+- 2D isometric top-down view a la Gaelco World Rally Championship
 
 ### Gameplay
 Splash screen
@@ -44,23 +46,26 @@ Multiplayer + single player with more content
 	All .gd scripts 
 
 ### Future ideas
-- Top down + 3rd person graphics
-- 3D engine for version 2
+- Top down + MK/F-Zero style graphics in race mode
+- 3D engine 
 - More types of terrain
 	- Hills?
 	- Boost pads
 - In-built level editor 
-
-### WIP
 Different cars have features / abilities, resistance / weaknesses
 - Preset / unlockable cars
 - Customisable cars
 - Trade fixed no. of points for speed, resilience, handling etc.
+- Kubrickian (impossible) layouts e.g. Shining mansion
+- Rocket League mini-game / game mode
 
 ### Influences
 - Infinitode
 - Pixeljunk Monsters 2
 - Other TD Games
+- Gaelco World Rally Championship
+- F-Zero 
+- R.C. Pro-Am 
 - Mario Kart Advance
 - Micro Machines
 - Other Racing Games
