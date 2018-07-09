@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/buildingTiles_119.png-22d5425f130d9ac40e1f0e40940919f5.stex"
+
+[deps]
+
+source_file="res://assets/tilesets/Isometric Buildings/PNG/buildingTiles_119.png"
+source_md5="cd1204f49f85d92400ed1d5ec1cd4f4f"
+
+dest_files=[ "res://.import/buildingTiles_119.png-22d5425f130d9ac40e1f0e40940919f5.stex" ]
+dest_md5="79f1b466dc00d129da0f5d8664347973"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
