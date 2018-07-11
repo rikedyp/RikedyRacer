@@ -50,6 +50,7 @@ func _on_game_ended():
 	show()
 	get_node("connect").show()
 	get_node("players").hide()
+	get_node("vehicle_select").hide()
 	get_node("connect/host").disabled = false
 	get_node("connect/join").disabled
 
@@ -89,6 +90,7 @@ func _on_start_pressed():
 	gamestate.begin_game()
 
 func free_child_nodes(node):
+	# TODO is this still used?
 	for child in node.get_children():
 		child.queue_free()
 
@@ -96,7 +98,6 @@ func display_vehicle_image(vehicle_scene, animation):
 	# TODO Check if spawning nodes in code [read() maybe] is better for lots of vehicle options
 	# Free vehicle image
 	var vehicle_img = get_node("vehicle_select/vehicle_image")
-	free_child_nodes(vehicle_img)
 	var car = load(vehicle_scene).instance()
 	car.set_animation(animation)
 	#car.set_frame(0)
@@ -106,56 +107,58 @@ func display_vehicle_image(vehicle_scene, animation):
 func _on_sedan_toggled(button_pressed):
 	if button_pressed:
 		_on_cavallo_toggled(false)
-		$vehicle_select/vehicles/sedan_yellow.show()
-		$vehicle_select/vehicles/sedan_white.show()
-		$vehicle_select/vehicles/cavallo.set_pressed(false)
+		$vehicle_select/vehicle_buttons/sedan_yellow.show()
+		$vehicle_select/vehicle_buttons/sedan_white.show()
+		$vehicle_select/vehicle_buttons/cavallo.set_pressed(false)
 	else:
-		$vehicle_select/vehicles/sedan_yellow.hide()
-		$vehicle_select/vehicles/sedan_white.hide()
+		$vehicle_select/vehicle_buttons/sedan_yellow.hide()
+		$vehicle_select/vehicle_buttons/sedan_white.hide()
 
 func _on_cavallo_toggled(button_pressed):
 	if button_pressed:
 		_on_sedan_toggled(false)
-		$vehicle_select/vehicles/cavallo_black.show()
-		$vehicle_select/vehicles/cavallo_blue.show()
-		$vehicle_select/vehicles/cavallo_grey.show()
-		$vehicle_select/vehicles/sedan.set_pressed(false)
+		$vehicle_select/vehicle_buttons/cavallo_black.show()
+		$vehicle_select/vehicle_buttons/cavallo_blue.show()
+		$vehicle_select/vehicle_buttons/cavallo_grey.show()
+		$vehicle_select/vehicle_buttons/sedan.set_pressed(false)
 	else:
-		$vehicle_select/vehicles/cavallo_black.hide()
-		$vehicle_select/vehicles/cavallo_blue.hide()
-		$vehicle_select/vehicles/cavallo_grey.hide()
+		$vehicle_select/vehicle_buttons/cavallo_black.hide()
+		$vehicle_select/vehicle_buttons/cavallo_blue.hide()
+		$vehicle_select/vehicle_buttons/cavallo_grey.hide()
 
 func _on_cavallo_black_pressed():
 	# TODO Check if putting these paths in a dictionary is a good idea
+	# TODO Or even spawning buttons using code (might make more sense for unlockables)
 	# Set vehicle and colour
 	var player_scene = "res://assets/vehicles/cavallo/cavallo.tscn"
 	var player_animation = "black"
 	vehicle_select(player_scene, player_animation)
-
-func _on_sedan_yellow_pressed():
-	# Set vehicle and colour
-	var player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
-	var player_animation = "yellow"
-	vehicle_select(player_scene, player_animation)
-
-func _on_sedan_white_pressed():
-	# Set vehicle and colour
-	var player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
-	var player_animation = "white"
-	vehicle_select(player_scene, player_animation)
+	$vehicle_select/vehicle_animations.set_animation("cavallo_black")
 
 func _on_cavallo_grey_pressed():
-	# Set vehicle and colour
 	var player_scene = "res://assets/vehicles/cavallo/cavallo.tscn"
 	var player_animation = "grey"
 	vehicle_select(player_scene, player_animation)
+	$vehicle_select/vehicle_animations.set_animation("cavallo_grey")
 
 func _on_cavallo_blue_pressed():
 	# Set vehicle and colour
 	var player_scene = "res://assets/vehicles/cavallo/cavallo.tscn"
 	var player_animation = "blue"
 	vehicle_select(player_scene, player_animation)
+	$vehicle_select/vehicle_animations.set_animation("cavallo_blue")
+
+func _on_sedan_yellow_pressed():
+	var player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
+	var player_animation = "yellow"
+	vehicle_select(player_scene, player_animation)
+	$vehicle_select/vehicle_animations.set_animation("sedan_yellow")
+
+func _on_sedan_white_pressed():
+	var player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
+	var player_animation = "white"
+	vehicle_select(player_scene, player_animation)
+	$vehicle_select/vehicle_animations.set_animation("sedan_white")
 
 func vehicle_select(player_scene, player_animation):
 	gamestate.set_vehicle_properties(player_scene, player_animation)
-	display_vehicle_image(player_scene, player_animation)

@@ -96,14 +96,7 @@ editor_draw_drag_margin = false
 position = Vector2( -2.72073, 1.36038 )
 shape = SubResource( 1 )
 
-[node name="animated_sprite" type="AnimatedSprite" parent="." index="2"]
-
-position = Vector2( 1.06316, -1.06316 )
-scale = Vector2( 0.740286, 0.740286 )
-frames = SubResource( 2 )
-animation = "yellow"
-
-[node name="label" type="Label" parent="." index="3"]
+[node name="label" type="Label" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -122,5 +115,13 @@ size_flags_vertical = 4
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="animated_sprite" type="AnimatedSprite" parent="." index="3"]
+
+position = Vector2( 1.06316, -1.06316 )
+scale = Vector2( 0.740286, 0.740286 )
+frames = SubResource( 2 )
+animation = "yellow"
+_sections_unfolded = [ "Material", "Visibility" ]
 
 

@@ -4,7 +4,7 @@ extends Node
 const DEFAULT_PORT = 14204
 
 # Max number of players
-const MAX_PEERS = 2
+const MAX_PEERS = 3
 
 # Details for my player
 var player_name = ""
@@ -79,7 +79,8 @@ remote func unregister_player(id):
 	emit_signal("player_list_changed")
 
 remote func register_vehicle(id, new_player_scene, new_player_animation):
-	# TODO: Share the current choosing players list around network
+	# TODO: Newly joining players need updated players_choosing dict
+	#	Retrieve this from server who is always host? does host change on disconnect?
 #	if get_tree().is_network_server():
 #		# If we are server, let everyone know about the vehicle choice
 #		rpc_id(id, "register_vehicle", 1, player_scene, player_animation)

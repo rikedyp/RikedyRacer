@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/tilesets/default_track_pieces.tres" type="TileSet" id=1]
 
-[node name="track1" type="Node2D"]
+[node name="track1" type="Node2D" index="0"]
 
 [node name="background" type="TileMap" parent="." index="0"]
 
@@ -89,8 +89,6 @@ _sections_unfolded = [ "Cell" ]
 
 [node name="spawn_points" type="Node2D" parent="." index="4"]
 
-editor/display_folded = true
-
 [node name="0" type="Position2D" parent="spawn_points" index="0"]
 
 position = Vector2( 849.077, 332.936 )
@@ -98,6 +96,10 @@ position = Vector2( 849.077, 332.936 )
 [node name="1" type="Position2D" parent="spawn_points" index="1"]
 
 position = Vector2( 981.575, 399.517 )
+
+[node name="2" type="Position2D" parent="spawn_points" index="2"]
+
+position = Vector2( 655.889, 429.58 )
 
 [node name="players" type="Node2D" parent="." index="5"]
 
