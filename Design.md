@@ -4,17 +4,17 @@ Made with Godot 3
 
 Design notes and future ideas
 
-CONTENTS
-[Overview](#overview)
-[Gameplay](#gameplay)
-[Godot project structure](#godot-project-structure)
-[Future ideas](#future-ideas)
-[Influences](#influences)
-[Targets](#targets)
-[Towers](#towers)
-[Vehicles](#vehicles)
-[Stages](#stages)
-
+CONTENTS  
+[Overview](#overview)  
+[Gameplay](#gameplay)  
+[Godot project structure](#godot-project-structure)  
+[Future ideas](#future-ideas)  
+[Influences](#influences)  
+[Targets](#targets)  
+[Towers](#towers)  
+[Vehicles](#vehicles)  
+[Stages](#stages)  
+  
 ### Overview
 - RikedyRacer is a 2D racing game / tower defense mashup.
 - Made with Godot 3 
@@ -22,18 +22,18 @@ CONTENTS
 - 2D isometric top-down view a la Gaelco World Rally Championship
 
 ### Gameplay
-Splash screen
-Main menu:
-	Multi player
-	Single player
-Multiplayer + single player with more content
-	- Tower upgrades (at least 3 types with multi-tier upgrades)
-	- Vehicle upgrades
-		- 1 per tower type (counter)
-		- Boost
-		- Armour
-	- NPC / AI opponent (at least 1) that builds towers as well (random strategy)
-
+Splash screen  
+Main menu:  
+	Multi player  
+	Single player  
+Multiplayer + single player with more content  
+	- Tower upgrades (at least 3 types with multi-tier upgrades)  
+	- Vehicle upgrades  
+		- 1 per tower type (counter)  
+		- Boost  
+		- Armour  
+	- NPC / AI opponent (at least 1) that builds towers as well (random strategy)  
+  
 ### Godot project structure
 - project.godot
 	Godot project file
