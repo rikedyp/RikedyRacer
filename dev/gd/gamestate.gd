@@ -65,17 +65,25 @@ func _connected_fail():
 remote func register_player(id, new_player_name):
 	if get_tree().is_network_server():
 		# If we are the server, let everyone know about the new player
-		rpc_id(id, "register_player", 1, player_name) # Send myself to new dude
+		rpc_id(id, "register_player", 1, player_name) # Send myself and vehicle choice to new dude
+		rpc_id(id, "register_vehicle", 1, player_scene, player_animation)
 		for p_id in players: # Then, for each remote player
-			rpc_id(id, "register_player", p_id, players[p_id]) # Send player to new dude
-			rpc_id(p_id, "register_player", id, new_player_name) # Send new dude to player
+			rpc_id(id, "register_player", p_id, players[p_id]) # Send player in lobby to new player
+			rpc_id(p_id, "register_player", id, new_player_name) # Send new player to player in lobby
+			rpc_id(id, "register_vehicle", p_id, player_scenes[p_id], player_animations[p_id]) # Send vehicle choices to new player
+			rpc_id(p_id, "register_vehicle", id, "", "") # Set up new player scene dict with player in lobby
 	players[id] = new_player_name
 	players_choosing[id] = true
+	player_scenes[id] = ""
+	player_animations[id] = ""
+	
 	emit_signal("player_list_changed")
 
 remote func unregister_player(id):
 	players.erase(id)
 	players_choosing.erase(id)
+	player_scenes.erase(id)
+	player_animations.erase(id)
 	emit_signal("player_list_changed")
 
 remote func register_vehicle(id, new_player_scene, new_player_animation):
@@ -87,14 +95,18 @@ remote func register_vehicle(id, new_player_scene, new_player_animation):
 #		for p_id in players: # Then, for each remote player
 #			rpc_id(id, "register_vehicle", p_id, player_scenes[p_id], player_animations[p_id]) # Send player's vehicle to chooser
 #			rpc_id(p_id, "register_vehicle", id, new_player_scene, new_player_animation) # Send chooser's vehicle to player
+	if new_player_scene == "":
+		players_choosing[id] = true
+	else:
+		players_choosing[id] = false
 	player_scenes[id] = new_player_scene
 	player_animations[id] = new_player_animation
-	players_choosing[id] = false
 	emit_signal("player_list_changed")
 
 remote func unregister_vehicle(id):
-	player_scenes.erase(id)
-	player_animations.erase(id)
+	players_choosing[id] = true
+	player_scenes[id] = ""
+	player_animations[id] = ""
 	emit_signal("player_list_changed")
 
 remote func pre_start_game(spawn_points):
@@ -181,16 +193,16 @@ func get_player_animation():
 
 func begin_game():
 	print(players_choosing)
-#	if player_choosing:
-#		var printstring = get_player_name() + " yet to choose vehicle"
-#		print(printstring)
-#		return
-#	else:
-#		for p in players_choosing:
-#			if p:
-#				var printstring = p + " yet to choose vehicle..."
-#				print(printstring)
-#				return
+	if player_choosing:
+		var printstring = get_player_name() + " yet to choose vehicle"
+		print(printstring)
+		return
+	else:
+		for p in players_choosing:
+			if players_choosing[p]:
+				var printstring = str(p) + " yet to choose vehicle..."
+				print(printstring)
+				return
 	# TODO: verify all connected players have chosen vehicles
 	assert(get_tree().is_network_server())
 
@@ -228,8 +240,13 @@ func set_vehicle_properties(scene, animation):
 	player_choosing = false
 	player_scene = scene
 	player_animation = animation
-	var printstring = player_name + " vehicle set." 
-	print(printstring)
 	rpc("register_vehicle", get_tree().get_network_unique_id(), scene, animation)
+	emit_signal("player_list_changed")
+	
+func still_choosing():
+	player_choosing = true
+	player_scene = ""
+	player_animation = ""
+	rpc("unregister_vehicle", get_tree().get_network_unique_id())
 	emit_signal("player_list_changed")
 

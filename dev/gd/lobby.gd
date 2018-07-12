@@ -1,5 +1,8 @@
 extends Control
 
+var player_scene
+var player_animation
+
 func _ready():
 	# Called every time the node is added to the scene.
 	gamestate.connect("connection_failed", self, "_on_connection_failed")
@@ -129,36 +132,44 @@ func _on_cavallo_toggled(button_pressed):
 func _on_cavallo_black_pressed():
 	# TODO Check if putting these paths in a dictionary is a good idea
 	# TODO Or even spawning buttons using code (might make more sense for unlockables)
+	# Enable choose button
+	$vehicle_select/choose.disabled = false
 	# Set vehicle and colour
-	var player_scene = "res://assets/vehicles/cavallo/cavallo.tscn"
-	var player_animation = "black"
-	vehicle_select(player_scene, player_animation)
+	player_scene = "res://assets/vehicles/cavallo/cavallo.tscn"
+	player_animation = "black"
 	$vehicle_select/vehicle_animations.set_animation("cavallo_black")
 
 func _on_cavallo_grey_pressed():
-	var player_scene = "res://assets/vehicles/cavallo/cavallo.tscn"
-	var player_animation = "grey"
-	vehicle_select(player_scene, player_animation)
+	$vehicle_select/choose.disabled = false
+	player_scene = "res://assets/vehicles/cavallo/cavallo.tscn"
+	player_animation = "grey"
 	$vehicle_select/vehicle_animations.set_animation("cavallo_grey")
 
 func _on_cavallo_blue_pressed():
-	# Set vehicle and colour
-	var player_scene = "res://assets/vehicles/cavallo/cavallo.tscn"
-	var player_animation = "blue"
-	vehicle_select(player_scene, player_animation)
+	$vehicle_select/choose.disabled = false
+	player_scene = "res://assets/vehicles/cavallo/cavallo.tscn"
+	player_animation = "blue"
 	$vehicle_select/vehicle_animations.set_animation("cavallo_blue")
 
 func _on_sedan_yellow_pressed():
-	var player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
-	var player_animation = "yellow"
-	vehicle_select(player_scene, player_animation)
+	$vehicle_select/choose.disabled = false
+	player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
+	player_animation = "yellow"
 	$vehicle_select/vehicle_animations.set_animation("sedan_yellow")
 
 func _on_sedan_white_pressed():
+	$vehicle_select/choose.disabled = false
 	var player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
 	var player_animation = "white"
-	vehicle_select(player_scene, player_animation)
 	$vehicle_select/vehicle_animations.set_animation("sedan_white")
 
-func vehicle_select(player_scene, player_animation):
-	gamestate.set_vehicle_properties(player_scene, player_animation)
+func _on_choose_toggled(button_pressed):
+	# TODO player choices / readiness available to other players when they join
+	if button_pressed:
+		$vehicle_select/choose.text = "CHOOSE AGAIN"
+		gamestate.set_vehicle_properties(player_scene, player_animation)
+	else:
+		$vehicle_select/choose.text = "CHOOSE"
+		gamestate.still_choosing()
+	
+	

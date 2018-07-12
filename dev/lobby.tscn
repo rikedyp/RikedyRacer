@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://gd/lobby.gd" type="Script" id=1]
-[ext_resource path="res://assets/ui/kenney_ui/PNG/grey_button02.png" type="Texture" id=2]
-[ext_resource path="res://assets/ui/kenney_ui/PNG/green_button13.png" type="Texture" id=3]
-[ext_resource path="res://assets/ui/kenney_ui/PNG/grey_button03.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui/kenney_ui/PNG/blue_button00.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/kenney_ui/PNG/blue_button03.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/kenney_ui/PNG/blue_button13.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/montserrat.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://assets/ui/kenney_ui/PNG/grey_button05.png" type="Texture" id=6]
-[ext_resource path="res://assets/vehicles/vehicle_animations.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/ui/kenney_ui/PNG/grey_button02.png" type="Texture" id=6]
+[ext_resource path="res://assets/ui/kenney_ui/PNG/grey_button05.png" type="Texture" id=7]
+[ext_resource path="res://assets/vehicles/vehicle_animations.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -120,7 +121,6 @@ fixed_icon_size = Vector2( 0, 0 )
 
 [node name="vehicle_select" type="Panel" parent="." index="1"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -210,7 +210,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 196.0
-margin_bottom = 45.0
+margin_bottom = 49.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -260,9 +260,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 49.0
+margin_top = 53.0
 margin_right = 196.0
-margin_bottom = 94.0
+margin_bottom = 98.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -274,8 +274,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 4 )
 _sections_unfolded = [ "Textures" ]
 
@@ -326,8 +326,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 4 )
 _sections_unfolded = [ "Textures" ]
 
@@ -363,9 +363,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 49.0
+margin_top = 53.0
 margin_right = 196.0
-margin_bottom = 94.0
+margin_bottom = 102.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -429,8 +429,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 4 )
 _sections_unfolded = [ "Textures" ]
 
@@ -481,8 +481,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 4 )
 _sections_unfolded = [ "Textures" ]
 
@@ -533,8 +533,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 4 )
 _sections_unfolded = [ "Textures" ]
 
@@ -569,9 +569,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 98.0
+margin_top = 106.0
 margin_right = 196.0
-margin_bottom = 98.0
+margin_bottom = 106.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -580,7 +580,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 stretch_mode = 0
 
-[node name="vehicle_animations" parent="vehicle_select" index="3" instance=ExtResource( 7 )]
+[node name="vehicle_animations" parent="vehicle_select" index="3" instance=ExtResource( 8 )]
 
 position = Vector2( 350.965, 245.988 )
 animation = "none"
@@ -603,7 +603,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-toggle_mode = false
+disabled = true
+toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
 group = null
@@ -829,7 +830,7 @@ dialog_hide_on_ok = true
 
 [connection signal="pressed" from="vehicle_select/vehicle_buttons/cavallo_grey" to="." method="_on_cavallo_grey_pressed"]
 
-[connection signal="pressed" from="vehicle_select/choose" to="." method="_on_choose_pressed"]
+[connection signal="toggled" from="vehicle_select/choose" to="." method="_on_choose_toggled"]
 
 [connection signal="pressed" from="connect/host" to="." method="_on_host_pressed"]
 

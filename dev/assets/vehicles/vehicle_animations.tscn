@@ -115,11 +115,11 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="vehicle_animations" type="AnimatedSprite" index="0"]
+[node name="vehicle_animations" type="AnimatedSprite"]
 
 frames = SubResource( 1 )
 animation = "cavallo_blue"
-frame = 1
+frame = 15
 playing = true
 
 
