@@ -17,7 +17,7 @@ use_filter = false
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 
-[node name="lobby" type="Control" index="0"]
+[node name="lobby" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -121,6 +121,7 @@ fixed_icon_size = Vector2( 0, 0 )
 
 [node name="vehicle_select" type="Panel" parent="." index="1"]
 
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -184,7 +185,6 @@ fixed_icon_size = Vector2( 0, 0 )
 
 [node name="vehicle_buttons" type="VBoxContainer" parent="vehicle_select" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -813,6 +813,7 @@ popup_exclusive = false
 window_title = "Alert!"
 resizable = false
 dialog_hide_on_ok = true
+_sections_unfolded = [ "Dialog" ]
 
 [connection signal="pressed" from="players/start" to="." method="_on_start_pressed"]
 

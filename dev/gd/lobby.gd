@@ -11,6 +11,12 @@ func _ready():
 	gamestate.connect("game_ended", self, "_on_game_ended")
 	gamestate.connect("game_error", self, "_on_game_error")
 
+func ip_in_use():
+	get_node("connect").show()
+	get_node("players").hide()
+	get_node("vehicle_select").hide()
+	get_node("connect/error_label").text = "IP address in use"
+
 func _on_host_pressed():
 	# TODO: Steal check-if-ip-in-use code from Multiplayer platformer demo / TDRacer v0.5
 	if get_node("connect/name").text == "":
@@ -64,9 +70,6 @@ func _on_game_error(errtxt):
 func refresh_lobby(): # sync func?
 	var players = gamestate.get_players()
 	var players_choosing = gamestate.get_players_choosing()
-	print(players)
-	print(players_choosing)
-	#players.sort()
 	get_node("players/list").clear()
 	if gamestate.player_choosing:
 		get_node("players/list").add_item(gamestate.get_player_name() + " (You) [Choosing vehicle...]")
@@ -159,12 +162,22 @@ func _on_sedan_yellow_pressed():
 
 func _on_sedan_white_pressed():
 	$vehicle_select/choose.disabled = false
-	var player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
-	var player_animation = "white"
+	player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
+	player_animation = "white"
 	$vehicle_select/vehicle_animations.set_animation("sedan_white")
 
 func _on_choose_toggled(button_pressed):
-	# TODO player choices / readiness available to other players when they join
+	if button_pressed:
+		# Disable vehicle choice buttons
+		for button in get_node("vehicle_select/vehicle_buttons").get_children():
+			if button.get_class() == "TextureButton":
+				button.disabled = true
+	else:
+		# Enable vehicle choice buttons
+		for button in get_node("vehicle_select/vehicle_buttons").get_children():
+			if button.get_class() == "TextureButton":
+				button.disabled = false
+	# Set vehicle properties for this player
 	if button_pressed:
 		$vehicle_select/choose.text = "CHOOSE AGAIN"
 		gamestate.set_vehicle_properties(player_scene, player_animation)

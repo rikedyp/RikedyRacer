@@ -1,12 +1,14 @@
 extends Node
 
 # Default game port
-const DEFAULT_PORT = 14204
+const DEFAULT_PORT = 14204 # 8910
 
 # Max number of players
-const MAX_PEERS = 3
+const MAX_PEERS = 6
 
 # Details for my player
+# Is holding the player node here good idea?
+var my_player
 var player_name = ""
 var player_scene = ""
 var player_animation = ""
@@ -122,7 +124,8 @@ remote func pre_start_game(spawn_points):
 		#player = load("res://assets/vehicles/cavallo/cavallo.tscn").instance()
 		if p_id == get_tree().get_network_unique_id():
 			# If node for this peer id, set up player here
-			player = load(player_scene).instance()
+			my_player = load(player_scene).instance()
+			player = my_player
 			#player.set_name(str(p_id)) # set unique id as node name
 			player.position = spawn_pos
 			player.set_player_name(player_name)
@@ -167,7 +170,12 @@ remote func ready_to_start(id):
 func host_game(new_player_name):
 	player_name = new_player_name
 	var host = NetworkedMultiplayerENet.new()
-	host.create_server(DEFAULT_PORT, MAX_PEERS)
+	#host.set_compression_mode(NetworkedMultiplayerENet.COMPRESS_RANGE_CODER)
+	var err = host.create_server(DEFAULT_PORT, MAX_PEERS) # max: 1 peer, since it's a 2 players game
+	if (err!=OK):
+		#is another server running?
+		emit_signal("game_error", "IP address in use or invalid.")
+		end_game()
 	get_tree().set_network_peer(host)
 
 func join_game(ip, new_player_name):

@@ -14,7 +14,10 @@ var velocity = Vector2() # velocity in Euclidean plane
 var vel_iso = Vector2() # velocity vector for move_and_collide (isometric)
 var line_to_draw = Vector2()
 var theta = 0 # vehicle rotation angle from North in radians
-var time = 0
+var time = 0.0
+var checkpoint = 0
+var lap = 0
+var lap_times = []
 
 #slave var slave_pos
 #slave var slave_vel_iso
@@ -94,7 +97,7 @@ func handle_input(delta):
 	var collision = move_and_collide(vel_iso*delta)
 	if collision:
 		print("Collision")
-		print(collision)
+		print(collision.collider)
 	# Apply friction 
 	if thrust == 0:
 		velocity = velocity / friction
@@ -120,6 +123,12 @@ func set_animation(animation):
 
 func set_frame(frame):
 	$animated_sprite.set_frame(frame)
+
+func get_top_speed():
+	return top_speed
+	
+func set_top_speed(speed):
+	top_speed = speed
 
 func set_animation_frame(x,y):
 	if x == -1:
@@ -190,7 +199,16 @@ func _physics_process(delta):
 	# Send this player's motion to other players
 	rpc("set_pos_and_motion",position,vel_iso,direction)
 	rpc("set_time", time)
-#func _process(delta):
+
+func _process(delta):
+	if active:
+		time += delta
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+
+func _on_hit_area_body_entered(body):
+	print(body.get_name())
+	print(body)
+	pass # replace with function body

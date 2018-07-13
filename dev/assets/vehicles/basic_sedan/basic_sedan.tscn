@@ -37,7 +37,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 16.1111
+radius = 10.0
 
 [sub_resource type="SpriteFrames" id=2]
 
@@ -57,16 +57,24 @@ animations = [ {
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 7
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "collision" ]
 top_speed = 1000
 power = 5000.0
 braking = 1000.0
-handling = 1.0
+handling = 5.0
 friction = 1.02
 
-[node name="camera" type="Camera2D" parent="." index="0"]
+[node name="hit_box" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 0.744842, -4.18245 )
+scale = Vector2( 3.22818, 2.62156 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="camera" type="Camera2D" parent="." index="1"]
 
 anchor_mode = 1
 rotating = false
@@ -90,11 +98,6 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-
-[node name="hit_box" type="CollisionShape2D" parent="." index="1"]
-
-position = Vector2( -2.72073, 1.36038 )
-shape = SubResource( 1 )
 
 [node name="label" type="Label" parent="." index="2"]
 
