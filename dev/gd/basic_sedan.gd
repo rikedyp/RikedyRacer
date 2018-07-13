@@ -18,6 +18,7 @@ var time = 0.0
 var checkpoint = 0
 var lap = 0
 var lap_times = []
+var score = {}
 
 #slave var slave_pos
 #slave var slave_vel_iso
@@ -34,6 +35,9 @@ slave func set_pos_and_motion(p_pos, p_vel_iso, p_dir):
 	var y = round((d.y*4))/4
 	# Animate slave vehicle
 	set_animation_frame(x,y)
+	
+slave func set_lap_time():
+	pass
 	
 slave func set_time(t):
 	time = t

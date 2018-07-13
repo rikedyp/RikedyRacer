@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/fonts/montserrat.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://lobby.tscn" type="PackedScene" id=6]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 
 size = 55
 use_mipmaps = false
@@ -56,6 +56,7 @@ _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="clock" type="Label" parent="." index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -132,7 +133,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.164795, 0.190916, 0.46875, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "3"
@@ -203,147 +204,23 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="player1" type="Label" parent="scoreboard" index="1"]
+[node name="scores" type="HBoxContainer" parent="scoreboard" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 124.0
-margin_top = 67.0
-margin_right = 175.0
-margin_bottom = 81.0
+margin_left = 30.0
+margin_top = 45.0
+margin_right = 597.0
+margin_bottom = 429.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Player 1"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="lap" type="Label" parent="scoreboard/player1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -20.0
-margin_top = 22.0
-margin_right = 22.0
-margin_bottom = 189.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Lap 1:
-Lap 2:
-Lap 3:
-.
-.
-.
-Lap N:
-
-Total:
-"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="score" type="Label" parent="scoreboard/player1" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 26.0
-margin_top = 22.0
-margin_right = 149.0
-margin_bottom = 200.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="player2" type="Label" parent="scoreboard" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 449.0
-margin_top = 66.0
-margin_right = 500.0
-margin_bottom = 80.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Player 2"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="lap" type="Label" parent="scoreboard/player2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -20.0
-margin_top = 22.0
-margin_right = 22.0
-margin_bottom = 189.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Lap 1:
-Lap 2:
-Lap 3:
-.
-.
-.
-Lap N:
-
-Total:
-"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="score" type="Label" parent="scoreboard/player2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 26.0
-margin_top = 22.0
-margin_right = 149.0
-margin_bottom = 200.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+size_flags_vertical = 1
+alignment = 1
 
 [node name="again" type="Button" parent="." index="9"]
 

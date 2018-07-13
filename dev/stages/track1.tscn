@@ -8,10 +8,10 @@
 [node name="track1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
-max_laps = 2
-countdown = 3
-top_speed = 1200.0
-grass_speed = 500.0
+max_laps = 3
+countdown = 1
+top_speed = 1600.0
+grass_speed = 300.0
 
 [node name="background" type="TileMap" parent="." index="0"]
 
@@ -217,6 +217,11 @@ _sections_unfolded = [ "Collision" ]
 build_mode = 0
 polygon = PoolVector2Array( 393.205, 405.853, 576.985, 305.152, -7.08179, 13.1185, 1178.67, -586.053, 594.608, -878.087, -779.963, -195.836 )
 
+[node name="hit_box2" type="CollisionPolygon2D" parent="barrier" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 346.323, 1639.49, 492.896, 1251.5, 1579.27, 441.038, 2467.33, 35.8042, 3476.1, 311.708, 3795.12, 1536.03, 3200.2, 2105.08, 2053.48, 2553.43 )
+
 [node name="grass" type="Area2D" parent="." index="10"]
 
 input_pickable = true
@@ -224,8 +229,10 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 2
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
 
 [node name="hit_box" type="CollisionPolygon2D" parent="grass" index="0"]
 
@@ -241,6 +248,8 @@ polygon = PoolVector2Array( 333.42, 437.551, -431.523, 61.7606, -930.906, -190.4
 
 [node name="checkpoints" type="Node2D" parent="." index="12"]
 
+editor/display_folded = true
+
 [node name="0" type="Area2D" parent="checkpoints" index="0"]
 
 input_pickable = true
@@ -248,9 +257,11 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 8
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="checkpoints/0" index="0"]
 
@@ -264,9 +275,11 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 8
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="checkpoints/1" index="0"]
 
@@ -280,15 +293,17 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 8
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="checkpoints/2" index="0"]
 
 position = Vector2( 898.041, -200.2 )
 build_mode = 0
-polygon = PoolVector2Array( 2456.64, 502.001, 3612.08, -413.2, 3675, -361.72, 2525.28, 519.161 )
+polygon = PoolVector2Array( 2456.64, 502.001, 4507.93, -1072.2, 4565.53, -1000.2, 2525.28, 519.161 )
 
 [node name="3" type="Area2D" parent="checkpoints" index="3"]
 
@@ -298,15 +313,17 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 8
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="checkpoints/3" index="0"]
 
 position = Vector2( 898.041, -200.2 )
 build_mode = 0
-polygon = PoolVector2Array( 2456.64, 502.001, 3612.08, -413.2, 3675, -361.72, 2525.28, 519.161 )
+polygon = PoolVector2Array( 2190.16, 497.543, 5994.07, -734.708, 6166.87, -619.505, 2202.53, 577.906 )
 
 [node name="4" type="Area2D" parent="checkpoints" index="4"]
 
@@ -316,14 +333,16 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 8
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="checkpoints/4" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 990.137, 177.7, 1312.07, 335.592, 1578.64, 470.928, 1521.23, 501.686, 333.964, -88.87, 397.531, -125.78 )
+polygon = PoolVector2Array( 990.137, 177.7, 1312.07, 335.592, 3876.91, 1304.47, 1521.23, 501.686, 333.964, -88.87, 397.531, -125.78 )
 
 [node name="5" type="Area2D" parent="checkpoints" index="5"]
 
@@ -333,14 +352,16 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 8
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="checkpoints/5" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 990.137, 177.7, 1312.07, 335.592, 1578.64, 470.928, 1521.23, 501.686, 333.964, -88.87, 397.531, -125.78 )
+polygon = PoolVector2Array( 990.137, 177.7, 1312.07, 335.592, 3399.12, 1402.26, 3111.12, 1416.66, 333.964, -88.87, 397.531, -125.78 )
 
 [node name="6" type="Area2D" parent="checkpoints" index="6"]
 
@@ -350,9 +371,11 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_layer = 8
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="checkpoints/6" index="0"]
 

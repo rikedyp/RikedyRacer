@@ -34,6 +34,7 @@ brake=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"",
 2d_physics/layer_1="player"
 2d_physics/layer_2="grass"
 2d_physics/layer_3="barrier"
+2d_physics/layer_4="checkpoints"
 
 [rendering]
 

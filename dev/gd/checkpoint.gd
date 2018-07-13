@@ -15,19 +15,16 @@ func _ready():
 func checkpoint_entered(body):
 	# TODO advise on track set up to avoid unwanted lap routes
 	if body.checkpoint + 1 > get_parent().get_child_count():
-		print("lap")
 		body.checkpoint = 0
 		lap(body)
 	if int(self.get_name()) == body.checkpoint:
 		body.checkpoint += 1
-		print("right way")
 	elif int(self.get_name()) < body.checkpoint:
-		print("wrong way!")
 		body.checkpoint -= 1
 	else:
 		# probably cheating / went way off course probably reset player on track like Mario Kart
 		print("other way")
-	print(body.get_name() + " entered checkpoint " + self.get_name() + " next " + str(body.checkpoint))
+	#print(body.get_name() + " entered checkpoint " + self.get_name() + " next " + str(body.checkpoint))
 
 func lap(player):
 	player.lap += 1

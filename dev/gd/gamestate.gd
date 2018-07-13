@@ -8,17 +8,19 @@ const MAX_PEERS = 6
 
 # Details for my player
 # Is holding the player node here good idea?
-var my_player
+var my_player # TODO deprecate this
 var player_name = ""
 var player_scene = ""
 var player_animation = ""
 var player_choosing = true
+var player_score = {}
 
 # Details for remote players in id:value format
 var players = {} # names
 var player_scenes = {} # scene file paths
 var player_animations = {} # player animation frame sets
-var players_choosing = {} # is player still choosing vehicle? (bools)
+var players_choosing = {} # is player still choosing vehicle? (bool)
+var player_scores = {} # everyone's scores
 
 # Signals to let lobby GUI know what's going on
 signal player_list_changed()
@@ -69,15 +71,19 @@ remote func register_player(id, new_player_name):
 		# If we are the server, let everyone know about the new player
 		rpc_id(id, "register_player", 1, player_name) # Send myself and vehicle choice to new dude
 		rpc_id(id, "register_vehicle", 1, player_scene, player_animation)
+		rpc_id(id, "register_score", 1, player_score)
 		for p_id in players: # Then, for each remote player
 			rpc_id(id, "register_player", p_id, players[p_id]) # Send player in lobby to new player
 			rpc_id(p_id, "register_player", id, new_player_name) # Send new player to player in lobby
 			rpc_id(id, "register_vehicle", p_id, player_scenes[p_id], player_animations[p_id]) # Send vehicle choices to new player
 			rpc_id(p_id, "register_vehicle", id, "", "") # Set up new player scene dict with player in lobby
+			rpc_id(id, "register_score", p_id, player_scores[p_id])
+			rpc_id(p_id, "register_score", id, {"name": new_player_name, 0: "Still racing"})
 	players[id] = new_player_name
 	players_choosing[id] = true
 	player_scenes[id] = ""
 	player_animations[id] = ""
+	player_scores[id] = {"name": new_player_name, 0: "Still racing"}
 	
 	emit_signal("player_list_changed")
 
@@ -89,14 +95,6 @@ remote func unregister_player(id):
 	emit_signal("player_list_changed")
 
 remote func register_vehicle(id, new_player_scene, new_player_animation):
-	# TODO: Newly joining players need updated players_choosing dict
-	#	Retrieve this from server who is always host? does host change on disconnect?
-#	if get_tree().is_network_server():
-#		# If we are server, let everyone know about the vehicle choice
-#		rpc_id(id, "register_vehicle", 1, player_scene, player_animation)
-#		for p_id in players: # Then, for each remote player
-#			rpc_id(id, "register_vehicle", p_id, player_scenes[p_id], player_animations[p_id]) # Send player's vehicle to chooser
-#			rpc_id(p_id, "register_vehicle", id, new_player_scene, new_player_animation) # Send chooser's vehicle to player
 	if new_player_scene == "":
 		players_choosing[id] = true
 	else:
@@ -126,18 +124,20 @@ remote func pre_start_game(spawn_points):
 			# If node for this peer id, set up player here
 			my_player = load(player_scene).instance()
 			player = my_player
-			#player.set_name(str(p_id)) # set unique id as node name
+			player.set_name(str(p_id)) # set unique id as node name
 			player.position = spawn_pos
 			player.set_player_name(player_name)
 			player.set_animation(player_animation)
 			player.set_camera()
+			#player.set_player_score(p_id)
 		else:
 			# Otherwise set up player from peer
 			player = load(player_scenes[p_id]).instance()
-			#player.set_name(str(p_id))
+			player.set_name(str(p_id))
 			player.position = spawn_pos
 			player.set_player_name(players[p_id])
 			player.set_animation(player_animations[p_id])
+			#player.set_score(player_scores[p_id])
 		player.set_network_master(p_id) #set unique id as master
 		player.set_active()
 		world.get_node("players").add_child(player)
@@ -169,6 +169,7 @@ remote func ready_to_start(id):
 
 func host_game(new_player_name):
 	player_name = new_player_name
+	player_score = {"name": new_player_name, 0: "Still racing"}
 	var host = NetworkedMultiplayerENet.new()
 	#host.set_compression_mode(NetworkedMultiplayerENet.COMPRESS_RANGE_CODER)
 	var err = host.create_server(DEFAULT_PORT, MAX_PEERS) # max: 1 peer, since it's a 2 players game
@@ -180,6 +181,7 @@ func host_game(new_player_name):
 
 func join_game(ip, new_player_name):
 	player_name = new_player_name
+	player_score = {"name": new_player_name, 0: "Still racing"}
 	var host = NetworkedMultiplayerENet.new()
 	host.create_client(ip, DEFAULT_PORT)
 	get_tree().set_network_peer(host)
@@ -232,7 +234,7 @@ func end_game():
 	if has_node("/root/world"): # Game is in progress
 		# End it
 		get_node("/root/world").queue_free()
-
+		# TODO free the level properly
 	emit_signal("game_ended")
 	players.clear()
 	get_tree().set_network_peer(null) # End networking
@@ -258,3 +260,14 @@ func still_choosing():
 	rpc("unregister_vehicle", get_tree().get_network_unique_id())
 	emit_signal("player_list_changed")
 
+func update_scores(id, score):
+	player_scores[id] = score
+	if id == get_tree().get_network_unique_id():
+		pass
+	rpc("register_scores", id, score)
+
+remote func register_score(id, score):
+	player_scores[id] = score
+
+func get_scores():
+	return player_scores
