@@ -153,8 +153,10 @@ func lap():
 	else:
 		# Display lap # / time on HUD
 		$HUD/lap.text = str(gamestate.my_player.lap) + "/" + str(max_laps)
+	emit_signal("update_scoreboard")
 
 func refresh_scoreboard():
+	print("refersh scoreboard")
 	var scoreboard = $HUD/scoreboard/scores
 	free_child_nodes(scoreboard)
 	var score_list = VBoxContainer.new()

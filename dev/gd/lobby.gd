@@ -113,12 +113,15 @@ func display_vehicle_image(vehicle_scene, animation):
 func _on_sedan_toggled(button_pressed):
 	if button_pressed:
 		_on_cavallo_toggled(false)
+		_on_bradipo_toggled(false)
 		$vehicle_select/vehicle_buttons/sedan_yellow.show()
 		$vehicle_select/vehicle_buttons/sedan_white.show()
 		$vehicle_select/vehicle_buttons/cavallo.set_pressed(false)
+		$vehicle_select/vehicle_buttons/bradipo.set_pressed(false)
 	else:
 		$vehicle_select/vehicle_buttons/sedan_yellow.hide()
 		$vehicle_select/vehicle_buttons/sedan_white.hide()
+		$vehicle_select/vehicle_buttons/bradipo_nero.hide()
 
 func _on_cavallo_toggled(button_pressed):
 	if button_pressed:
@@ -127,10 +130,37 @@ func _on_cavallo_toggled(button_pressed):
 		$vehicle_select/vehicle_buttons/cavallo_blue.show()
 		$vehicle_select/vehicle_buttons/cavallo_grey.show()
 		$vehicle_select/vehicle_buttons/sedan.set_pressed(false)
+		$vehicle_select/vehicle_buttons/bradipo.set_pressed(false)
 	else:
 		$vehicle_select/vehicle_buttons/cavallo_black.hide()
 		$vehicle_select/vehicle_buttons/cavallo_blue.hide()
 		$vehicle_select/vehicle_buttons/cavallo_grey.hide()
+		$vehicle_select/vehicle_buttons/bradipo_nero.hide()
+
+func _on_bradipo_toggled(button_pressed):
+	if button_pressed:
+		_on_sedan_toggled(false)
+		_on_sedan_toggled(false)
+		$vehicle_select/vehicle_buttons/bradipo_nero.show()
+		$vehicle_select/vehicle_buttons/sedan.set_pressed(false)
+		$vehicle_select/vehicle_buttons/cavallo.set_pressed(false)
+	else:
+		$vehicle_select/vehicle_buttons/cavallo_black.hide()
+		$vehicle_select/vehicle_buttons/cavallo_blue.hide()
+		$vehicle_select/vehicle_buttons/cavallo_grey.hide()
+		$vehicle_select/vehicle_buttons/bradipo_nero.hide()
+	
+func _on_sedan_yellow_pressed():
+	$vehicle_select/choose.disabled = false
+	player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
+	player_animation = "yellow"
+	$vehicle_select/vehicle_animations.set_animation("sedan_yellow")
+
+func _on_sedan_white_pressed():
+	$vehicle_select/choose.disabled = false
+	player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
+	player_animation = "white"
+	$vehicle_select/vehicle_animations.set_animation("sedan_white")
 
 func _on_cavallo_black_pressed():
 	# TODO Check if putting these paths in a dictionary is a good idea
@@ -154,17 +184,11 @@ func _on_cavallo_blue_pressed():
 	player_animation = "blue"
 	$vehicle_select/vehicle_animations.set_animation("cavallo_blue")
 
-func _on_sedan_yellow_pressed():
+func _on_bradipo_nero_pressed():
 	$vehicle_select/choose.disabled = false
-	player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
-	player_animation = "yellow"
-	$vehicle_select/vehicle_animations.set_animation("sedan_yellow")
-
-func _on_sedan_white_pressed():
-	$vehicle_select/choose.disabled = false
-	player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
-	player_animation = "white"
-	$vehicle_select/vehicle_animations.set_animation("sedan_white")
+	player_scene = "res://assets/vehicles/bradipo/bradipo.tscn"
+	player_animation = "nero"
+	$vehicle_select/vehicle_animations.set_animation("bradipo_nero")
 
 func _on_choose_toggled(button_pressed):
 	if button_pressed:
@@ -184,5 +208,18 @@ func _on_choose_toggled(button_pressed):
 	else:
 		$vehicle_select/choose.text = "CHOOSE"
 		gamestate.still_choosing()
-	
-	
+	if button_pressed:
+		# TODO condense toggled calls
+		_on_sedan_toggled(false)
+		_on_cavallo_toggled(false)
+		$vehicle_select/vehicle_buttons/bradipo_nero.show()
+		$vehicle_select/vehicle_buttons/sedan.set_pressed(false)
+		$vehicle_select/vehicle_buttons/cavallo.set_pressed(false)
+	else:
+		$vehicle_select/vehicle_buttons/bradipo_nero.hide()
+		$vehicle_select/vehicle_buttons/cavallo_black.hide()
+		$vehicle_select/vehicle_buttons/cavallo_blue.hide()
+		$vehicle_select/vehicle_buttons/cavallo_grey.hide()
+	pass # replace with function body
+
+

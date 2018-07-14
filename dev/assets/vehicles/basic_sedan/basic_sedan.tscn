@@ -52,6 +52,7 @@ animations = [ {
 "name": "yellow",
 "speed": 5.0
 } ]
+_sections_unfolded = [ "Resource" ]
 
 [node name="basic_sedan" type="KinematicBody2D"]
 
@@ -125,6 +126,6 @@ position = Vector2( 1.06316, -1.06316 )
 scale = Vector2( 0.740286, 0.740286 )
 frames = SubResource( 2 )
 animation = "yellow"
-_sections_unfolded = [ "Material", "Visibility" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 
