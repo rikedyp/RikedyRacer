@@ -8,6 +8,7 @@ CONTENTS
 [Overview](#overview)  
 [Gameplay](#gameplay)  
 [Godot project structure](#godot-project-structure)  
+[Multiplayer methods](#multiplayer-methods)
 [Future ideas](#future-ideas)  
 [Influences](#influences)  
 [Targets](#targets)  
@@ -44,6 +45,16 @@ Multiplayer + single player with more content
 	- Stages
 - gd
 	All .gd scripts 
+
+### Multiplayer methods
+By design, Godot 3 let's you start multiplayer games in single player with ease. This means it is easier to focus on multiplayer functionality and modify stages in the future for single player modes.
+TODO: Tutorial for this stuff
+RikedyRacer uses a gamestate singleton node as a kind of global variables holder for game state information
+This node contains some network connection related functions to bring players into the game and also spawn the players. Generally this means that all game levels (stages) require the same or similar structure. <- These details may be laid out at a later date.
+Gamestate contains a variable my_player which is the reference to the current device's player.
+It also contains a dictionary players which will be filled with the key game variables for all relevant players on the network and can be updated at particular times in the game (or regularly throughout the game).
+Use gamestate methods to save game information.
+TODO: Persistent game file for unlockables or whatever.
 
 ### Future ideas
 - Top down + MK/F-Zero style graphics in race mode

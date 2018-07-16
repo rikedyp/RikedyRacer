@@ -6,21 +6,23 @@ const DEFAULT_PORT = 14204 # 8910
 # Max number of players
 const MAX_PEERS = 6
 
-# Details for my player
-# Is holding the player node here good idea?
-var my_player # TODO deprecate this
-var player_name = ""
-var player_scene = ""
-var player_animation = ""
-var player_choosing = true
-var player_score = {}
+# Game # laps
+var max_laps = 3
 
-# Details for remote players in id:value format
-var players = {} # names
-var player_scenes = {} # scene file paths
-var player_animations = {} # player animation frame sets
-var players_choosing = {} # is player still choosing vehicle? (bool)
-var player_scores = {} # everyone's scores
+# Details for my player
+var my_player
+var my_player_info = {
+	"name": "",
+	"scene_file": "",
+	"animation": "", # TODO Alter this so animated characters are easy in future
+	"ready": false,
+	"score": [] # List of lap times
+	} 
+# Details for remote players 
+var players = {} # dict by id:profile format
+# where profile is a dict "property": value
+# {id: {"name": "player_name", "scene_file" = "player_scene_path"}} etc.
+# name, scene, animation, ready, score
 
 # Signals to let lobby GUI know what's going on
 signal player_list_changed()
@@ -39,7 +41,7 @@ func _player_connected(id):
 func _player_disconnected(id):
 	if get_tree().is_network_server():
 		if has_node("/root/world"): # Game is in progress
-			emit_signal("game_error", "Player " + players[id] + " disconnected")
+			emit_signal("game_error", "Player " + players[id]["name"] + " disconnected")
 			end_game()
 		else: # Game is not in progress
 			# If we are the server, send to the new dude all the already registered players
@@ -51,7 +53,7 @@ func _player_disconnected(id):
 # Callback from SceneTree, only for clients (not server)
 func _connected_ok():
 	# Registration of a client beings here, tell everyone that we are here
-	rpc("register_player", get_tree().get_network_unique_id(), player_name)
+	rpc("register_player", get_tree().get_network_unique_id(), my_player_info)
 	emit_signal("connection_succeeded")
 
 # Callback from SceneTree, only for clients (not server)
@@ -66,87 +68,58 @@ func _connected_fail():
 
 # Lobby management functions
 
-remote func register_player(id, new_player_name):
+remote func register_player(id, new_player_dict):
+	# TODO set # laps
 	if get_tree().is_network_server():
 		# If we are the server, let everyone know about the new player
-		rpc_id(id, "register_player", 1, player_name) # Send myself and vehicle choice to new dude
-		rpc_id(id, "register_vehicle", 1, player_scene, player_animation)
-		rpc_id(id, "register_score", 1, player_score)
+		rpc_id(id, "register_player", 1, my_player_info) # Send myself to newly connected player
 		for p_id in players: # Then, for each remote player
-			rpc_id(id, "register_player", p_id, players[p_id]) # Send player in lobby to new player
-			rpc_id(p_id, "register_player", id, new_player_name) # Send new player to player in lobby
-			rpc_id(id, "register_vehicle", p_id, player_scenes[p_id], player_animations[p_id]) # Send vehicle choices to new player
-			rpc_id(p_id, "register_vehicle", id, "", "") # Set up new player scene dict with player in lobby
-			rpc_id(id, "register_score", p_id, player_scores[p_id])
-			rpc_id(p_id, "register_score", id, {"name": new_player_name, 0: "Still racing"})
-	players[id] = new_player_name
-	players_choosing[id] = true
-	player_scenes[id] = ""
-	player_animations[id] = ""
-	player_scores[id] = {"name": new_player_name, 0: "Still racing"}
-	
+			rpc_id(id, "register_player", p_id, players[p_id]) # Send existing player to new player
+			rpc_id(p_id, "register_player", id, new_player_dict) # Send new player to existing player
+	players[id] = new_player_dict
 	emit_signal("player_list_changed")
 
 remote func unregister_player(id):
 	players.erase(id)
-	players_choosing.erase(id)
-	player_scenes.erase(id)
-	player_animations.erase(id)
 	emit_signal("player_list_changed")
 
 remote func register_vehicle(id, new_player_scene, new_player_animation):
 	if new_player_scene == "":
-		players_choosing[id] = true
+		players[id]["ready"] = false
 	else:
-		players_choosing[id] = false
-	player_scenes[id] = new_player_scene
-	player_animations[id] = new_player_animation
+		players[id]["ready"] = true
+	players[id]["scene_file"] = new_player_scene
+	players[id]["animation"] = new_player_animation
 	emit_signal("player_list_changed")
 
-remote func unregister_vehicle(id):
-	players_choosing[id] = true
-	player_scenes[id] = ""
-	player_animations[id] = ""
-	emit_signal("player_list_changed")
-
-remote func pre_start_game(spawn_points):
+remote func pre_start_game(spawn_points, max_laps):
 	# Change scene
 	var world = load("res://stages/track1.tscn").instance()
+	world.max_laps = max_laps
 	get_tree().get_root().add_child(world)
 	get_tree().get_root().get_node("lobby").hide()
 	#var player_scene = load(vehicle_scene)
 	for p_id in spawn_points:
 		var spawn_pos = world.get_node("spawn_points/" + str(spawn_points[p_id])).position
 		var player
-		#print(player.camera)
-		#player = load("res://assets/vehicles/cavallo/cavallo.tscn").instance()
 		if p_id == get_tree().get_network_unique_id():
 			# If node for this peer id, set up player here
-			my_player = load(player_scene).instance()
+			my_player = load(my_player_info["scene_file"]).instance()
 			player = my_player
 			player.set_name(str(p_id)) # set unique id as node name
 			player.position = spawn_pos
-			player.set_player_name(player_name)
-			player.set_animation(player_animation)
+			player.set_player_name(my_player_info["name"])
+			player.set_animation(my_player_info["animation"])
 			player.set_camera()
-			#player.set_player_score(p_id)
 		else:
 			# Otherwise set up player from peer
-			player = load(player_scenes[p_id]).instance()
+			player = load(players[p_id]["scene_file"]).instance()
 			player.set_name(str(p_id))
 			player.position = spawn_pos
-			player.set_player_name(players[p_id])
-			player.set_animation(player_animations[p_id])
-			#player.set_score(player_scores[p_id])
+			player.set_player_name(players[p_id]["name"])
+			player.set_animation(players[p_id]["animation"])
 		player.set_network_master(p_id) #set unique id as master
-		player.set_active()
 		world.get_node("players").add_child(player)
-
-	# Set up score
-#	world.get_node("score").add_player(get_tree().get_network_unique_id(), player_name)
-#	for pn in players:
-#		world.get_node("score").add_player(pn, players[pn])
-
 	if not get_tree().is_network_server():
 		# Tell server we are ready to start
 		rpc_id(1, "ready_to_start", get_tree().get_network_unique_id())
@@ -156,20 +129,14 @@ remote func pre_start_game(spawn_points):
 remote func post_start_game():
 	get_tree().set_pause(false) # Unpause and unleash the game!
 
-var players_ready = []
-
 remote func ready_to_start(id):
 	assert(get_tree().is_network_server())
-	if not id in players_ready:
-		players_ready.append(id)
-	if players_ready.size() == players.size():
-		for p in players:
-			rpc_id(p, "post_start_game")
-		post_start_game()
+	for player in players:
+		rpc_id(player, "post_start_game")
+	post_start_game()
 
 func host_game(new_player_name):
-	player_name = new_player_name
-	player_score = {"name": new_player_name, 0: "Still racing"}
+	my_player_info["name"] = new_player_name
 	var host = NetworkedMultiplayerENet.new()
 	#host.set_compression_mode(NetworkedMultiplayerENet.COMPRESS_RANGE_CODER)
 	var err = host.create_server(DEFAULT_PORT, MAX_PEERS) # max: 1 peer, since it's a 2 players game
@@ -180,37 +147,29 @@ func host_game(new_player_name):
 	get_tree().set_network_peer(host)
 
 func join_game(ip, new_player_name):
-	player_name = new_player_name
-	player_score = {"name": new_player_name, 0: "Still racing"}
+	my_player_info["name"] = new_player_name
+	#my_player["score"][0] = "Still racing"
 	var host = NetworkedMultiplayerENet.new()
 	host.create_client(ip, DEFAULT_PORT)
 	get_tree().set_network_peer(host)
 
-func get_players():
-	return players
-	
-func get_players_choosing():
-	return players_choosing
-
-func get_player_name():
-	return player_name
-	
-func get_player_vehicle_properties():
-	return player_scene
-	
-func get_player_animation():
-	return player_animation
+func get_players_ready():
+	pass
+#	var players_ready = []
+#	for player in players:
+#		players_ready.append(players[player]["ready"])
+#	return players_ready
 
 func begin_game():
-	print(players_choosing)
-	if player_choosing:
-		var printstring = get_player_name() + " yet to choose vehicle"
+	if not my_player_info["ready"]:
+		# TODO GUI Warning
+		var printstring = gamestate.my_player["name"] + " yet to choose vehicle"
 		print(printstring)
 		return
 	else:
-		for p in players_choosing:
-			if players_choosing[p]:
-				var printstring = str(p) + " yet to choose vehicle..."
+		for p in players:
+			if not players[p]["ready"]:
+				var printstring = players[p]["name"] + " yet to choose vehicle..."
 				print(printstring)
 				return
 	# TODO: verify all connected players have chosen vehicles
@@ -226,9 +185,9 @@ func begin_game():
 		spawn_point_idx += 1
 	# Call to pre-start game with the spawn points, vehicle types and colours
 	for p in players:
-		rpc_id(p, "pre_start_game", spawn_points)
+		rpc_id(p, "pre_start_game", spawn_points, max_laps)
 
-	pre_start_game(spawn_points)
+	pre_start_game(spawn_points, max_laps)
 
 func end_game():
 	if has_node("/root/world"): # Game is in progress
@@ -246,28 +205,19 @@ func _ready():
 	get_tree().connect("connection_failed", self, "_connected_fail")
 	get_tree().connect("server_disconnected", self, "_server_disconnected")
 
-func set_vehicle_properties(scene, animation):
-	player_choosing = false
-	player_scene = scene
-	player_animation = animation
-	rpc("register_vehicle", get_tree().get_network_unique_id(), scene, animation)
+func set_vehicle_properties(scene_file, animation):
+	my_player_info["ready"] = true
+	my_player_info["scene_file"] = scene_file
+	my_player_info["animation"] = animation
+	rpc("register_vehicle", get_tree().get_network_unique_id(), scene_file, animation)
 	emit_signal("player_list_changed")
 	
 func still_choosing():
-	player_choosing = true
-	player_scene = ""
-	player_animation = ""
-	rpc("unregister_vehicle", get_tree().get_network_unique_id())
+	my_player_info["ready"] = false
 	emit_signal("player_list_changed")
 
-func update_scores(id, score):
-	player_scores[id] = score
-	if id == get_tree().get_network_unique_id():
-		pass
-	rpc("register_scores", id, score)
+sync func set_max_laps(laps):
+	max_laps = laps
 
-remote func register_score(id, score):
-	player_scores[id] = score
-
-func get_scores():
-	return player_scores
+remote func update_score(id, score):
+	players[id]["score"] = score

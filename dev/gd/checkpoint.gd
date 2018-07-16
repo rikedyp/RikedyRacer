@@ -4,7 +4,7 @@ extends Area2D
 # var a = 2
 # var b = "textvar"
 
-signal lap_passed
+signal lap_passed(body)
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -28,7 +28,7 @@ func checkpoint_entered(body):
 
 func lap(player):
 	player.lap += 1
-	emit_signal("lap_passed")
+	emit_signal("lap_passed", player)
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.

@@ -18,7 +18,7 @@
 [ext_resource path="res://assets/vehicles/bradipo/black/c07_s128_iso_0151.png" type="Texture" id=16]
 [ext_resource path="res://assets/vehicles/bradipo/black/c07_s128_iso_0152.png" type="Texture" id=17]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
@@ -27,12 +27,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="bradipo" type="KinematicBody2D"]
+[node name="bradipo" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -40,8 +40,8 @@ collision_mask = 7
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "collision" ]
-top_speed = 1000
-power = 5000.0
+top_speed = 300
+power = 500.0
 braking = 1000.0
 handling = 5.0
 friction = 1.02
@@ -51,7 +51,7 @@ friction = 1.02
 modulate = Color( 0.863281, 0.647461, 0, 1 )
 position = Vector2( -50.3795, -45.2858 )
 scale = Vector2( 0.740286, 0.740286 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "nero"
 centered = false
 _sections_unfolded = [ "Material", "Visibility" ]
@@ -60,7 +60,7 @@ _sections_unfolded = [ "Material", "Visibility" ]
 
 position = Vector2( 0.744842, -4.18245 )
 scale = Vector2( 3.22818, 2.62156 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="camera" type="Camera2D" parent="." index="2"]

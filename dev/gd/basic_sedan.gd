@@ -14,16 +14,11 @@ var velocity = Vector2() # velocity in Euclidean plane
 var vel_iso = Vector2() # velocity vector for move_and_collide (isometric)
 var line_to_draw = Vector2()
 var theta = 0 # vehicle rotation angle from North in radians
-var time = 0.0
+var time = 0.00
 var checkpoint = 0
 var lap = 0
 var lap_times = []
-var score = {}
-
-#slave var slave_pos
-#slave var slave_vel_iso
-#slave var slave_time
-#slave var slave_animation_frame
+var score = []
 
 #This updates the position on the other end
 slave func set_pos_and_motion(p_pos, p_vel_iso, p_dir):
@@ -99,9 +94,10 @@ func handle_input(delta):
 	vel_iso.y = (x + y) / 2
 	# Move car
 	var collision = move_and_collide(vel_iso*delta)
-	if collision:
-		print("Collision")
-		print(collision.collider)
+	# Check collisions here (or make collision_check function)
+#	if collision:
+#		print("Collision")
+#		print(collision.collider)
 	# Apply friction 
 	if thrust == 0:
 		velocity = velocity / friction

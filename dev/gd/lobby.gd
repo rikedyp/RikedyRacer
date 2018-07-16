@@ -11,20 +11,23 @@ func _ready():
 	gamestate.connect("game_ended", self, "_on_game_ended")
 	gamestate.connect("game_error", self, "_on_game_error")
 
-func ip_in_use():
-	get_node("connect").show()
-	get_node("players").hide()
-	get_node("vehicle_select").hide()
-	get_node("connect/error_label").text = "IP address in use"
+#func ip_in_use():
+#	# TODO check this does something
+#	get_node("connect").show()
+#	get_node("players").hide()
+#	get_node("vehicle_select").hide()
+#	get_node("connect/error_label").text = "IP address in use"
 
 func _on_host_pressed():
-	# TODO: Steal check-if-ip-in-use code from Multiplayer platformer demo / TDRacer v0.5
+	# TODO set # laps
 	if get_node("connect/name").text == "":
 		get_node("connect/error_label").text = "Invalid name!"
 		return
 	get_node("connect").hide()
 	get_node("players").show()
 	get_node("vehicle_select").show()
+	# Only host can set game options e.g. # laps
+	$vehicle_select/laps.show()
 	get_node("connect/error_label").text = ""
 	var player_name = get_node("connect/name").text
 	gamestate.host_game(player_name)
@@ -68,31 +71,32 @@ func _on_game_error(errtxt):
 	get_node("error").popup_centered_minsize()
 
 func refresh_lobby(): # sync func?
-	var players = gamestate.get_players()
-	var players_choosing = gamestate.get_players_choosing()
+	var players = gamestate.players
+	var players_choosing = gamestate.get_players_ready()
 	get_node("players/list").clear()
-	if gamestate.player_choosing:
-		get_node("players/list").add_item(gamestate.get_player_name() + " (You) [Choosing vehicle...]")
+	if not gamestate.my_player_info["ready"]:
+		get_node("players/list").add_item(gamestate.my_player_info["name"] + " (You) [Choosing vehicle...]")
 	else:
-		get_node("players/list").add_item(gamestate.get_player_name() + " (You) [Ready.]")
-	for p_id in players:
-		var p = players[p_id]
-		if players_choosing[p_id]:
-			if p_id == get_tree().get_network_unique_id():
-				p += " (You) [Choosing vehicle...]"
+		get_node("players/list").add_item(gamestate.my_player_info["name"] + " (You) [Ready.]")
+	if not players.empty():
+		for p_id in players:
+			var p = players[p_id]["name"]
+			if not players[p_id]["ready"]:
+				if p_id == get_tree().get_network_unique_id():
+					p += " (You) [Choosing vehicle...]"
+				else:
+					p += " [Choosing vehicle...]"
 			else:
-				p += " [Choosting vehicle...]"
-		else:
-			if p_id == get_tree().get_network_unique_id():
-				p += " (You) [Ready.]"
-			else:
-				p += " [Ready.]"
-		get_node("players/list").add_item(p)
+				if p_id == get_tree().get_network_unique_id():
+					p += " (You) [Ready.]"
+				else:
+					p += " [Ready.]"
+			get_node("players/list").add_item(p)
 
 	get_node("players/start").disabled = not get_tree().is_network_server()
 
 func _on_start_pressed():
-	# TODO: has everyone chosen?
+	gamestate.rpc("set_max_laps",int($vehicle_select/laps.text))
 	gamestate.begin_game()
 
 func free_child_nodes(node):
@@ -126,6 +130,7 @@ func _on_sedan_toggled(button_pressed):
 func _on_cavallo_toggled(button_pressed):
 	if button_pressed:
 		_on_sedan_toggled(false)
+		_on_bradipo_toggled(false)
 		$vehicle_select/vehicle_buttons/cavallo_black.show()
 		$vehicle_select/vehicle_buttons/cavallo_blue.show()
 		$vehicle_select/vehicle_buttons/cavallo_grey.show()
@@ -140,7 +145,7 @@ func _on_cavallo_toggled(button_pressed):
 func _on_bradipo_toggled(button_pressed):
 	if button_pressed:
 		_on_sedan_toggled(false)
-		_on_sedan_toggled(false)
+		_on_cavallo_toggled(false)
 		$vehicle_select/vehicle_buttons/bradipo_nero.show()
 		$vehicle_select/vehicle_buttons/sedan.set_pressed(false)
 		$vehicle_select/vehicle_buttons/cavallo.set_pressed(false)
@@ -221,5 +226,3 @@ func _on_choose_toggled(button_pressed):
 		$vehicle_select/vehicle_buttons/cavallo_blue.hide()
 		$vehicle_select/vehicle_buttons/cavallo_grey.hide()
 	pass # replace with function body
-
-

@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/ui/HUD.tscn" type="PackedScene" id=3]
 [ext_resource path="res://gd/checkpoint.gd" type="Script" id=4]
 
-[node name="track1" type="Node2D" index="0"]
+[node name="track1" type="Node2D"]
 
 script = ExtResource( 1 )
 max_laps = 3
@@ -247,8 +247,6 @@ polygon = PoolVector2Array( 333.42, 437.551, -431.523, 61.7606, -930.906, -190.4
 [node name="HUD" parent="." index="11" instance=ExtResource( 3 )]
 
 [node name="checkpoints" type="Node2D" parent="." index="12"]
-
-editor/display_folded = true
 
 [node name="0" type="Area2D" parent="checkpoints" index="0"]
 
