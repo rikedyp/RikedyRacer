@@ -189,11 +189,23 @@ func begin_game():
 
 	pre_start_game(spawn_points, max_laps)
 
+func see_children(node):
+	print("-----")
+	for child in node.get_children():
+		print(child.get_name())
+		see_children(child)
+
 func end_game():
-	if has_node("/root/world"): # Game is in progress
+	print("--- end game")
+	see_children(get_tree().get_root())
+	print("---")
+	# TODO generalise for any scene (levels)
+	if has_node("/root/track1"): # Game is in progress
 		# End it
-		get_node("/root/world").queue_free()
+		print("has it")
+		get_node("/root/track1").queue_free()
 		# TODO free the level properly
+	get_tree().change_scene("res://lobby.tscn")
 	emit_signal("game_ended")
 	players.clear()
 	get_tree().set_network_peer(null) # End networking

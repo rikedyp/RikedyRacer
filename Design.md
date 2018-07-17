@@ -23,6 +23,8 @@ CONTENTS
 - 2D isometric top-down view a la Gaelco World Rally Championship
 
 ### Gameplay
+##### User Stories
+ - Open 
 Splash screen  
 Main menu:  
 	Multi player  
@@ -58,6 +60,7 @@ TODO: Persistent game file for unlockables or whatever.
 
 ### Future ideas
 - Top down + MK/F-Zero style graphics in race mode
+- Pit stops can restore HP over time?
 - 3D engine 
 - More types of terrain
 	- Hills?
@@ -69,6 +72,9 @@ Different cars have features / abilities, resistance / weaknesses
 - Trade fixed no. of points for speed, resilience, handling etc.
 - Kubrickian (impossible) layouts e.g. Shining mansion
 - Rocket League mini-game / game mode
+- Drone battle / attack vehicles with drones / drone weapon
+    - Drone tower that launches drones which you can control for short amount of time
+- Double dash team mode 1 drives 1 tower defends / 1 drones
 
 ### Influences
 - Infinitode
@@ -87,6 +93,8 @@ Different cars have features / abilities, resistance / weaknesses
 
 ### Towers
 - Tower colours match car colours for each player
+- Towers are bigger
+- Animated shooting, aiming, idling
 - Slow enemy tower
 - Crossbow / pistol short spurts low damage
 - Trebuchet / charge laser low speed high damage

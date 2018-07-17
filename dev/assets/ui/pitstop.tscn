@@ -1,0 +1,202 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://gd/pitstop.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui/kenney_ui/PNG/grey_button07.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/kenney_ui/PNG/blue_button06.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/kenney_ui/PNG/blue_button11.png" type="Texture" id=4]
+[ext_resource path="res://assets/towers/shotgun/default/1_down.png" type="Texture" id=5]
+[ext_resource path="res://assets/towers/shotgun/default/1_leftdown.png" type="Texture" id=6]
+[ext_resource path="res://assets/towers/shotgun/default/1_left.png" type="Texture" id=7]
+[ext_resource path="res://assets/towers/shotgun/default/1_leftup.png" type="Texture" id=8]
+[ext_resource path="res://assets/towers/shotgun/default/1_up.png" type="Texture" id=9]
+[ext_resource path="res://assets/towers/shotgun/default/1_rightup.png" type="Texture" id=10]
+[ext_resource path="res://assets/towers/shotgun/default/1_right.png" type="Texture" id=11]
+[ext_resource path="res://assets/towers/shotgun/default/1_rightdown.png" type="Texture" id=12]
+[ext_resource path="res://assets/towers/mg/default/tower_mg_1_down.png" type="Texture" id=13]
+[ext_resource path="res://assets/towers/mg/default/tower_mg_1_leftdown.png" type="Texture" id=14]
+[ext_resource path="res://assets/towers/mg/default/tower_mg_1_left.png" type="Texture" id=15]
+[ext_resource path="res://assets/towers/mg/default/tower_mg_1_leftup.png" type="Texture" id=16]
+[ext_resource path="res://assets/towers/mg/default/tower_mg_1_up.png" type="Texture" id=17]
+[ext_resource path="res://assets/towers/mg/default/tower_mg_1_rightup.png" type="Texture" id=18]
+[ext_resource path="res://assets/towers/mg/default/tower_mg_1_right.png" type="Texture" id=19]
+[ext_resource path="res://assets/towers/mg/default/tower_mg_1_rightdown.png" type="Texture" id=20]
+[ext_resource path="res://assets/towers/laser/default/1_down.png" type="Texture" id=21]
+[ext_resource path="res://assets/towers/laser/default/1_leftdown.png" type="Texture" id=22]
+[ext_resource path="res://assets/towers/laser/default/1_left.png" type="Texture" id=23]
+[ext_resource path="res://assets/towers/laser/default/1_leftup.png" type="Texture" id=24]
+[ext_resource path="res://assets/towers/laser/default/1_up.png" type="Texture" id=25]
+[ext_resource path="res://assets/towers/laser/default/1_rightup.png" type="Texture" id=26]
+[ext_resource path="res://assets/towers/laser/default/1_right.png" type="Texture" id=27]
+[ext_resource path="res://assets/towers/laser/default/1_rightdown.png" type="Texture" id=28]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="pitstop_ui" type="Node2D"]
+
+script = ExtResource( 1 )
+drag_factor = null
+
+[node name="camera" type="Camera2D" parent="." index="0"]
+
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 1.5, 1.5 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Smoothing" ]
+
+[node name="tower_menu" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+
+[node name="shotgun" type="TextureButton" parent="tower_menu" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 6.0
+margin_right = 57.0
+margin_bottom = 55.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="animation" type="AnimatedSprite" parent="tower_menu/shotgun" index="0"]
+
+position = Vector2( 23.8731, 22.4391 )
+frames = SubResource( 1 )
+animation = "default"
+frame = 1
+playing = true
+
+[node name="mg" type="TextureButton" parent="tower_menu" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 75.0
+margin_top = 6.0
+margin_right = 124.0
+margin_bottom = 55.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="animation" type="AnimatedSprite" parent="tower_menu/mg" index="0"]
+
+position = Vector2( 23.8731, 22.4391 )
+frames = SubResource( 2 )
+animation = "default"
+frame = 3
+playing = true
+
+[node name="laser" type="TextureButton" parent="tower_menu" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 142.0
+margin_top = 6.0
+margin_right = 191.0
+margin_bottom = 55.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="animation" type="AnimatedSprite" parent="tower_menu/laser" index="0"]
+
+position = Vector2( 23.8731, 22.4391 )
+frames = SubResource( 3 )
+animation = "default"
+frame = 7
+playing = true
+
+[connection signal="pressed" from="tower_menu/shotgun" to="." method="_on_shotgun_pressed"]
+
+[connection signal="pressed" from="tower_menu/mg" to="." method="_on_mg_pressed"]
+
+[connection signal="pressed" from="tower_menu/laser" to="." method="_on_laser_pressed"]
+
+

@@ -1,3 +1,5 @@
+# TODO put in some kind of logical order
+
 extends Node2D
 export (int) var max_laps = 2
 export (int) var countdown = 3
@@ -83,12 +85,10 @@ func lap(player):
 			#gamestate.my_player.score.erase(0) # maybe this?
 			print("RACE OVER")
 			$HUD/lap.text = str(max_laps) + "/" + str(max_laps)
-			#refresh_scoreboard()
-			
 			gamestate.rpc("update_score", get_tree().get_network_unique_id(), gamestate.my_player.lap_times)
 			rpc("refresh_scoreboard")
 			$HUD/scoreboard.show()
-
+			$HUD/again.show()
 sync func refresh_scoreboard():
 	print("refersh scoreboard")
 	var scoreboard = $HUD/scoreboard/scores
@@ -117,3 +117,42 @@ sync func refresh_scoreboard():
 		scoreboard.add_child(player_score_list)
 		#print("---")
 		#var score_label = Label.new()
+
+func _on_HUD_back_to_lobby():
+	#$HUD/lobby/connect.show()
+	#call_deferred("go_lobby")
+	gamestate.end_game()
+	#queue_free()
+	pass # replace with function body
+
+func go_lobby():
+	get_tree().change_scene("res://lobby.tscn")
+
+func _on_pitstop_body_entered(body):
+	print(body.get_name())
+	print("ID")
+	print(get_tree().get_network_unique_id())
+	if int(body.get_name()) == get_tree().get_network_unique_id():
+		$pitstop_ui.in_pitstop = true
+		$pitstop_ui/camera.make_current()
+		# Show tower placement nodes
+
+func _on_pitstop_body_exited(body):
+	pass
+	if int(body.get_name()) == get_tree().get_network_unique_id():
+		print("leave pitstop")
+		$pitstop_ui.in_pitstop = false
+		body.get_node("camera").make_current()
+
+# Functions to let pitstop_ui interact with TileMaps
+func tower_menu_pressed():
+	print("TWOER MENU PRESSED")
+
+
+func _on_tower0_pressed():
+	# TODO Once toggled disabled?
+	#$pitstop_ui/tower_menu.position = Vector2()#$towers/tower0.position
+	#$pitstop_ui/tower_menu.position.y += 10
+	$pitstop_ui.show()
+	#$HUD/pitstop_ui.show()
+	pass # replace with function body

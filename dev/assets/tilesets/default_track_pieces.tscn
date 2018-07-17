@@ -249,7 +249,7 @@ texture = ExtResource( 23 )
 position = Vector2( 1010.46, 472.937 )
 texture = ExtResource( 24 )
 
-[node name="grass_corner_ne" type="Sprite" parent="." index="23"]
+[node name="grass_corner_small_ne" type="Sprite" parent="." index="23"]
 
 position = Vector2( 1185.41, 468.392 )
 texture = ExtResource( 25 )
@@ -259,32 +259,32 @@ texture = ExtResource( 25 )
 position = Vector2( 1369.45, 470.664 )
 texture = ExtResource( 26 )
 
-[node name="landscapeTiles_024" type="Sprite" parent="." index="25"]
+[node name="river_concrete_up_s" type="Sprite" parent="." index="25"]
 
 position = Vector2( 1617.11, 497.929 )
 texture = ExtResource( 27 )
 
-[node name="landscapeTiles_025" type="Sprite" parent="." index="26"]
+[node name="river_we" type="Sprite" parent="." index="26"]
 
 position = Vector2( 1773.88, 488.841 )
 texture = ExtResource( 28 )
 
-[node name="landscapeTiles_026" type="Sprite" parent="." index="27"]
+[node name="river_fall_we" type="Sprite" parent="." index="27"]
 
 position = Vector2( 123.297, 678.871 )
 texture = ExtResource( 29 )
 
-[node name="landscapeTiles_027" type="Sprite" parent="." index="28"]
+[node name="river_bank_2_s" type="Sprite" parent="." index="28"]
 
-position = Vector2( 410.296, 671.318 )
+position = Vector2( 412.568, 671.318 )
 texture = ExtResource( 30 )
 
-[node name="landscapeTiles_028" type="Sprite" parent="." index="29"]
+[node name="grass_corner_ne" type="Sprite" parent="." index="29"]
 
 position = Vector2( 626.804, 688.941 )
 texture = ExtResource( 31 )
 
-[node name="landscapeTiles_029" type="Sprite" parent="." index="30"]
+[node name="grass_corner_sw" type="Sprite" parent="." index="30"]
 
 position = Vector2( 848.347, 691.458 )
 texture = ExtResource( 32 )
@@ -299,27 +299,27 @@ texture = ExtResource( 33 )
 position = Vector2( 1225.98, 681.388 )
 texture = ExtResource( 34 )
 
-[node name="landscapeTiles_032" type="Sprite" parent="." index="33"]
+[node name="river_concrete_ns" type="Sprite" parent="." index="33"]
 
 position = Vector2( 1432.41, 678.871 )
 texture = ExtResource( 35 )
 
-[node name="landscapeTiles_033" type="Sprite" parent="." index="34"]
+[node name="river_fall_s" type="Sprite" parent="." index="34"]
 
 position = Vector2( 1643.89, 696.493 )
 texture = ExtResource( 36 )
 
-[node name="landscapeTiles_034" type="Sprite" parent="." index="35"]
+[node name="river_bank_2_e" type="Sprite" parent="." index="35"]
 
-position = Vector2( 1835.22, 681.388 )
+position = Vector2( 1832.95, 681.388 )
 texture = ExtResource( 37 )
 
-[node name="landscapeTiles_035" type="Sprite" parent="." index="36"]
+[node name="river_bank_2_w" type="Sprite" parent="." index="36"]
 
 position = Vector2( 143.438, 824.888 )
 texture = ExtResource( 38 )
 
-[node name="landscapeTiles_036" type="Sprite" parent="." index="37"]
+[node name="grass_corner_nw" type="Sprite" parent="." index="37"]
 
 position = Vector2( 425.401, 827.405 )
 texture = ExtResource( 39 )
@@ -514,12 +514,12 @@ texture = ExtResource( 76 )
 position = Vector2( 839.805, 1461.05 )
 texture = ExtResource( 77 )
 
-[node name="landscapeTiles_076" type="Sprite" parent="." index="76"]
+[node name="river_corner_ne" type="Sprite" parent="." index="76"]
 
 position = Vector2( 1077.8, 1451.78 )
 texture = ExtResource( 78 )
 
-[node name="landscapeTiles_077" type="Sprite" parent="." index="77"]
+[node name="river_corner_sw" type="Sprite" parent="." index="77"]
 
 position = Vector2( 1309.62, 1454.87 )
 texture = ExtResource( 79 )

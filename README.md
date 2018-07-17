@@ -5,7 +5,7 @@ Multiplayer Tower Defence Racing Game Mashup
   made with Godot 3
 
 ##### Progress
-![Progress](http://progressed.io/bar/30)   
+![Progress](http://progressed.io/bar/35)   
 
 ### Quickstart
 

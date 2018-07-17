@@ -94,6 +94,7 @@ func handle_input(delta):
 	vel_iso.y = (x + y) / 2
 	# Move car
 	var collision = move_and_collide(vel_iso*delta)
+	#var collision = move_and_slide(vel_iso*delta)
 	# Check collisions here (or make collision_check function)
 #	if collision:
 #		print("Collision")
@@ -110,7 +111,7 @@ func handle_input(delta):
 	set_animation_frame(x,y)
 	line_to_draw = vel_iso / 5
 	#rpc("set_pos_and_motion",position,vel_iso,x,y)
-	update()
+	#update()
 
 func play_animation():
 	$animated_sprite.play()
