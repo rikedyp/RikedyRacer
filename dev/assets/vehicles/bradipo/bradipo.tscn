@@ -27,10 +27,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 10.0
+extents = Vector2( 14.0957, 10 )
 
 [node name="bradipo" type="KinematicBody2D"]
 
@@ -45,6 +45,7 @@ power = 500.0
 braking = 1000.0
 handling = 5.0
 friction = 1.02
+active = null
 
 [node name="animated_sprite" type="AnimatedSprite" parent="." index="0"]
 
@@ -58,10 +59,11 @@ _sections_unfolded = [ "Material", "Visibility" ]
 
 [node name="hit_box" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0.744842, -4.18245 )
+position = Vector2( -6.47516, 0.330062 )
+rotation = -0.523599
 scale = Vector2( 3.22818, 2.62156 )
 shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="camera" type="Camera2D" parent="." index="2"]
 
@@ -107,5 +109,12 @@ size_flags_vertical = 4
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="timer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
 
 

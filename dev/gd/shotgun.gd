@@ -5,20 +5,34 @@ export (float) var fire_rate
 export (PackedScene) var Bullet # Needs changing for shotgun shell
 var vis_color = Color(.867, .91, .247, 0.1)
 var laser_color = Color(1.0, .329, .298)
-var enemy_name = ""
+var owner_id
+var enemies = []
 var target
 var hit_pos
+var location
 var can_shoot = true
 
+func set_base(new_base):
+	location = new_base
+
+func set_level(mode):
+	# Will depend on type of turret
+	$animated_sprite.set_animation(mode)
+
 func _ready():
+	# Connect signals
+	connect("input_event", self, "_on_input_event")
+	$upgrade_menu.connect("shotgun_upgrade", self, "_on_upgrade_menu_shotgun_upgrade")
+	$visibility.connect("body_entered", self, "_on_visibility_body_entered")
+	$visibility.connect("body_exited", self, "_on_visibility_body_exited")
 	var shape = CircleShape2D.new()
 	shape.radius = detect_radius
-	$Visibility/CollisionShape2D.shape = shape
-	$ShootTimer.wait_time = fire_rate
+	$visibility/collision_shape.shape = shape
+	$shoot_timer.wait_time = fire_rate
 	#set_enemy("Player2")
 	
-func set_enemy(my_enemy):
-	enemy_name = my_enemy
+func set_enemy(new_foe):
+	enemies.append(new_foe)
 
 func _physics_process(delta):
 	update()
@@ -28,7 +42,7 @@ func _physics_process(delta):
 func aim():
 	hit_pos = []
 	var space_state = get_world_2d().direct_space_state
-	var target_extents = target.get_node('CollisionShape2D').shape.extents - Vector2(5, 5)
+	var target_extents = target.get_node("hit_box").shape.extents - Vector2(5, 5)
 	var nw = target.position - target_extents
 	var se = target.position + target_extents
 	var ne = target.position + Vector2(target_extents.x, -target_extents.y)
@@ -38,15 +52,10 @@ func aim():
 				pos, [self], collision_mask)
 		if result:
 			hit_pos.append(result.position)
-			if result.collider.name == "Player1" or result.collider.name == "Player2":
-				# TODO: Make this only apply to enemy player
-				#$Sprite.self_modulate.r = 1.0
-				#rotation = (target.position - position).angle()
-				# Use this ^ to change animation frame
-				set_image((target.position - position).angle())
-				if can_shoot:
-					shoot(pos)
-				break
+			if can_shoot:
+				shoot(pos)
+			break
+
 
 func set_image(angle):
 	# Target moves from -pi(upleft) < -0(upright) < 0(downright) < pi(downleft)
@@ -82,7 +91,7 @@ func shoot(pos):
 	b.start(global_position, a + rand_range(-0.05, 0.05))
 	get_parent().add_child(b)
 	can_shoot = false
-	$ShootTimer.start()
+	$shoot_timer.start()
 
 func _draw():
 	draw_circle(Vector2(), detect_radius, vis_color)
@@ -91,20 +100,48 @@ func _draw():
 			draw_circle((hit - position).rotated(-rotation), 5, laser_color)
 			draw_line(Vector2(), (hit - position).rotated(-rotation), laser_color)
 
-func _on_Visibility_body_entered(body):
-	#print("Body entered")
-	#print(body.get_name())
-	#print(enemy_name)
-	if target:
-		return
-	if int(body.get_name()) == enemy_name:
-		target = body
-
-
-func _on_Visibility_body_exited(body):
-	if body == target:
-		target = null
-		#$Sprite.self_modulate.r = 0.2
-
 func _on_ShootTimer_timeout():
 	can_shoot = true
+
+func _on_click_area_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		#print(event.button_index)
+		$upgrade_menu.show()
+		$upgrade_menu/shotgun.show()
+	#print("click are2")
+	#emit_signal("input_event", viewport, event, shape_idx)
+	pass # replace with function body
+
+func _on_visibility_body_entered(body):
+	if target:
+		return
+	if int(body.get_name()) in enemies:
+		target = body
+	pass # replace with function body
+
+func _on_visibility_body_exited(body):
+	if body == target:
+		target = null
+	pass # replace with function body
+
+func _on_shoot_timer_timeout():
+	can_shoot = true
+	pass # replace with function body
+
+
+func _on_input_event(viewport, event, shape_idx):
+	#print(event)
+	if event is InputEventMouseButton:
+		#print(event.button_index)
+		print(event)
+		$upgrade_menu.show()
+		$upgrade_menu/shotgun.show()
+	pass # replace with function body
+
+
+func _on_visibility_input_event(viewport, event, shape_idx):
+	print(event)
+	pass # replace with function body
+
+func _on_upgrade_menu_shotgun_upgrade():
+	pass # replace with function body

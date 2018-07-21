@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/fonts/HUD.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/ui/kenney_ui/PNG/yellow_button13.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/montserrat.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://lobby.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/ui/lobby.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 

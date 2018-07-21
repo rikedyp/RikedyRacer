@@ -23,28 +23,33 @@ CONTENTS
 - 2D isometric top-down view a la Gaelco World Rally Championship
 
 ### Gameplay
-##### User Stories
- - Open 
-Splash screen  
-Main menu:  
-	Multi player  
-	Single player  
 Multiplayer + single player with more content  
 	- Tower upgrades (at least 3 types with multi-tier upgrades)  
 	- Vehicle upgrades  
+		- Mana system (RaceCoin)
 		- 1 per tower type (counter)  
 		- Boost  
 		- Armour  
 	- NPC / AI opponent (at least 1) that builds towers as well (random strategy)  
+##### User Stories
+ 1 - Open application from system menu  
+Splash screen   
+ 2 - Main menu:    
+	Multi player    
+		Lobby menu (host / join)  
+		3 - Host  
+		3 - Join  
+	Single player    
+
   
 ### Godot project structure
 - project.godot
 	Godot project file
-- Assets
+- assets
 	Images and Godot .tscn files for all game elements
-	- Vehicles
-	- Towers
-	- Stages
+	- vehicles
+	- towers
+	- stages
 - gd
 	All .gd scripts 
 
@@ -75,6 +80,7 @@ Different cars have features / abilities, resistance / weaknesses
 - Drone battle / attack vehicles with drones / drone weapon
     - Drone tower that launches drones which you can control for short amount of time
 - Double dash team mode 1 drives 1 tower defends / 1 drones
+- Use Spine animations https://github.com/GodotExplorer/spine
 
 ### Influences
 - Infinitode

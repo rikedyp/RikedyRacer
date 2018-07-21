@@ -94,7 +94,7 @@ remote func register_vehicle(id, new_player_scene, new_player_animation):
 
 remote func pre_start_game(spawn_points, max_laps):
 	# Change scene
-	var world = load("res://stages/track1.tscn").instance()
+	var world = load("res://assets/stages/track1.tscn").instance()
 	world.max_laps = max_laps
 	get_tree().get_root().add_child(world)
 	get_tree().get_root().get_node("lobby").hide()
@@ -197,7 +197,7 @@ func see_children(node):
 
 func end_game():
 	print("--- end game")
-	see_children(get_tree().get_root())
+	#see_children(get_tree().get_root())
 	print("---")
 	# TODO generalise for any scene (levels)
 	if has_node("/root/track1"): # Game is in progress

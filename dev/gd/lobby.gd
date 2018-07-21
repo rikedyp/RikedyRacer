@@ -122,10 +122,13 @@ func _on_sedan_toggled(button_pressed):
 		$vehicle_select/vehicle_buttons/sedan_white.show()
 		$vehicle_select/vehicle_buttons/cavallo.set_pressed(false)
 		$vehicle_select/vehicle_buttons/bradipo.set_pressed(false)
+		$vehicle_select/vehicle_buttons/rikedykart.set_pressed(false)
 	else:
 		$vehicle_select/vehicle_buttons/sedan_yellow.hide()
 		$vehicle_select/vehicle_buttons/sedan_white.hide()
 		$vehicle_select/vehicle_buttons/bradipo_nero.hide()
+		$vehicle_select/vehicle_buttons/rk_rainbow.hide()
+		$vehicle_select/vehicle_buttons/boat.hide()
 
 func _on_cavallo_toggled(button_pressed):
 	if button_pressed:
@@ -136,11 +139,14 @@ func _on_cavallo_toggled(button_pressed):
 		$vehicle_select/vehicle_buttons/cavallo_grey.show()
 		$vehicle_select/vehicle_buttons/sedan.set_pressed(false)
 		$vehicle_select/vehicle_buttons/bradipo.set_pressed(false)
+		$vehicle_select/vehicle_buttons/rikedykart.set_pressed(false)
 	else:
 		$vehicle_select/vehicle_buttons/cavallo_black.hide()
 		$vehicle_select/vehicle_buttons/cavallo_blue.hide()
 		$vehicle_select/vehicle_buttons/cavallo_grey.hide()
 		$vehicle_select/vehicle_buttons/bradipo_nero.hide()
+		$vehicle_select/vehicle_buttons/rk_rainbow.hide()
+		$vehicle_select/vehicle_buttons/boat.hide()
 
 func _on_bradipo_toggled(button_pressed):
 	if button_pressed:
@@ -149,12 +155,32 @@ func _on_bradipo_toggled(button_pressed):
 		$vehicle_select/vehicle_buttons/bradipo_nero.show()
 		$vehicle_select/vehicle_buttons/sedan.set_pressed(false)
 		$vehicle_select/vehicle_buttons/cavallo.set_pressed(false)
+		$vehicle_select/vehicle_buttons/rikedykart.set_pressed(false)
 	else:
 		$vehicle_select/vehicle_buttons/cavallo_black.hide()
 		$vehicle_select/vehicle_buttons/cavallo_blue.hide()
 		$vehicle_select/vehicle_buttons/cavallo_grey.hide()
 		$vehicle_select/vehicle_buttons/bradipo_nero.hide()
-	
+		$vehicle_select/vehicle_buttons/rk_rainbow.hide()
+		$vehicle_select/vehicle_buttons/boat.hide()
+
+func _on_rikedykart_toggled(button_pressed):
+	if button_pressed:
+		_on_sedan_toggled(false)
+		_on_cavallo_toggled(false)
+		$vehicle_select/vehicle_buttons/rk_rainbow.show()
+		$vehicle_select/vehicle_buttons/boat.show()
+		$vehicle_select/vehicle_buttons/sedan.set_pressed(false)
+		$vehicle_select/vehicle_buttons/cavallo.set_pressed(false)
+		$vehicle_select/vehicle_buttons/bradipo.set_pressed(false)
+	else:
+		$vehicle_select/vehicle_buttons/cavallo_black.hide()
+		$vehicle_select/vehicle_buttons/cavallo_blue.hide()
+		$vehicle_select/vehicle_buttons/cavallo_grey.hide()
+		$vehicle_select/vehicle_buttons/bradipo_nero.hide()
+		$vehicle_select/vehicle_buttons/rk_rainbow.hide()
+		$vehicle_select/vehicle_buttons/boat.hide()
+
 func _on_sedan_yellow_pressed():
 	$vehicle_select/choose.disabled = false
 	player_scene = "res://assets/vehicles/basic_sedan/basic_sedan.tscn"
@@ -195,6 +221,20 @@ func _on_bradipo_nero_pressed():
 	player_animation = "nero"
 	$vehicle_select/vehicle_animations.set_animation("bradipo_nero")
 
+func _on_rk_rainbow_pressed():
+	$vehicle_select/choose.disabled = false
+	player_scene = "res://assets/vehicles/rikedykart/rikedykart.tscn"
+	player_animation = "white"
+	$vehicle_select/vehicle_animations.set_animation("rk_rainbow")
+	pass # replace with function body
+	
+func _on_boat_pressed():
+	$vehicle_select/choose.disabled = false
+	player_scene = "res://assets/vehicles/boat/boat.tscn"
+	player_animation = "none"
+	$vehicle_select/vehicle_animations.set_animation("boat")
+	pass # replace with function body
+
 func _on_choose_toggled(button_pressed):
 	if button_pressed:
 		# Disable vehicle choice buttons
@@ -213,16 +253,16 @@ func _on_choose_toggled(button_pressed):
 	else:
 		$vehicle_select/choose.text = "CHOOSE"
 		gamestate.still_choosing()
-	if button_pressed:
-		# TODO condense toggled calls
-		_on_sedan_toggled(false)
-		_on_cavallo_toggled(false)
-		$vehicle_select/vehicle_buttons/bradipo_nero.show()
-		$vehicle_select/vehicle_buttons/sedan.set_pressed(false)
-		$vehicle_select/vehicle_buttons/cavallo.set_pressed(false)
-	else:
-		$vehicle_select/vehicle_buttons/bradipo_nero.hide()
-		$vehicle_select/vehicle_buttons/cavallo_black.hide()
-		$vehicle_select/vehicle_buttons/cavallo_blue.hide()
-		$vehicle_select/vehicle_buttons/cavallo_grey.hide()
-	pass # replace with function body
+#	if button_pressed:
+#		# TODO condense toggled calls
+#		_on_sedan_toggled(false)
+#		_on_cavallo_toggled(false)
+#		$vehicle_select/vehicle_buttons/bradipo_nero.show()
+#		$vehicle_select/vehicle_buttons/sedan.set_pressed(false)
+#		$vehicle_select/vehicle_buttons/cavallo.set_pressed(false)
+#	else:
+#		$vehicle_select/vehicle_buttons/bradipo_nero.hide()
+#		$vehicle_select/vehicle_buttons/cavallo_black.hide()
+#		$vehicle_select/vehicle_buttons/cavallo_blue.hide()
+#		$vehicle_select/vehicle_buttons/cavallo_grey.hide()
+#	pass # replace with function body

@@ -1,9 +1,10 @@
 extends Area2D
 
-var speed = 1000
+export (int) var speed = 1000
 var velocity = Vector2()
 
 func _ready():
+	connect("body_entered", self, "_on_bullet_body_entered")
 	pass
 
 func start(pos, dir):
@@ -14,11 +15,7 @@ func start(pos, dir):
 func _physics_process(delta):
 	position += velocity * delta
 
-func _on_Bullet_body_entered(body):
-	if body.get_class() != "TileMap":
-		#print(body.get_name())
-		# TODO: if body.get_name() == Other_Player shoot
-		# else: don't shoot
-		if body.NOWSPEED > 50:
-			body.NOWSPEED -= 30
-		queue_free()
+func _on_bullet_body_entered(body):
+	if body is KinematicBody2D:
+		body.temp_slow(100, 0.4)
+	queue_free()

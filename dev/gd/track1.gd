@@ -64,18 +64,18 @@ func free_child_nodes(node):
 
 func _on_grass_body_entered(body):
 	top_speed = body.top_speed
-	body.top_speed = grass_speed
+	body.now_speed = grass_speed
 
 func _on_grass_body_exited(body):
-	body.top_speed = top_speed
+	body.now_speed = top_speed
 
 func lap(player):
-	print("lap")
-	print(player.get_name())
+	# TODO Move to checkpoint.gd
 	if int(player.get_name()) == get_tree().get_network_unique_id():
 	# TODO Send lap times to other players for score board
 	# Update my player's lap record
-		gamestate.my_player.lap += 1
+		print("add lap")
+		#gamestate.my_player.lap += 1
 		gamestate.my_player.lap_times.append(gamestate.my_player.time)
 		# Display lap # / time on HUD
 		$HUD/lap.text = str(gamestate.my_player.lap) + "/" + str(max_laps)
@@ -84,11 +84,12 @@ func lap(player):
 			gamestate.my_player.active = false
 			#gamestate.my_player.score.erase(0) # maybe this?
 			print("RACE OVER")
-			$HUD/lap.text = str(max_laps) + "/" + str(max_laps)
+			#$HUD/lap.text = str(max_laps) + "/" + str(max_laps)
 			gamestate.rpc("update_score", get_tree().get_network_unique_id(), gamestate.my_player.lap_times)
 			rpc("refresh_scoreboard")
 			$HUD/scoreboard.show()
 			$HUD/again.show()
+
 sync func refresh_scoreboard():
 	print("refersh scoreboard")
 	var scoreboard = $HUD/scoreboard/scores
@@ -153,6 +154,11 @@ func _on_tower0_pressed():
 	# TODO Once toggled disabled?
 	#$pitstop_ui/tower_menu.position = Vector2()#$towers/tower0.position
 	#$pitstop_ui/tower_menu.position.y += 10
-	$pitstop_ui.show()
+	#$pitstop_ui.show()
+	#$towers/tower0/base.disabled = true
 	#$HUD/pitstop_ui.show()
+	pass # replace with function body
+
+
+func _on_tower1_pressed():
 	pass # replace with function body
