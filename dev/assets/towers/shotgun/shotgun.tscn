@@ -47,7 +47,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="shotgun" type="StaticBody2D"]
+[node name="shotgun" type="StaticBody2D" index="0"]
 
 z_index = 10
 input_pickable = true
@@ -83,7 +83,6 @@ position = Vector2( -0.466205, -1.91944 )
 scale = Vector2( 1.22775, 1.22669 )
 frames = SubResource( 1 )
 animation = "level1"
-frame = 7
 playing = true
 
 [node name="collision_shape" type="CollisionPolygon2D" parent="." index="2"]

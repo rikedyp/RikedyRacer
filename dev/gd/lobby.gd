@@ -230,7 +230,7 @@ func _on_rk_rainbow_pressed():
 	
 func _on_boat_pressed():
 	$vehicle_select/choose.disabled = false
-	player_scene = "res://assets/vehicles/boat/boat.tscn"
+	player_scene = "res://assets/vehicles/boat/big_boat.tscn"
 	player_animation = "none"
 	$vehicle_select/vehicle_animations.set_animation("boat")
 	pass # replace with function body

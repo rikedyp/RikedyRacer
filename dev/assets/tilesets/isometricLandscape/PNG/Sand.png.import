@@ -7,10 +7,7 @@ path="res://.import/Sand.png-451b73589faa1c3f90ab23e7a489cd74.stex"
 [deps]
 
 source_file="res://assets/tilesets/isometricLandscape/PNG/Sand.png"
-source_md5="ecccd3bd4a182902d88b768920980e39"
-
 dest_files=[ "res://.import/Sand.png-451b73589faa1c3f90ab23e7a489cd74.stex" ]
-dest_md5="e42726e75c81dfb669b0cde09e487cf2"
 
 [params]
 

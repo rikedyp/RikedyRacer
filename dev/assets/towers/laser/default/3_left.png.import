@@ -7,10 +7,7 @@ path="res://.import/3_left.png-47417a1d37526495a5e1fad3998e7c96.stex"
 [deps]
 
 source_file="res://assets/towers/laser/default/3_left.png"
-source_md5="1e9a8e3a1878694a6359b98d6e5b2116"
-
 dest_files=[ "res://.import/3_left.png-47417a1d37526495a5e1fad3998e7c96.stex" ]
-dest_md5="00679ecd9065e2434c38c537af69a654"
 
 [params]
 

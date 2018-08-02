@@ -7,10 +7,7 @@ path="res://.import/landscapeTiles_070.png-e02dda52b03115d7a536251f3a041ca8.stex
 [deps]
 
 source_file="res://assets/tilesets/isometricLandscape/PNG/landscapeTiles_070.png"
-source_md5="2a8770ca71e38d0e8df59f1f9cb83bf3"
-
 dest_files=[ "res://.import/landscapeTiles_070.png-e02dda52b03115d7a536251f3a041ca8.stex" ]
-dest_md5="cb5a366bd53b651ce67d980b3f2f4937"
 
 [params]
 

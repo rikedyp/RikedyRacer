@@ -7,10 +7,7 @@ path="res://.import/3_up.png-bfdfb53ac678c27dc8f79d0aa18cb814.stex"
 [deps]
 
 source_file="res://assets/towers/mg/default/3_up.png"
-source_md5="74204620f11d2370aa90d570cf9c2c18"
-
 dest_files=[ "res://.import/3_up.png-bfdfb53ac678c27dc8f79d0aa18cb814.stex" ]
-dest_md5="36e1b2f611d90754732bbcb49e56fe63"
 
 [params]
 

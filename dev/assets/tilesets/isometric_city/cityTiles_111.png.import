@@ -7,10 +7,7 @@ path="res://.import/cityTiles_111.png-7ffdcebf69334b6c8377900aee8e4042.stex"
 [deps]
 
 source_file="res://assets/tilesets/isometric_city/cityTiles_111.png"
-source_md5="f4d7e4af770730025190484fd9160421"
-
 dest_files=[ "res://.import/cityTiles_111.png-7ffdcebf69334b6c8377900aee8e4042.stex" ]
-dest_md5="f9bafe799e5dd80cd0a6b9a16999e560"
 
 [params]
 

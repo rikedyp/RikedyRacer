@@ -7,10 +7,7 @@ path="res://.import/buildingTiles_108.png-0f6012ac20801e7d997d47fc67c60e70.stex"
 [deps]
 
 source_file="res://assets/tilesets/isometric_buildings/buildingTiles_108.png"
-source_md5="83ad842d59849129b80d20fb1127f7c1"
-
 dest_files=[ "res://.import/buildingTiles_108.png-0f6012ac20801e7d997d47fc67c60e70.stex" ]
-dest_md5="90fb9f7564841c0895ba288d0a0ee5f2"
 
 [params]
 

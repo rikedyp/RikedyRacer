@@ -185,6 +185,7 @@ fixed_icon_size = Vector2( 0, 0 )
 
 [node name="vehicle_buttons" type="VBoxContainer" parent="vehicle_select" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

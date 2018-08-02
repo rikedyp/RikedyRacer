@@ -7,10 +7,7 @@ path="res://.import/2_leftdown.png-46d45bd4e23f518fbbdd8fef70c0f03e.stex"
 [deps]
 
 source_file="res://assets/towers/shotgun/default/2_leftdown.png"
-source_md5="fe1093b251dd8a3f96d169d07c0adf32"
-
 dest_files=[ "res://.import/2_leftdown.png-46d45bd4e23f518fbbdd8fef70c0f03e.stex" ]
-dest_md5="2137b474d1141d6dabd0b04fbd542296"
 
 [params]
 

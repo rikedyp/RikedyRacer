@@ -7,10 +7,7 @@ path="res://.import/Grass.png-39430709526b2224f2eca023ca26fe2a.stex"
 [deps]
 
 source_file="res://assets/tilesets/isometricLandscape/PNG/Grass.png"
-source_md5="2c87503431598f468b86097a722fa3b9"
-
 dest_files=[ "res://.import/Grass.png-39430709526b2224f2eca023ca26fe2a.stex" ]
-dest_md5="28db267770940aaaf8e0b9442268b8ee"
 
 [params]
 

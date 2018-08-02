@@ -7,10 +7,7 @@ path="res://.import/c04_s128_iso_0214.png-8829aedf2b0a074d5b555d27600227b8.stex"
 [deps]
 
 source_file="res://assets/vehicles/cavallo/grey/c04_s128_iso_0214.png"
-source_md5="7d3ccc5428f38867a6010e45cab0d2e3"
-
 dest_files=[ "res://.import/c04_s128_iso_0214.png-8829aedf2b0a074d5b555d27600227b8.stex" ]
-dest_md5="787f0b93940291969aecd6badfe23add"
 
 [params]
 

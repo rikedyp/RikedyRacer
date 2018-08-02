@@ -7,10 +7,7 @@ path="res://.import/3_leftdown.png-ad9bd2c3b93cc20fe0181b3069f876b5.stex"
 [deps]
 
 source_file="res://assets/towers/mg/default/3_leftdown.png"
-source_md5="9fbe6abd599e16155bd4ae5220b70a4b"
-
 dest_files=[ "res://.import/3_leftdown.png-ad9bd2c3b93cc20fe0181b3069f876b5.stex" ]
-dest_md5="ffdb1cccfcb876c1d9675f9c3fc9a04c"
 
 [params]
 

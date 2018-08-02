@@ -7,10 +7,7 @@ path="res://.import/1_up.png-210d36b448c582c7469b360db82e7e79.stex"
 [deps]
 
 source_file="res://assets/towers/shotgun/default/1_up.png"
-source_md5="07b439dd684a27807344473af9007189"
-
 dest_files=[ "res://.import/1_up.png-210d36b448c582c7469b360db82e7e79.stex" ]
-dest_md5="464a08f25410c833417b921a6df7e996"
 
 [params]
 

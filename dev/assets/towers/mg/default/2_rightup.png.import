@@ -7,10 +7,7 @@ path="res://.import/2_rightup.png-2a6d70f0df3a087567983fb84e40b48c.stex"
 [deps]
 
 source_file="res://assets/towers/mg/default/2_rightup.png"
-source_md5="0bc051d64dfb69a68b7995cafc9d3d99"
-
 dest_files=[ "res://.import/2_rightup.png-2a6d70f0df3a087567983fb84e40b48c.stex" ]
-dest_md5="b4ae050d0b068745705a19daf972278b"
 
 [params]
 

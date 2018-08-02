@@ -7,10 +7,7 @@ path="res://.import/3_left.png-3ff149c18026f8a0ec1894a6eb597f13.stex"
 [deps]
 
 source_file="res://assets/towers/pistol/default/3_left.png"
-source_md5="4d2847c32e9b58d3677ea09def189e8f"
-
 dest_files=[ "res://.import/3_left.png-3ff149c18026f8a0ec1894a6eb597f13.stex" ]
-dest_md5="03704d9c2dfbc2c99423ba54cdbecbed"
 
 [params]
 

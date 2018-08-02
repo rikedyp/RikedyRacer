@@ -19,7 +19,7 @@ signal choose_mg
 sync func spawn_tower(owner_id, base_name, spawn_pos, tower_type, enemies):
 	#print("spwan tower")
 	var tower = load(tower_type).instance()
-	spawn_pos.x += 20
+	#spawn_pos.x += 20
 	tower.position = spawn_pos
 	#tower.set_name(base_name)
 	for enemy in enemies:
@@ -60,15 +60,19 @@ func _process(delta):
 	# For player in group "bad_guys"
 #
 #
-#func _input(event):
-#		#set_cellv(tile_pos, _tileset.find_tile_by_name("FireTower"))
-#	if event is InputEventMouseMotion and dragging:
-#		position -= event.relative*drag_factor
-#	if event is InputEventMouseButton:
-#		if event.button_index == BUTTON_WHEEL_UP:
-#			zoom(-0.1)
-#		if event.button_index == BUTTON_WHEEL_DOWN:
-#			zoom(0.1)
+func _input(event):
+		#set_cellv(tile_pos, _tileset.find_tile_by_name("FireTower"))
+	if event is InputEventMouseMotion and dragging:
+		position -= event.relative*drag_factor
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_WHEEL_UP:
+			zoom(-0.1)
+		if event.button_index == BUTTON_WHEEL_DOWN:
+			zoom(0.1)
+
+func zoom(dir):
+	$camera.zoom.x += dir
+	$camera.zoom.y += dir
 
 func _on_laser_pressed():
 	$tower_menu.hide()

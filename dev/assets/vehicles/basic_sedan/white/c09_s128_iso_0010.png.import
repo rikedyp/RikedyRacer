@@ -7,10 +7,7 @@ path="res://.import/c09_s128_iso_0010.png-241abba4fa05a4fc96e4376dcca41ab6.stex"
 [deps]
 
 source_file="res://assets/vehicles/basic_sedan/white/c09_s128_iso_0010.png"
-source_md5="60ce1ea37ef8aa190799eed8870e9c44"
-
 dest_files=[ "res://.import/c09_s128_iso_0010.png-241abba4fa05a4fc96e4376dcca41ab6.stex" ]
-dest_md5="2999ace7c1bfe5e8420900601a3fbf18"
 
 [params]
 

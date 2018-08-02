@@ -7,10 +7,7 @@ path="res://.import/2_rightdown.png-5936ca7b71423fb34d36ab5d342dd55a.stex"
 [deps]
 
 source_file="res://assets/towers/laser/default/2_rightdown.png"
-source_md5="62dd5af85197ed20021c3783f1c46ffb"
-
 dest_files=[ "res://.import/2_rightdown.png-5936ca7b71423fb34d36ab5d342dd55a.stex" ]
-dest_md5="50d564941519c2860e3aa4a7115eae13"
 
 [params]
 

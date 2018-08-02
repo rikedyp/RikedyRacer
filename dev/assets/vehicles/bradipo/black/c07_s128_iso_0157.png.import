@@ -7,10 +7,7 @@ path="res://.import/c07_s128_iso_0157.png-f1859586caa684961986f2f9a85882d8.stex"
 [deps]
 
 source_file="res://assets/vehicles/bradipo/black/c07_s128_iso_0157.png"
-source_md5="9ae02a6bee80126791a57e24eda40841"
-
 dest_files=[ "res://.import/c07_s128_iso_0157.png-f1859586caa684961986f2f9a85882d8.stex" ]
-dest_md5="d9f244c3e2a02da475c92d99157781ec"
 
 [params]
 

@@ -56,7 +56,6 @@ func aim():
 				shoot(pos)
 			break
 
-
 func set_image(angle):
 	# Target moves from -pi(upleft) < -0(upright) < 0(downright) < pi(downleft)
 	# -pi/2 directly above, +pi/2 directly below
@@ -128,7 +127,6 @@ func _on_shoot_timer_timeout():
 	can_shoot = true
 	pass # replace with function body
 
-
 func _on_input_event(viewport, event, shape_idx):
 	#print(event)
 	if event is InputEventMouseButton:
@@ -137,7 +135,6 @@ func _on_input_event(viewport, event, shape_idx):
 		$upgrade_menu.show()
 		$upgrade_menu/shotgun.show()
 	pass # replace with function body
-
 
 func _on_visibility_input_event(viewport, event, shape_idx):
 	print(event)
