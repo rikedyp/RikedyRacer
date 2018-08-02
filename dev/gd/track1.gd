@@ -151,6 +151,7 @@ func tower_menu_pressed():
 
 
 func _on_tower0_pressed():
+	print("TOWER 0000 PRESSED")
 	# TODO Once toggled disabled?
 	#$pitstop_ui/tower_menu.position = Vector2()#$towers/tower0.position
 	#$pitstop_ui/tower_menu.position.y += 10

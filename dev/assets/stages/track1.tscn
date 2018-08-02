@@ -6,8 +6,8 @@
 [ext_resource path="res://assets/ui/HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://gd/checkpoint.gd" type="Script" id=5]
 [ext_resource path="res://assets/ui/pitstop.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/tilesets/isometric_buildings/buildingTiles_128.png" type="Texture" id=7]
-[ext_resource path="res://assets/tilesets/isometric_buildings/buildingTiles_120.png" type="Texture" id=8]
+[ext_resource path="res://assets/tilesets/isometric_buildings/buildingTiles_120.png" type="Texture" id=7]
+[ext_resource path="res://assets/tilesets/isometric_buildings/buildingTiles_128.png" type="Texture" id=8]
 [ext_resource path="res://assets/tilesets/isometric_buildings/buildingTiles_121.png" type="Texture" id=9]
 
 [node name="track1" type="Node2D" index="0"]
@@ -433,7 +433,12 @@ _sections_unfolded = [ "Z Index" ]
 position = Vector2( 1384.67, 326.021 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="base" type="TextureButton" parent="towers/tower0" index="0"]
+[node name="image" type="Sprite" parent="towers/tower0" index="0"]
+
+position = Vector2( 0.32605, 9.58994 )
+texture = ExtResource( 7 )
+
+[node name="base" type="TextureButton" parent="towers/tower0" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -454,22 +459,22 @@ toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 9 )
 _sections_unfolded = [ "Textures", "Visibility" ]
-
-[node name="buildingTiles_120" type="Sprite" parent="towers/tower0" index="1"]
-
-position = Vector2( 0.32605, 9.58994 )
-texture = ExtResource( 8 )
 
 [node name="tower1" type="Position2D" parent="towers" index="1"]
 
 position = Vector2( -0.102814, 1084.09 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="base" type="TextureButton" parent="towers/tower1" index="0"]
+[node name="image" type="Sprite" parent="towers/tower1" index="0"]
+
+position = Vector2( -1.4891, 9.06201 )
+texture = ExtResource( 7 )
+
+[node name="base" type="TextureButton" parent="towers/tower1" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -490,8 +495,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 9 )
 _sections_unfolded = [ "Textures", "Visibility" ]
 

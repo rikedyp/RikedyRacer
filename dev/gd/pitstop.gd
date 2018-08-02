@@ -25,7 +25,8 @@ sync func spawn_tower(owner_id, base_name, spawn_pos, tower_type, enemies):
 	for enemy in enemies:
 		tower.set_enemy(enemy)
 	get_parent().add_child(tower)
-	get_parent().get_node("towers/"+base_name+"/base").disabled = true
+	#get_parent().get_node("towers/"+base_name+"/base").disabled = true
+	get_parent().get_node("towers/"+base_name+"/base").hide()
 	#get_parent().get_node("towers/"+base_name+"/base").set_focus_mode(0)
 
 sync func select_tower(tower):
@@ -106,6 +107,7 @@ func _on_shotgun_upgrade_pressed():
 
 func _on_tower_menu_shotgun_pressed():
 	print("choose shotgun tower")
+	#get_parent().get_node("towers/tower0/base").hide()
 	var spawn_pos = get_parent().get_node("towers/"+selected_tower).position
 	var tower_type = "res://assets/towers/shotgun/shotgun.tscn"
 	var enemies = get_enemies()
