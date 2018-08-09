@@ -21,6 +21,7 @@ sync func spawn_tower(owner_id, base_name, spawn_pos, tower_type, enemies):
 	var tower = load(tower_type).instance()
 	#spawn_pos.x += 20
 	tower.position = spawn_pos
+	tower.set_owner(get_tree().get_network_unique_id())
 	#tower.set_name(base_name)
 	for enemy in enemies:
 		tower.set_enemy(enemy)
@@ -131,7 +132,7 @@ func _on_tower_menu_mg_pressed():
 func get_enemies():
 	var enemies = []
 	# --- So can test behaviour on self 
-	enemies.append(get_tree().get_network_unique_id())
+	#enemies.append(get_tree().get_network_unique_id())
 	# /---
 	for enemy in gamestate.players:
 		enemies.append(enemy)

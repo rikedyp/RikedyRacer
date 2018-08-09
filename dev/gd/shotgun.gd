@@ -12,11 +12,15 @@ var hit_pos
 var location
 var can_shoot = true
 var current_level = 1
-var slow_speed = 100 # Vehicle speed when hit
-var slow_time = 0.4 # Duration of vehicle slow when hit
+var slow_speed = 100 # Vehicle speed when hit (level1)
+var slow_time = 0.4 # Duration of vehicle slow when hit (level1)
 
 func set_base(new_base):
 	location = new_base
+
+func set_owner(new_id):
+	# Who owns this tower?
+	owner_id = new_id
 
 func _ready():
 	# Connect signals
@@ -103,14 +107,15 @@ func _draw():
 func _on_ShootTimer_timeout():
 	can_shoot = true
 
-func _on_click_area_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
-		#print(event.button_index)
-		$upgrade_menu.show()
-		$upgrade_menu/shotgun.show()
-	#print("click are2")
-	#emit_signal("input_event", viewport, event, shape_idx)
-	pass # replace with function body
+#func _on_click_area_input_event(viewport, event, shape_idx):
+#
+#	if event is InputEventMouseButton:
+#		#print(event.button_index)
+#		$upgrade_menu.show()
+#		$upgrade_menu/shotgun.show()
+#	#print("click are2")
+#	#emit_signal("input_event", viewport, event, shape_idx)
+#	pass # replace with function body
 
 func _on_visibility_body_entered(body):
 	if target:
@@ -130,9 +135,20 @@ func _on_shoot_timer_timeout():
 
 func _on_input_event(viewport, event, shape_idx):
 	#print(event)
-	if event is InputEventMouseButton:
+	# Make sure only I can modify my towers
+#	print("Who's TOWER???")
+#	print(get_name())
+#
+#	print(owner)
+#
+#	print("------")
+	if event is InputEventMouseButton and owner_id == get_tree().get_network_unique_id():
 		#print(event.button_index)
-		print(event)
+		#print(event)
+		print("Owner ID")
+		print(owner_id)
+		print("Network ID")
+		print(get_tree().get_network_unique_id())
 		$upgrade_menu.show()
 		$upgrade_menu/shotgun.show()
 	pass # replace with function body
@@ -149,6 +165,10 @@ func upgrade_level():
 	if gamestate.my_player.r_coin < 40:
 		print("Insufficient RCoin!")
 		return
+	gamestate.my_player.r_coin -= 40
+	rpc("sync_upgrade")
+
+sync func sync_upgrade():
 	# Set current tower level and animation frames
 	current_level += 1
 	var new_level = "level" + str(current_level)
@@ -164,3 +184,4 @@ func upgrade_level():
 		slow_speed = 69
 		slow_time = 0.8
 		$label.text = "69, 0.8"
+	pass

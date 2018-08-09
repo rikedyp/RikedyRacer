@@ -2,30 +2,30 @@
 
 [ext_resource path="res://gd/shotgun.gd" type="Script" id=1]
 [ext_resource path="res://assets/towers/shotgun/shotgun_shell.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/towers/shotgun/default/3_down.png" type="Texture" id=3]
-[ext_resource path="res://assets/towers/shotgun/default/3_leftdown.png" type="Texture" id=4]
-[ext_resource path="res://assets/towers/shotgun/default/3_left.png" type="Texture" id=5]
-[ext_resource path="res://assets/towers/shotgun/default/3_leftup.png" type="Texture" id=6]
-[ext_resource path="res://assets/towers/shotgun/default/3_up.png" type="Texture" id=7]
-[ext_resource path="res://assets/towers/shotgun/default/3_rightup.png" type="Texture" id=8]
-[ext_resource path="res://assets/towers/shotgun/default/3_right.png" type="Texture" id=9]
-[ext_resource path="res://assets/towers/shotgun/default/3_rightdown.png" type="Texture" id=10]
-[ext_resource path="res://assets/towers/shotgun/default/2_down.png" type="Texture" id=11]
-[ext_resource path="res://assets/towers/shotgun/default/2_leftdown.png" type="Texture" id=12]
-[ext_resource path="res://assets/towers/shotgun/default/2_left.png" type="Texture" id=13]
-[ext_resource path="res://assets/towers/shotgun/default/2_leftup.png" type="Texture" id=14]
-[ext_resource path="res://assets/towers/shotgun/default/2_up.png" type="Texture" id=15]
-[ext_resource path="res://assets/towers/shotgun/default/2_rightup.png" type="Texture" id=16]
-[ext_resource path="res://assets/towers/shotgun/default/2_right.png" type="Texture" id=17]
-[ext_resource path="res://assets/towers/shotgun/default/2_rightdown.png" type="Texture" id=18]
-[ext_resource path="res://assets/towers/shotgun/default/1_down.png" type="Texture" id=19]
-[ext_resource path="res://assets/towers/shotgun/default/1_leftdown.png" type="Texture" id=20]
-[ext_resource path="res://assets/towers/shotgun/default/1_left.png" type="Texture" id=21]
-[ext_resource path="res://assets/towers/shotgun/default/1_leftup.png" type="Texture" id=22]
-[ext_resource path="res://assets/towers/shotgun/default/1_up.png" type="Texture" id=23]
-[ext_resource path="res://assets/towers/shotgun/default/1_rightup.png" type="Texture" id=24]
-[ext_resource path="res://assets/towers/shotgun/default/1_right.png" type="Texture" id=25]
-[ext_resource path="res://assets/towers/shotgun/default/1_rightdown.png" type="Texture" id=26]
+[ext_resource path="res://assets/towers/shotgun/default/2_down.png" type="Texture" id=3]
+[ext_resource path="res://assets/towers/shotgun/default/2_leftdown.png" type="Texture" id=4]
+[ext_resource path="res://assets/towers/shotgun/default/2_left.png" type="Texture" id=5]
+[ext_resource path="res://assets/towers/shotgun/default/2_leftup.png" type="Texture" id=6]
+[ext_resource path="res://assets/towers/shotgun/default/2_up.png" type="Texture" id=7]
+[ext_resource path="res://assets/towers/shotgun/default/2_rightup.png" type="Texture" id=8]
+[ext_resource path="res://assets/towers/shotgun/default/2_right.png" type="Texture" id=9]
+[ext_resource path="res://assets/towers/shotgun/default/2_rightdown.png" type="Texture" id=10]
+[ext_resource path="res://assets/towers/shotgun/default/1_down.png" type="Texture" id=11]
+[ext_resource path="res://assets/towers/shotgun/default/1_leftdown.png" type="Texture" id=12]
+[ext_resource path="res://assets/towers/shotgun/default/1_left.png" type="Texture" id=13]
+[ext_resource path="res://assets/towers/shotgun/default/1_leftup.png" type="Texture" id=14]
+[ext_resource path="res://assets/towers/shotgun/default/1_up.png" type="Texture" id=15]
+[ext_resource path="res://assets/towers/shotgun/default/1_rightup.png" type="Texture" id=16]
+[ext_resource path="res://assets/towers/shotgun/default/1_right.png" type="Texture" id=17]
+[ext_resource path="res://assets/towers/shotgun/default/1_rightdown.png" type="Texture" id=18]
+[ext_resource path="res://assets/towers/shotgun/default/3_down.png" type="Texture" id=19]
+[ext_resource path="res://assets/towers/shotgun/default/3_leftdown.png" type="Texture" id=20]
+[ext_resource path="res://assets/towers/shotgun/default/3_left.png" type="Texture" id=21]
+[ext_resource path="res://assets/towers/shotgun/default/3_leftup.png" type="Texture" id=22]
+[ext_resource path="res://assets/towers/shotgun/default/3_up.png" type="Texture" id=23]
+[ext_resource path="res://assets/towers/shotgun/default/3_rightup.png" type="Texture" id=24]
+[ext_resource path="res://assets/towers/shotgun/default/3_right.png" type="Texture" id=25]
+[ext_resource path="res://assets/towers/shotgun/default/3_rightdown.png" type="Texture" id=26]
 [ext_resource path="res://assets/ui/upgrade_menu.tscn" type="PackedScene" id=27]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -33,21 +33,21 @@
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "level3",
+"name": "level2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "level2",
+"name": "level1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
 "loop": true,
-"name": "level1",
+"name": "level3",
 "speed": 5.0
 } ]
 
-[node name="shotgun" type="StaticBody2D"]
+[node name="shotgun" type="StaticBody2D" index="0"]
 
 z_index = 10
 input_pickable = true
@@ -83,7 +83,7 @@ position = Vector2( -0.466205, -1.91944 )
 scale = Vector2( 1.22775, 1.22669 )
 frames = SubResource( 1 )
 animation = "level1"
-frame = 6
+frame = 2
 playing = true
 
 [node name="collision_shape" type="CollisionPolygon2D" parent="." index="2"]

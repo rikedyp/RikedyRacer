@@ -161,8 +161,14 @@ func get_players_ready():
 #	return players_ready
 
 func begin_game():
+#	if gamestate.my_player == null:
+#		print("You haven't chosen anything yet")
+#		return
 	if not my_player_info["ready"]:
 		# TODO GUI Warning
+		if gamestate.my_player == null:
+			print("You haven't chosen yet")
+			return
 		var printstring = gamestate.my_player["name"] + " yet to choose vehicle"
 		print(printstring)
 		return
