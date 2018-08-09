@@ -25,15 +25,20 @@ func _on_x_pressed():
 
 func _on_shotgun_upgrade_pressed():
 	#print(gamestate.see_children(get_parent()))
-	print(get_parent().get_node("animated_sprite").get_name())
+	print(get_parent().get_name())
 	get_parent().get_node("animated_sprite").set_animation("level2")
+	$shotgun/shotgun_upgrade/animation.set_animation("level3")
+	get_parent().set_level("level2")
 	#print(get_parent().get_node("animation").set_animation("level2"))
 	emit_signal("shotgun_upgrade")
 	hide()
 	pass # replace with function body
 
 func _on_upgrade_pressed():
-	get_parent().get_node("animated_sprite").set_animation("level2")
+	#get_parent().get_node("animated_sprite").set_animation("level2")
+	#print(get_parent().get_name())
+	get_parent().upgrade_level()
+	hide()
 	
 func _on_mg_upgrade_pressed():
 	get_parent()

@@ -23,7 +23,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 11.2105, 32.6959 )
 
-[node name="big_boat" type="KinematicBody2D"]
+[node name="big_boat" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -89,87 +89,88 @@ max_lines_visible = -1
 
 [node name="sprite_layers" type="Node2D" parent="." index="3"]
 
-rotation = 4.71239
+rotation = 1.5708
 _sections_unfolded = [ "Transform" ]
 
 [node name="0" type="Sprite" parent="sprite_layers" index="0"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="1" type="Sprite" parent="sprite_layers" index="1"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 3 )
 
 [node name="2" type="Sprite" parent="sprite_layers" index="2"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 4 )
 
 [node name="3" type="Sprite" parent="sprite_layers" index="3"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 5 )
 
 [node name="4" type="Sprite" parent="sprite_layers" index="4"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 6 )
 
 [node name="5" type="Sprite" parent="sprite_layers" index="5"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 7 )
 
 [node name="6" type="Sprite" parent="sprite_layers" index="6"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 8 )
 
 [node name="7" type="Sprite" parent="sprite_layers" index="7"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 9 )
 
 [node name="8" type="Sprite" parent="sprite_layers" index="8"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 10 )
 
 [node name="9" type="Sprite" parent="sprite_layers" index="9"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 11 )
 
 [node name="10" type="Sprite" parent="sprite_layers" index="10"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 12 )
 
 [node name="11" type="Sprite" parent="sprite_layers" index="11"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 13 )
 
 [node name="12" type="Sprite" parent="sprite_layers" index="12"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 14 )
 
 [node name="13" type="Sprite" parent="sprite_layers" index="13"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 15 )
 
 [node name="14" type="Sprite" parent="sprite_layers" index="14"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 16 )
 
 [node name="15" type="Sprite" parent="sprite_layers" index="15"]
 
-position = Vector2( -2.5635, 0.42246 )
+position = Vector2( -14.0005, 58.0008 )
 texture = ExtResource( 17 )
 
 [node name="animated_sprite" type="AnimatedSprite" parent="." index="4"]

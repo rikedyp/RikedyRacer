@@ -24,6 +24,15 @@ CONTENTS
 
 ### Gameplay
 Multiplayer + single player with more content  
+	- Racing
+		- Players are able to move after countdown
+		- Players complete a set number of laps in shortest time to win
+	- Towers
+		- Stages have pit stop areas in which players can set and upgrade towers
+	- Currency
+		- RaceCoin or RikedyCoin
+		- + 200 every lap (Pass Go and collect 200)
+		- TODO: Balance tower and upgrade costs for most enjoyable experience
 	- Tower upgrades (at least 3 types with multi-tier upgrades)  
 	- Vehicle upgrades  
 		- Mana system (RaceCoin)
@@ -38,20 +47,29 @@ Splash screen
 	Multi player    
 		Lobby menu (host / join)  
 		3 - Host  
+		  Choose vehicle  
+		  Set number of laps (Optional)  
+		  4 - Start game  
 		3 - Join  
+		  Choose vehicle  
+		  4 - Wait for game to begin
+	- GAME START:  
 	Single player    
 
-  
 ### Godot project structure
 - project.godot
 	Godot project file
-- assets
+- addons  
+	Godot addons
+- assets  
 	Images and Godot .tscn files for all game elements
 	- vehicles
 	- towers
 	- stages
-- gd
+- gd  
 	All .gd scripts 
+- bin  
+	Non-release executables
 
 ### Multiplayer methods
 By design, Godot 3 let's you start multiplayer games in single player with ease. This means it is easier to focus on multiplayer functionality and modify stages in the future for single player modes.

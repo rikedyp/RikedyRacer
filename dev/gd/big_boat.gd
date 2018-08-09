@@ -53,7 +53,7 @@ func _ready():
 	var i = 0
 	for layer in $sprite_layers.get_children():
 		var j = i * sprite_shift
-		layer.position += Vector2(j, 0)
+		layer.position += Vector2(-j, 0)
 		i += 1
 	# Set up movement variables
 	now_speed = top_speed
@@ -133,7 +133,7 @@ func handle_input(delta):
 	line_to_draw = vel_iso / 5
 	#rpc("set_pos_and_motion",position,vel_iso,x,y)
 	#
-	update()
+	#update()
 
 func play_animation():
 	$animated_sprite.play()

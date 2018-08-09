@@ -126,7 +126,7 @@ func _on_tower_menu_mg_pressed():
 func get_enemies():
 	var enemies = []
 	# --- So can test behaviour on self 
-	#enemies.append(get_tree().get_network_unique_id())
+	enemies.append(get_tree().get_network_unique_id())
 	# /---
 	for enemy in gamestate.players:
 		enemies.append(enemy)

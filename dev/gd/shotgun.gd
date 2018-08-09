@@ -11,13 +11,12 @@ var target
 var hit_pos
 var location
 var can_shoot = true
+var current_level = 1
+var slow_speed = 100 # Vehicle speed when hit
+var slow_time = 0.4 # Duration of vehicle slow when hit
 
 func set_base(new_base):
 	location = new_base
-
-func set_level(mode):
-	# Will depend on type of turret
-	$animated_sprite.set_animation(mode)
 
 func _ready():
 	# Connect signals
@@ -86,6 +85,8 @@ func set_image(angle):
 		$AnimatedSprite.set_frame(7)
 func shoot(pos):
 	var b = Bullet.instance()
+	b.slow_speed = slow_speed
+	b.slow_time = slow_time
 	var a = (pos - global_position).angle()
 	b.start(global_position, a + rand_range(-0.05, 0.05))
 	get_parent().add_child(b)
@@ -142,3 +143,20 @@ func _on_visibility_input_event(viewport, event, shape_idx):
 
 func _on_upgrade_menu_shotgun_upgrade():
 	pass # replace with function body
+
+func upgrade_level():
+	# Set current tower level and animation frames
+	current_level += 1
+	var new_level = "level" + str(current_level)
+	var next_level = "level" + str(current_level+1)
+	$animated_sprite.set_animation(new_level)
+	$upgrade_menu/shotgun/shotgun_upgrade/animation.set_animation(next_level)
+	# Set new projectile / bullet properties
+	if current_level == 2:
+		slow_speed = 80
+		slow_time = 0.5
+		$label.text = "80, 0.5"
+	elif current_level == 3:
+		slow_speed = 69
+		slow_time = 0.8
+		$label.text = "69, 0.8"
