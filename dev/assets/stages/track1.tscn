@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/tilesets/isometric_buildings/buildingTiles_128.png" type="Texture" id=8]
 [ext_resource path="res://assets/tilesets/isometric_buildings/buildingTiles_121.png" type="Texture" id=9]
 
-[node name="track1" type="Node2D" index="0"]
+[node name="track1" type="Node2D"]
 
 script = ExtResource( 1 )
 max_laps = 3

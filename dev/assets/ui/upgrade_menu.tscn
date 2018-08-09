@@ -92,7 +92,7 @@ _sections_unfolded = [ "Textures" ]
 position = Vector2( 23.8731, 22.4391 )
 frames = SubResource( 1 )
 animation = "level2"
-frame = 2
+frame = 1
 playing = true
 
 [node name="mg" type="Node2D" parent="." index="1"]
@@ -131,7 +131,6 @@ _sections_unfolded = [ "Textures" ]
 position = Vector2( 23.8731, 22.4391 )
 frames = ExtResource( 29 )
 animation = "level2"
-frame = 1
 playing = true
 
 [node name="laser" type="Node2D" parent="." index="2"]
@@ -170,6 +169,7 @@ _sections_unfolded = [ "Textures" ]
 position = Vector2( 23.8731, 22.4391 )
 frames = ExtResource( 30 )
 animation = "level2"
+frame = 7
 playing = true
 
 [node name="pistol" type="Node2D" parent="." index="3"]
@@ -208,7 +208,6 @@ _sections_unfolded = [ "Textures" ]
 position = Vector2( 23.8731, 22.4391 )
 frames = ExtResource( 31 )
 animation = "level2"
-frame = 1
 playing = true
 
 [node name="x" type="TextureButton" parent="." index="4"]
