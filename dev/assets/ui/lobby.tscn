@@ -185,7 +185,6 @@ fixed_icon_size = Vector2( 0, 0 )
 
 [node name="vehicle_buttons" type="VBoxContainer" parent="vehicle_select" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -462,6 +461,7 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 [node name="cavallo" type="TextureButton" parent="vehicle_select/vehicle_buttons" index="5"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -668,6 +668,8 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 [node name="rikedykart" type="TextureButton" parent="vehicle_select/vehicle_buttons" index="9"]
 
+editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -825,9 +827,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 212.0
+margin_top = 159.0
 margin_right = 196.0
-margin_bottom = 212.0
+margin_bottom = 159.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1

@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/ui/kenney_ui/PNG/yellow_button13.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/montserrat.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/ui/lobby.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/ui/kenney_ui/PNG/blue_boxTick.png" type="Texture" id=7]
+[ext_resource path="res://assets/ui/r_coin.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -24,7 +24,7 @@ use_filter = false
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="HUD" type="CanvasLayer" index="0"]
+[node name="HUD" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -285,7 +285,6 @@ _sections_unfolded = [ "custom_colors", "custom_fonts", "custom_styles" ]
 
 [node name="r_coin" type="Label" parent="." index="10"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -307,9 +306,9 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="r_coin_label" type="Sprite" parent="r_coin" index="0"]
+[node name="icon" type="Sprite" parent="r_coin" index="0"]
 
-position = Vector2( -37.4096, 15.1666 )
+position = Vector2( -37.7944, 15.7265 )
 texture = ExtResource( 7 )
 
 [connection signal="timeout" from="timer" to="." method="_on_Timer_timeout"]

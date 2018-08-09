@@ -124,6 +124,8 @@ playing = true
 
 [node name="mg" type="TextureButton" parent="." index="1"]
 
+editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -158,6 +160,8 @@ playing = true
 
 [node name="laser" type="TextureButton" parent="." index="2"]
 
+editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

@@ -106,6 +106,11 @@ func _on_shotgun_upgrade_pressed():
 #	pass # replace with function body
 
 func _on_tower_menu_shotgun_pressed():
+	# Can we afford the tower?
+	if gamestate.my_player.r_coin < 60:
+		print("Insufficient RCoin!")
+		return
+	get_parent().update_coin(-60)
 	print("choose shotgun tower")
 	#get_parent().get_node("towers/tower0/base").hide()
 	var spawn_pos = get_parent().get_node("towers/"+selected_tower).position

@@ -145,6 +145,10 @@ func _on_upgrade_menu_shotgun_upgrade():
 	pass # replace with function body
 
 func upgrade_level():
+	# Can we afford the upgrade?
+	if gamestate.my_player.r_coin < 40:
+		print("Insufficient RCoin!")
+		return
 	# Set current tower level and animation frames
 	current_level += 1
 	var new_level = "level" + str(current_level)

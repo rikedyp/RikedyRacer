@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/tilesets/isometric_buildings/buildingTiles_128.png" type="Texture" id=8]
 [ext_resource path="res://assets/tilesets/isometric_buildings/buildingTiles_121.png" type="Texture" id=9]
 
-[node name="track1" type="Node2D"]
+[node name="track1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 max_laps = 3
@@ -157,6 +157,7 @@ _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
 [node name="decoration" type="TileMap" parent="." index="6"]
 
+position = Vector2( -559.23, 0 )
 mode = 1
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 132, 66 )
@@ -209,7 +210,6 @@ position = Vector2( 714.675, 533.586 )
 
 [node name="barrier" type="StaticBody2D" parent="." index="9"]
 
-editor/display_folded = true
 visible = false
 input_pickable = false
 collision_layer = 4
@@ -235,6 +235,11 @@ polygon = PoolVector2Array( 346.323, 1639.49, 492.896, 1251.5, 1579.27, 441.038,
 position = Vector2( -4419.81, 1276.48 )
 build_mode = 0
 polygon = PoolVector2Array( 1579.27, 441.038, 2467.33, 35.8042, 3476.1, 311.708, 3671.65, 1186.83, 4317.97, 2901.87, 9619, 2634.95, 11254.5, 1721.01, 11158.3, -1261.33, 8416.44, -3401.88, 5337.9, -1453.74, 3437.86, -491.693, 3413.81, 422.249, 1465.67, 710.863, 6011.33, -6432.32, 13371, -4099.36, 13298.8, 4510.94, 2620.12, 6002.11 )
+
+[node name="tower0" type="CollisionPolygon2D" parent="barrier" index="3"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1318.65, 337.155, 1385.44, 302.86, 1451.32, 335.35, 1381.83, 371.45 )
 
 [node name="grass" type="Area2D" parent="." index="10"]
 
@@ -437,6 +442,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 position = Vector2( 0.32605, 9.58994 )
 texture = ExtResource( 7 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="base" type="TextureButton" parent="towers/tower0" index="1"]
 

@@ -20,6 +20,7 @@ var checkpoint = 0
 var lap = 1
 var lap_times = []
 var score = []
+var r_coin = 0
 
 #This updates the position on the other end
 slave func set_pos_and_motion(p_pos, p_vel_iso, p_dir):

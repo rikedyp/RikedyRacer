@@ -51,6 +51,8 @@ func _on_HUD_countdown_timeout():
 		if countdown == 0:
 			#ActivePlayer.ACTIVE = true
 			gamestate.my_player.active = true
+			gamestate.my_player.r_coin = 100
+			$HUD/r_coin.text = str(gamestate.my_player.r_coin)
 			$HUD/countdown.hide()
 			$HUD/countdown_panel.hide()
 		$HUD/countdown.text = str(countdown)
@@ -72,10 +74,10 @@ func _on_grass_body_exited(body):
 func lap(player):
 	# TODO Move to checkpoint.gd
 	if int(player.get_name()) == get_tree().get_network_unique_id():
-	# TODO Send lap times to other players for score board
-	# Update my player's lap record
-		print("add lap")
-		#gamestate.my_player.lap += 1
+		# Pass Go and Collect 200
+		gamestate.my_player.r_coin += 40
+		$HUD/r_coin.text = str(gamestate.my_player.r_coin)
+		# Update my player's lap record
 		gamestate.my_player.lap_times.append(gamestate.my_player.time)
 		# Display lap # / time on HUD
 		$HUD/lap.text = str(gamestate.my_player.lap) + "/" + str(max_laps)
@@ -163,3 +165,7 @@ func _on_tower0_pressed():
 
 func _on_tower1_pressed():
 	pass # replace with function body
+
+func update_coin(amount):
+	gamestate.my_player.r_coin += amount
+	$HUD/r_coin.text = str(gamestate.my_player.r_coin)
