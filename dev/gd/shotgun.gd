@@ -87,6 +87,7 @@ func set_image(angle):
 	if -1.9635 < angle and angle < -1.1781:
 		# target up
 		$AnimatedSprite.set_frame(7)
+
 func shoot(pos):
 	var b = Bullet.instance()
 	b.slow_speed = slow_speed
@@ -140,15 +141,13 @@ func _on_input_event(viewport, event, shape_idx):
 #	print(get_name())
 #
 #	print(owner)
-#
 #	print("------")
-	if event is InputEventMouseButton and owner_id == get_tree().get_network_unique_id():
+	if event is InputEventMouseButton and location in gamestate.my_towers:
+		print(location)
+		print(gamestate.my_towers)
+		print("MY TOWER")
 		#print(event.button_index)
 		#print(event)
-		print("Owner ID")
-		print(owner_id)
-		print("Network ID")
-		print(get_tree().get_network_unique_id())
 		$upgrade_menu.show()
 		$upgrade_menu/shotgun.show()
 	pass # replace with function body
@@ -185,3 +184,6 @@ sync func sync_upgrade():
 		slow_time = 0.8
 		$label.text = "69, 0.8"
 	pass
+	
+func set_label_text(text):
+	$label.text = text

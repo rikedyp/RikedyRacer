@@ -83,7 +83,7 @@ position = Vector2( -0.466205, -1.91944 )
 scale = Vector2( 1.22775, 1.22669 )
 frames = SubResource( 1 )
 animation = "level1"
-frame = 2
+frame = 7
 playing = true
 
 [node name="collision_shape" type="CollisionPolygon2D" parent="." index="2"]

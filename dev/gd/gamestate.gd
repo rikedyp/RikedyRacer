@@ -18,6 +18,7 @@ var my_player_info = {
 	"ready": false,
 	"score": [] # List of lap times
 	} 
+var my_towers = []
 # Details for remote players 
 var players = {} # dict by id:profile format
 # where profile is a dict "property": value

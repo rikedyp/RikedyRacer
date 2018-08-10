@@ -23,6 +23,8 @@ sync func spawn_tower(owner_id, base_name, spawn_pos, tower_type, enemies):
 	tower.position = spawn_pos
 	tower.set_owner(get_tree().get_network_unique_id())
 	#tower.set_name(base_name)
+	tower.set_label_text(str(owner_id))
+	tower.location = base_name
 	for enemy in enemies:
 		tower.set_enemy(enemy)
 	get_parent().add_child(tower)
@@ -117,6 +119,7 @@ func _on_tower_menu_shotgun_pressed():
 	var spawn_pos = get_parent().get_node("towers/"+selected_tower).position
 	var tower_type = "res://assets/towers/shotgun/shotgun.tscn"
 	var enemies = get_enemies()
+	gamestate.my_towers.append(selected_tower)
 	rpc("spawn_tower", get_tree().get_network_unique_id(), selected_tower, spawn_pos, tower_type, enemies)
 	print(get_parent().get_name())
 	$tower_menu.hide()
@@ -126,6 +129,8 @@ func _on_tower_menu_mg_pressed():
 	var spawn_pos = get_parent().get_node("towers/"+selected_tower).position
 	var tower_type = "res://assets/towers/mg/mg.tscn"
 	var enemies = get_enemies()
+	# var tower_id = get_tree().get_network_unique_id()
+	#spawn_tower(get_tree().get_network_unique_id(), selected_tower, spawn_pos, tower_type, enemies)
 	rpc("spawn_tower", get_tree().get_network_unique_id(), selected_tower, spawn_pos, tower_type, enemies)
 	$tower_menu.hide()
 
